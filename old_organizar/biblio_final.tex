@@ -1,0 +1,1436 @@
+\documentclass[]{article}
+\usepackage{lmodern}
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\usepackage{fixltx2e} % provides \textsubscript
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+\else % if luatex or xelatex
+  \ifxetex
+    \usepackage{mathspec}
+  \else
+    \usepackage{fontspec}
+  \fi
+  \defaultfontfeatures{Ligatures=TeX,Scale=MatchLowercase}
+\fi
+% use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+% use microtype if available
+\IfFileExists{microtype.sty}{%
+\usepackage{microtype}
+\UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\usepackage[left=3cm,right=3cm,top=2cm,bottom=2cm]{geometry}
+\usepackage{hyperref}
+\hypersetup{unicode=true,
+            pdftitle={Bibliometrix - Landscape genetics for studies in Ecology and Conservation},
+            pdfauthor={Michele Fernandes da Silva},
+            pdfborder={0 0 0},
+            breaklinks=true}
+\urlstyle{same}  % don't use monospace font for urls
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{248,248,248}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\ImportTok}[1]{#1}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+\newcommand{\BuiltInTok}[1]{#1}
+\newcommand{\ExtensionTok}[1]{#1}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.77,0.63,0.00}{#1}}
+\newcommand{\RegionMarkerTok}[1]{#1}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{#1}
+\usepackage{graphicx,grffile}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+\IfFileExists{parskip.sty}{%
+\usepackage{parskip}
+}{% else
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt plus 2pt minus 1pt}
+}
+\setlength{\emergencystretch}{3em}  % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{0}
+% Redefines (sub)paragraphs to behave more like sections
+\ifx\paragraph\undefined\else
+\let\oldparagraph\paragraph
+\renewcommand{\paragraph}[1]{\oldparagraph{#1}\mbox{}}
+\fi
+\ifx\subparagraph\undefined\else
+\let\oldsubparagraph\subparagraph
+\renewcommand{\subparagraph}[1]{\oldsubparagraph{#1}\mbox{}}
+\fi
+
+%%% Use protect on footnotes to avoid problems with footnotes in titles
+\let\rmarkdownfootnote\footnote%
+\def\footnote{\protect\rmarkdownfootnote}
+
+%%% Change title format to be more compact
+\usepackage{titling}
+
+% Create subtitle command for use in maketitle
+\providecommand{\subtitle}[1]{
+  \posttitle{
+    \begin{center}\large#1\end{center}
+    }
+}
+
+\setlength{\droptitle}{-2em}
+
+  \title{``Bibliometrix - Landscape genetics for studies in Ecology and
+Conservation''}
+    \pretitle{\vspace{\droptitle}\centering\huge}
+  \posttitle{\par}
+    \author{Michele Fernandes da Silva}
+    \preauthor{\centering\large\emph}
+  \postauthor{\par}
+      \predate{\centering\large\emph}
+  \postdate{\par}
+    \date{4 de maio de 2019}
+
+
+\begin{document}
+\maketitle
+
+\subsection{\texorpdfstring{\textbf{Landscape
+genetics}}{Landscape genetics}}\label{landscape-genetics}
+
+A genÃ©tica da paisagem surgiu como uma disciplina relativamente nova
+que integra abordagens em genÃ©tica de populaÃ§Ãµes, ecologia da
+paisagem e estatística espacial para compreender a influÃªncia de
+restriÃ§Ãµes ecolÃ³gicas e ambientais na variaÃ§Ã£o genÃ©tica,
+quantificando a relaÃ§Ã£o entre características da paisagem, diversidade
+genÃ©tica e estrutura genÃ©tica espacial. O campo estÃ¡ se desenvolvendo
+rapidamente devido aos recentes avanÃ§os em tecnologias de biologia
+molecular, aquisiÃ§Ã£o de dados ambientais e mÃ©todos analíticos
+espaciais que podem relacionar dados genÃ©ticos e de paisagem de maneira
+significativa (Storfer et al. 2010). A abordagem integrativa permite uma
+avaliaÃ§Ã£o do impacto da composição da paisagem na distribuição
+espacial da variaÃ§Ã£o genÃ©tica neutra e adaptativa e nos processos
+microevolutivos associados em populaÃ§Ãµes naturais (Holderegger e
+Wagner 2008; Balkenhol et al. 2009; Manel e cols. 2010; Segelbacher et
+al., 2010; Epperson et al., 2010). Esse entendimento Ã© crucial para
+promover pesquisas em ecologia evolutiva e genÃ©tica, mas tambÃ©m tem um
+imenso potencial para manejo aplicado e conservaÃ§Ã£o de espÃ©cies de
+plantas e animais ameaÃ§adas ou em perigo de extinÃ§Ã£o (Sork e Waits,
+2010). Embora o interesse pela GenÃ©tica da paisagem tenha aumentado, os
+estudos sobre esse tema ainda sÃ£o escassos. Nesse sentido, buscamos
+analisar os dados de publicaÃ§Ã£o e citaÃ§Ãµes referentes Ã~ essa Ã¡rea
+atravÃ©s do pacote bibliometrix; um pacote que fornece um conjunto de
+ferramentas para pesquisa quantitativa em bibliometria e cienciometria.
+Essencialmente, a bibliometria Ã© a aplicaÃ§Ã£o de anÃ¡lises
+quantitativas e estatÃ­sticas a publicaÃ§Ãµes como artigos de
+periÃ³dicos e suas respectivas contagens de citaÃ§Ãµes. A avaliaÃ§Ã£o
+quantitativa de dados de publicaÃ§Ã£o e citaÃ§Ã£o Ã© agora usada em
+quase todas as Ã¡reas cientÃ­ficas para avaliar o crescimento,
+maturidade, autores lÃ­deres, mapas conceituais e intelectuais,
+tendÃªncias de uma comunidade cientÃ­fica.
+
+\subsubsection{\texorpdfstring{Pacote utilizado:
+\emph{Bibliometrix}}{Pacote utilizado: Bibliometrix}}\label{pacote-utilizado-bibliometrix}
+
+Instalando o pacote \emph{Bibliometrix} e suas dependÃªncias
+
+\subsubsection{Carregando o pacote}\label{carregando-o-pacote}
+
+\subsubsection{Configurando o diretÃ³rio de
+trabalho}\label{configurando-o-diretario-de-trabalho}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{setwd}\NormalTok{(}\StringTok{"D:/data/cursos"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\subsubsection{Dados utilizados}\label{dados-utilizados}
+
+Os dados utilizados foram obtidos atrÃ¡ves do serviÃ§o de indexaÃ§Ã£o de
+citaÃ§Ãµes cientÃ­ficas \texttt{Web\ of\ Science}
+(\url{http://www.webofknowledge.com}). Foram pesquisadas as palavras
+``Landscape genetics'', ``Ecology'' e ``Conservation'', entre os anos de
+1900 Ã~ 2019.
+
+\subsubsection{Carregamento e
+importaÃ§Ã£o}\label{carregamento-e-importaaao}
+
+O arquivo Ã© inicialmente carregado como um vetor de caracteres grandes
+no formato \texttt{BibTeX}, atravÃ©s da funÃ§Ã£o \emph{readFiles}.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{D <-}\StringTok{ }\KeywordTok{readFiles}\NormalTok{(}\StringTok{"D:/data/cursos/file1.bib"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+E convertido em um quadro de dados (dataframe) usando a funÃ§Ã£o
+\emph{convert2df}.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{M <-}\StringTok{ }\KeywordTok{convert2df}\NormalTok{(D, }\DataTypeTok{dbsource =} \StringTok{"isi"}\NormalTok{, }\DataTypeTok{format =} \StringTok{"bibtex"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 
+## Converting your isi collection into a bibliographic dataframe
+## 
+## Articles extracted   100 
+## Articles extracted   104 
+## Done!
+## 
+## 
+## Generating affiliation field tag AU_UN from C1:  Done!
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{head}\NormalTok{(M)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##                                                                                                                                                                                                                                AU
+## DICKSON BG, 2019, CONSERV BIOL             DICKSON BG;ALBANO CM;ANANTHARAMAN R;BEIER P;FARGIONE J;GRAVES TA;GRAY ME;HALL KR;LAWLER JJ;LEONARD PB;LITTLEFIELD CE;MCCLURE ML;NOVEMBRE J;SCHLOSS CA;SCHUMAKER NH;SHAH VB;THEOBALD DM
+## ZHAO X, 2019, BIOL CONSERV                                                                                                                                        ZHAO X;REN B;LI D;GARBER PA;ZHU P;XIANG Z;GRUETER CC;LIU Z;LI M
+## BRUCE SA, 2018, ECOL EVOL                                                                                                                                                                                      BRUCE SA;WRIGHT JJ
+## ANTUNES B, 2018, CONSERV GENET                                                                                                    ANTUNES B;LOURENCO A;CAEIRO DIAS G;DINIS M;GONCALVES H;MARTINEZ SOLANO I;TARROSO P;VELO ANTON G
+## CUERVO-ALARCON L, 2018, TREE GENET GENOMES                                                                                                                 CUERVO ALARCON L;AREND M;MUELLER M;SPERISEN C;FINKELDEY R;KRUTOVSKY KV
+## SYLVESTER EVA, 2018, MOL ECOL                                                                                  SYLVESTER EVA;BEIKO RG;BENTZEN P;PATERSON I;HORNE JB;WATSON B;LEHNERT S;DUFFY S;CLEMENT M;ROBERTSON MJ;BRADBURY IR
+##                                                                                                                                                                                                            TI
+## DICKSON BG, 2019, CONSERV BIOL                                                                                                           CIRCUIT-THEORY APPLICATIONS TO CONNECTIVITY SCIENCE AND CONSERVATION
+## ZHAO X, 2019, BIOL CONSERV                                                                                    CLIMATE CHANGE, GRAZING, AND COLLECTING ACCELERATE HABITAT CONTRACTION IN AN ENDANGERED PRIMATE
+## BRUCE SA, 2018, ECOL EVOL                  ESTIMATES OF GENE FLOW AND DISPERSAL IN WILD RIVERINE BROOK TROUT (SALVELINUS FONTINALIS) POPULATIONS REVEAL ONGOING MIGRATION AND INTROGRESSION FROM STOCKED FISH
+## ANTUNES B, 2018, CONSERV GENET                    COMBINING PHYLOGEOGRAPHY AND LANDSCAPE GENETICS TO INFER THE EVOLUTIONARY HISTORY OF A SHORT-RANGE MEDITERRANEAN RELICT, SALAMANDRA SALAMANDRA LONGIROSTRIS
+## CUERVO-ALARCON L, 2018, TREE GENET GENOMES                          GENETIC VARIATION AND SIGNATURES OF NATURAL SELECTION IN POPULATIONS OF EUROPEAN BEECH (FAGUS SYLVATICA L.) ALONG PRECIPITATION GRADIENTS
+## SYLVESTER EVA, 2018, MOL ECOL                                                               ENVIRONMENTAL EXTREMES DRIVE POPULATION STRUCTURE AT THE NORTHERN RANGE LIMIT OF ATLANTIC SALMON IN NORTH AMERICA
+##                                                                   SO
+## DICKSON BG, 2019, CONSERV BIOL                  CONSERVATION BIOLOGY
+## ZHAO X, 2019, BIOL CONSERV                   BIOLOGICAL CONSERVATION
+## BRUCE SA, 2018, ECOL EVOL                      ECOLOGY AND EVOLUTION
+## ANTUNES B, 2018, CONSERV GENET                 CONSERVATION GENETICS
+## CUERVO-ALARCON L, 2018, TREE GENET GENOMES TREE GENETICS \\& GENOMES
+## SYLVESTER EVA, 2018, MOL ECOL                      MOLECULAR ECOLOGY
+##                                                             JI
+## DICKSON BG, 2019, CONSERV BIOL                  CONSERV. BIOL.
+## ZHAO X, 2019, BIOL CONSERV                      BIOL. CONSERV.
+## BRUCE SA, 2018, ECOL EVOL                          ECOL. EVOL.
+## ANTUNES B, 2018, CONSERV GENET                 CONSERV. GENET.
+## CUERVO-ALARCON L, 2018, TREE GENET GENOMES TREE GENET. GENOMES
+## SYLVESTER EVA, 2018, MOL ECOL                       MOL. ECOL.
+##                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        AB
+## DICKSON BG, 2019, CONSERV BIOL                                                                                                                                                                                                                                                                                                                                                                                                                       CONSERVATION PRACTITIONERS HAVE LONG RECOGNIZED ECOLOGICAL CONNECTIVITY AS A GLOBAL PRIORITY FOR PRESERVING BIODIVERSITY AND ECOSYSTEM FUNCTION. IN THE EARLY YEARS OF CONSERVATION SCIENCE, ECOLOGISTS EXTENDED PRINCIPLES OF ISLAND BIOGEOGRAPHY TO ASSESS CONNECTIVITY BASED ON SOURCE PATCH PROXIMITY AND OTHER METRICS DERIVED FROM BINARY MAPS OF HABITAT. FROM 2006 TO 2008, THE LATE BRAD MCRAE INTRODUCED CIRCUIT THEORY AS AN ALTERNATIVE APPROACH TO MODEL GENE FLOW AND THE DISPERSAL OR MOVEMENT ROUTES OF ORGANISMS. HE POSITED CONCEPTS AND METRICS FROM ELECTRICAL CIRCUIT THEORY AS A ROBUST WAY TO QUANTIFY MOVEMENT ACROSS MULTIPLE POSSIBLE PATHS IN A LANDSCAPE, NOT JUST A SINGLE LEAST-COST PATH OR CORRIDOR. CIRCUIT THEORY OFFERS MANY THEORETICAL, CONCEPTUAL, AND PRACTICAL LINKAGES TO CONSERVATION SCIENCE. WE REVIEWED 459 RECENT STUDIES CITING CIRCUIT THEORY OR THE OPEN-SOURCE SOFTWARE CIRCUITSCAPE. WE FOCUSED ON APPLICATIONS OF CIRCUIT THEORY TO THE SCIENCE AND PRACTICE OF CONNECTIVITY CONSERVATION, INCLUDING TOPICS IN LANDSCAPE AND POPULATION GENETICS, MOVEMENT AND DISPERSAL PATHS OF ORGANISMS, ANTHROPOGENIC BARRIERS TO CONNECTIVITY, FIRE BEHAVIOR, WATER FLOW, AND ECOSYSTEM SERVICES. CIRCUIT THEORY IS LIKELY TO HAVE AN EFFECT ON CONSERVATION SCIENCE AND PRACTITIONERS THROUGH IMPROVED INSIGHTS INTO LANDSCAPE DYNAMICS, ANIMAL MOVEMENT, AND HABITAT-USE STUDIES AND THROUGH THE DEVELOPMENT OF NEW SOFTWARE TOOLS FOR DATA ANALYSIS AND VISUALIZATION. THE INFLUENCE OF CIRCUIT THEORY ON CONSERVATION COMES FROM THE THEORETICAL BASIS AND ELEGANCE OF THE APPROACH AND THE POWERFUL COLLABORATIONS AND ACTIVE USER COMMUNITY THAT HAVE EMERGED. CIRCUIT THEORY PROVIDES A SPRINGBOARD FOR ECOLOGICAL UNDERSTANDING AND WILL REMAIN AN IMPORTANT CONSERVATION TOOL FOR RESEARCHERS AND PRACTITIONERS AROUND THE GLOBE.
+## ZHAO X, 2019, BIOL CONSERV                 CORRELATIONAL MODELS ARE WIDELY USED TO PREDICT CHANGES IN SPECIES' DISTRIBUTION, BUT GENERALLY HAVE FAILED TO ADDRESS THE COMPREHENSIVE EFFECTS OF ANTHROPOGENIC ACTIVITIES, CLIMATE CHANGE, HABITAT CONNECTIVITY AND GENE FLOW ON WILDLIFE SUSTAINABILITY. HERE, WE USED INTEGRATED APPROACHES (MAXENT MODEL, CIRCUIT MODEL AND GENETIC ANALYSIS) TO ASSESS AND PREDICT THE EFFECTS OF CLIMATE CHANGE AND ANTHROPOGENIC ACTIVITIES ON THE DISTRIBUTION, HABITAT CONNECTIVITY, AND GENETIC DIVERSITY OF AN ENDANGERED PRIMATE, RHINOPITHECUS BIETI, FROM 2000 TO 2050. WE CREATED SIX SCENARIOS: CLIMATIC FACTORS ONLY (SCENARIO-A), ANTHROPOGENIC ACTIVITIES ONLY (SCENARIO-B), CLIMATIC FACTORS AND ANTHROPOGENIC ACTIVITIES (SCENARIO-C), PLUS THREE ADDITIONAL SCENARIOS THAT INCLUDED CLIMATIC FACTORS AND ANTHROPOGENIC ACTIVITIES BUT CONTROLLED FOR INDIVIDUAL ANTHROPOGENIC ACTIVITIES (SCENARIO-D: GRAZING, SCENARIO E: COLLECTING, AND SCENARIO-F: GRAZING AND COLLECTING). THE RESULTS INDICATE THAT AREAS OF SUITABLE HABITAT FOR R. BIETI ARE EXPECTED TO DECLINE BY 8.0\\%-22.4\\% FROM 2000 TO 2050, WITH THE COLLECTION OF LOCAL FOREST PRODUCTS AND THE GRAZING OF DOMESTICATED CATTLE AS THE PRIMARY DRIVERS OF LANDSCAPE FRAGMENTATION AND RANGE CONTRACTION. IF THESE ANTHROPOGENIC ACTIVITIES ARE STRICTLY CONTROLLED, HOWEVER, THE AREA OF SUITABLE HABITAT IS PREDICTED TO INCREASE BY10.4\\%-14.3\\%. WE ALSO FOUND THAT HABITATS VULNERABLE TO HUMAN DISTURBANCE WERE PRINCIPALLY LOCATED IN AREAS OF LOW HABITAT CONNECTIVITY RESULTING IN LIMITED MIGRATION OPPORTUNITIES AND INCREASED LOSS OF GENETIC DIVERSITY AMONG R. BIETI LIVING IN THESE ISOLATED SUBPOPULATIONS. THUS, WE SUGGEST THAT EFFECTIVE MANAGEMENT POLICIES TO PROTECT THIS SPECIES INCLUDE PROHIBITING BOTH LIVESTOCK GRAZING AND THE COLLECTING OF FOREST PRODUCTS. ALTHOUGH OUR STUDY FOCUSES ON A SINGLE PRIMATE SPECIES, THE CONSERVATION MODELING APPROACHES WE PRESENTED HAVE WIDE APPLICABILITY TO A BROAD RANGE OF THREATENED MAMMALIAN AND AVIAN TAXA THAT CURRENTLY INHABIT A LIMITED GEOGRAPHIC RANGE AND ARE AFFECTED BY ANTHROPOGENIC ACTIVITIES (E.G. COLLECTING, GRAZING, HUNTING), LOSS OF HABITAT CONNECTIVITY, REDUCED GENETIC DIVERSITY, AND THE EFFECTS OF CLIMATE CHANGE.
+## BRUCE SA, 2018, ECOL EVOL                                                                                                                                                                                                                                                                                                                                                                                                                                                       AS ANTHROPOGENIC IMPACTS ACCELERATE CHANGES TO LANDSCAPES ACROSS THE GLOBE, UNDERSTANDING HOW GENETIC POPULATION STRUCTURE IS INFLUENCED BY HABITAT FEATURES AND DISPERSAL IS KEY TO PRESERVING EVOLUTIONARY POTENTIAL AT THE SPECIES LEVEL. FURTHERMORE, KNOWLEDGE OF THESE INTERACTIONS IS ESSENTIAL TO IDENTIFYING POTENTIAL CONSTRAINTS ON LOCAL ADAPTATION AND FOR THE DEVELOPMENT OF EFFECTIVE MANAGEMENT STRATEGIES. WE EXAMINED THESE ISSUES IN BROOK TROUT (SALVELINUS FONTINALIS) POPULATIONS RESIDING IN THE UPPER HUDSON RIVER WATERSHED OF NEW YORK STATE BY INVESTIGATING THE SPATIAL GENETIC STRUCTURE OF OVER 350 FISH COLLECTED FROM 14 DIFFERENT SAMPLING LOCATIONS ENCOMPASSING THREE RIVER SYSTEMS. POPULATION GENETIC ANALYSES OF MICROSATELLITE DATA SUGGEST THAT FISH IN THE AREA EXHIBIT VARYING DEGREES OF INTROGRESSION FROM NEARBY STATE-DIRECTED SUPPLEMENTATION ACTIVITIES. LEVELS OF INTROGRESSION IN THESE POPULATIONS CORRELATE WITH WATER-WAY DISTANCE TO STOCKING SITES, ALTHOUGH GENETIC POPULATION STRUCTURE AT THE LEVEL OF INDIVIDUAL TRIBUTARIES AS WELL AS THEIR LARGER, PARENT RIVER SYSTEMS IS ALSO DETECTABLE AND IS DICTATED BY MIGRATION AND INFLUENCED BY HABITAT CONNECTIVITY. THESE FINDINGS REPRESENT A SIGNIFICANT CONTRIBUTION TO THE CURRENT LITERATURE SURROUNDING BROOK TROUT MIGRATION AND DISPERSAL, ESPECIALLY AS IT RELATES TO LARGER INTERCONNECTED SYSTEMS. THIS WORK ALSO SUGGESTS THAT STOCKING ACTIVITIES MAY HAVE FAR-REACHING CONSEQUENCES THAT ARE NOT DIRECTLY LIMITED TO THE IMMEDIATE AREA WHERE STOCKING OCCURS. THE FRAMEWORK AND DATA PRESENTED HERE MAY AID IN THE DEVELOPMENT OF OTHER LOCAL AQUATIC SPECIES-FOCUSED CONSERVATION PLANS THAT INCORPORATE MOLECULAR TOOLS TO ANSWER COMPLEX QUESTIONS REGARDING DIVERSITY MAPPING, AND GENETICALLY IMPORTANT CONSERVATION UNITS.
+## ANTUNES B, 2018, CONSERV GENET                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      EXAMINING HISTORICAL AND CONTEMPORARY PROCESSES UNDERLYING CURRENT PATTERNS OF GENETIC VARIATION IS KEY TO RECONSTRUCT THE EVOLUTIONARY HISTORY OF SPECIES AND IMPLEMENT CONSERVATION MEASURES PROMOTING THEIR LONG-TERM PERSISTENCE. COMBINING PHYLOGEOGRAPHIC AND LANDSCAPE GENETIC APPROACHES CAN PROVIDE VALUABLE INSIGHTS, ESPECIALLY IN REGIONS HARBORING HIGH LEVELS OF BIODIVERSITY THAT ARE CURRENTLY THREATENED BY CLIMATE AND LAND COVER CHANGES, LIKE SOUTHERN IBERIA. WE USED GENETIC (MTDNA AND MICROSATELLITES) AND SPATIAL DATA (CLIMATE AND LAND COVER) TO INFER THE EVOLUTIONARY HISTORY AND CONTEMPORARY GENETIC CONNECTIVITY IN A SHORT-RANGE ENDEMIC SALAMANDER SUBSPECIES, SALAMANDRA SALAMANDRA LONGIROSTRIS, USING A COMBINATION OF ECOLOGICAL NICHE MODELLING, PHYLOGEOGRAPHIC, AND LANDSCAPE GENETIC ANALYSES. ECOLOGICAL-BASED ANALYSES SUPPORT A ROLE OF THE GUADALQUIVIR RIVER BASIN AS A MAJOR VICARIANT AGENT IN THIS TAXON. THE LOWER GENETIC DIVERSITY AND GREATER DIFFERENTIATION OF PERIPHERAL POPULATIONS, TOGETHER WITH ANALYSES OF CLIMATICALLY STABLE AREAS THROUGHOUT TIME, SUGGEST THE PERSISTENCE OF A POPULATION IN THE CENTRAL PART OF THE CURRENT RANGE SINCE THE LAST INTER GLACIAL [LIG, 120,000-140,000YEARS BP], AND A MICRO REFUGIUM IN THE EASTERN END OF THE RANGE. HABITAT HETEROGENEITY PLAYS A MAJOR ROLE IN SHAPING PATTERNS OF GENETIC DIFFERENTIATION IN S. S. LONGIROSTRIS, WITH FORESTS REPRESENTING KEY AREAS FOR ITS LONG-TERM PERSISTENCE UNDER SCENARIOS OF ENVIRONMENTAL CHANGE. OUR STUDY STRESSES THE IMPORTANCE OF MAINTAINING POPULATION GENETIC CONNECTIVITY IN LOW-DISPERSAL ORGANISMS UNDER RAPIDLY CHANGING ENVIRONMENTS, AND WILL INFORM MANAGEMENT PLANS FOR THE LONG-TERM SURVIVAL OF THIS EVOLUTIONARILY DISTINCT MEDITERRANEAN ENDEMIC.
+## CUERVO-ALARCON L, 2018, TREE GENET GENOMES                                                                                                                                                                                                                                                                                                                                                                                                                                                       EUROPEAN BEECH (FAGUS SYLVATICA L.) IS ONE OF THE MOST IMPORTANT FOREST TREE SPECIES IN EUROPE, AND ITS GENETIC ADAPTATION POTENTIAL TO CLIMATE CHANGE IS OF GREAT INTEREST. SAPLINGS AND ADULTS FROM 12 EUROPEAN BEECH POPULATIONS WERE SAMPLED ALONG TWO STEEP PRECIPITATION GRADIENTS IN SWITZERLAND. ALL INDIVIDUALS WERE GENOTYPED AT 13 MICROSATELLITE OR SIMPLE SEQUENCE REPEAT (SSR) MARKERS AND 70 SINGLE NUCLEOTIDE POLYMORPHISMS (SNPS) IN 24 CANDIDATE GENES POTENTIALLY INVOLVED IN STRESS RESPONSE AND PHENOLOGY. BOTH SSR AND SNP MARKERS REVEALED HIGH GENETIC DIVERSITY IN THE STUDIED POPULATIONS AND LOW BUT STATISTICALLY SIGNIFICANT POPULATION DIFFERENTIATION. THE SNPS WERE SEARCHED FOR F-ST OUTLIERS USING THREE DIFFERENT METHODS IMPLEMENTED IN LOSITAN, ARLEQUIN, AND BAYESCAN, RESPECTIVELY. ADDITIONALLY, ASSOCIATIONS OF THE SNPS WITH ENVIRONMENTAL VARIABLES WERE TESTED BY TWO METHODS IMPLEMENTED IN BAYENV2 AND SAMADA, RESPECTIVELY. THERE WERE 14 (20\\%) SNPS IN 12 (50\\%) CANDIDATE GENES IN THE SAPLINGS AND 9 (12.8\\%) SNPS IN 7 (29.2\\%) CANDIDATE GENES IN THE ADULTS CONSISTENTLY IDENTIFIED BY AT LEAST TWO OF THE FIVE METHODS USED, INDICATING THAT THEY ARE VERY LIKELY UNDER SELECTION. GENES WITH SNPS SHOWING SIGNATURES OF SELECTION ARE INVOLVED IN A WIDE RANGE OF MOLECULAR FUNCTIONS, SUCH AS OXIDOREDUCTASES (IDH), HYDROLASES (CYSPRO), TRANSFERASES (XTH), TRANSPORTERS (KT2), CHAPERONES (CP10), AND TRANSCRIPTION FACTORS (DAG, NAC TRANSCRIPTION FACTOR). THE OBTAINED DATA WILL HELP US BETTER UNDERSTAND THE GENETIC VARIATION UNDERLYING ADAPTATION TO ENVIRONMENTALLY CHANGING CONDITIONS IN EUROPEAN BEECH, WHICH IS OF GREAT IMPORTANCE FOR THE DEVELOPMENT OF SCIENTIFIC GUIDELINES FOR THE SUSTAINABLE MANAGEMENT AND CONSERVATION OF THIS IMPORTANT SPECIES.
+## SYLVESTER EVA, 2018, MOL ECOL                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           CONSERVATION OF EXPLOITED SPECIES REQUIRES AN UNDERSTANDING OF BOTH GENETIC DIVERSITY AND THE DOMINANT STRUCTURING FORCES, PARTICULARLY NEAR RANGE LIMITS, WHERE CLIMATIC VARIATION CAN DRIVE RAPID EXPANSIONS OR CONTRACTIONS OF GEOGRAPHIC RANGE. HERE, WE EXAMINE POPULATION STRUCTURE AND LANDSCAPE ASSOCIATIONS IN ATLANTIC SALMON (SALMO SALAR) ACROSS A HETEROGENEOUS LANDSCAPE NEAR THE NORTHERN RANGE LIMIT IN LABRADOR, CANADA. ANALYSIS OF TWO AMPLICON-BASED DATA SETS CONTAINING 101 MICROSATELLITES AND 376 SINGLE NUCLEOTIDE POLYMORPHISMS (SNPS) FROM 35 LOCATIONS REVEALED CLEAR DIFFERENTIATION BETWEEN POPULATIONS SPAWNING IN RIVERS FLOWING INTO A LARGE MARINE EMBAYMENT (LAKE MELVILLE) COMPARED TO COASTAL POPULATIONS. THE MECHANISMS INFLUENCING THE DIFFERENTIATION OF EMBAYMENT POPULATIONS WERE INVESTIGATED USING BOTH MULTIVARIATE AND MACHINE-LEARNING LANDSCAPE GENETIC APPROACHES. WE IDENTIFIED TEMPERATURE AS THE STRONGEST CORRELATE WITH GENETIC STRUCTURE, PARTICULARLY WARM TEMPERATURE EXTREMES AND WIDER ANNUAL TEMPERATURE RANGES. THE GENOMIC BASIS OF THIS DIVERGENCE WAS FURTHER EXPLORED USING A SUBSET OF LOCATIONS (N=17) AND A 220K SNP ARRAY. SNPS ASSOCIATED WITH SPATIAL STRUCTURING AND TEMPERATURE MAPPED TO A DIVERSE SET OF GENES AND MOLECULAR PATHWAYS, INCLUDING REGULATION OF GENE EXPRESSION, IMMUNE RESPONSE, AND CELL DEVELOPMENT AND DIFFERENTIATION. THE RESULTS SPANNING MOLECULAR MARKER TYPES AND BOTH NOVEL AND ESTABLISHED METHODS CLEARLY SHOW CLIMATE-ASSOCIATED, FINE-SCALE POPULATION STRUCTURE ACROSS AN ENVIRONMENTAL GRADIENT IN ATLANTIC SALMON NEAR ITS RANGE LIMIT IN NORTH AMERICA, HIGHLIGHTING VALUABLE APPROACHES FOR PREDICTING POPULATION RESPONSES TO CLIMATE CHANGE AND MANAGING SPECIES SUSTAINABILITY.
+##                                                                                                                                                                                                                                                                                                                                           DE
+## DICKSON BG, 2019, CONSERV BIOL             BARRIERS; CORRIDORS; DISPERSAL; ECOLOGICAL FLOW; ELECTRICAL CURRENT; LANDSCAPE GENETICS; BARRERAS; CORREDORES; CORRIENTE ELECTRICA; DISPERSION; FLUJO ECOLOGICO; GENETICA DEL PAISAJE; \\&\\#X969C;(SIC); \\&\\#X5ECA;(SIC); \\&\\#X6269;<SIC>; (SIC)(SIC)(SIC); (SIC)(SIC)(SIC)(SIC); (SIC)(SIC)
+## ZHAO X, 2019, BIOL CONSERV                                                                                                                                                                                                                 CLIMATE CHANGE; ANTHROPOGENIC ACTIVITIES; SPECIES' DISTRIBUTION; RANGE SHIFT; RHINOPITHECUS BIETI
+## BRUCE SA, 2018, ECOL EVOL                                                                                                                                                                                                                          DISPERSAL; GENE FLOW; INTROGRESSION; LANDSCAPE GENETICS; MIGRATION; SALVELINUS FONTINALIS
+## ANTUNES B, 2018, CONSERV GENET                                                                                                                                                                                                                                     AMPHIBIANS; CLIMATE CHANGE; CONNECTIVITY; INTEGRATIVE STUDIES; LAND COVER
+## CUERVO-ALARCON L, 2018, TREE GENET GENOMES                                                                                                                                                                                             ADAPTATION; CLIMATE CHANGE; ENVIRONMENTAL ASSOCIATION ANALYSIS; MICROSATELLITE; OUTLIER ANALYSIS; SNP
+## SYLVESTER EVA, 2018, MOL ECOL                                                                                                                                                                                                               ATLANTIC SALMON; CLIMATE CHANGE; LANDSCAPE GENETICS; PERIPHERAL POPULATIONS; POPULATION GENETICS
+##                                                                                                                                                                                                                         ID
+## DICKSON BG, 2019, CONSERV BIOL                PREDICTS GENE FLOW; LANDSCAPE CONNECTIVITY; HABITAT CONNECTIVITY; FUNCTIONAL CONNECTIVITY; REGIONAL CONNECTIVITY; CLIMATE-CHANGE; NEW-MODEL; DISPERSAL; MOVEMENT; RESISTANCE
+## ZHAO X, 2019, BIOL CONSERV                                         SNUB-NOSED MONKEYS; RHINOPITHECUS-BIETI; SPECIES DISTRIBUTION; LANDSCAPE GENETICS; CHANGE IMPACTS; DAY LENGTH; YUNNAN; POPULATION; TEMPERATURE; ECOLOGY
+## BRUCE SA, 2018, ECOL EVOL                                                CLIMATE-CHANGE; RE-IMPLEMENTATION; ATLANTIC SALMON; BETA REGRESSION; CONSERVATION; SOFTWARE; PROGRAMS; TRANSLOCATION; HYBRIDIZATION; BIODIVERSITY
+## ANTUNES B, 2018, CONSERV GENET                                                          POPULATION EXPANSION; CLIMATE-CHANGE; DIFFERENTIATION; CONSERVATION; DISPERSAL; SOFTWARE; CONNECTIVITY; AMPHIBIA; ECOLOGY; HABITAT
+## CUERVO-ALARCON L, 2018, TREE GENET GENOMES PINE PINUS-TAEDA; MICROSATELLITE MARKERS; LOCAL ADAPTATION; CLIMATE-CHANGE; CANDIDATE GENES; LANDSCAPE GENETICS; GENOME-SCAN; SPATIAL-PATTERNS; PRACTICAL GUIDE; VAR. MENZIESII
+## SYLVESTER EVA, 2018, MOL ECOL                    LANDSCAPE GENETICS; LOCAL ADAPTATION; SOCKEYE-SALMON; R-PACKAGE; PERIPHERAL-POPULATIONS; MICROSATELLITE LOCI; ONCORHYNCHUS-NERKA; RANDOM FORESTS; F-STATISTICS; SELECTION
+##                                                 LA      DT     DT2 TC
+## DICKSON BG, 2019, CONSERV BIOL             ENGLISH  REVIEW ARTICLE  0
+## ZHAO X, 2019, BIOL CONSERV                 ENGLISH ARTICLE ARTICLE  0
+## BRUCE SA, 2018, ECOL EVOL                  ENGLISH ARTICLE ARTICLE  0
+## ANTUNES B, 2018, CONSERV GENET             ENGLISH ARTICLE ARTICLE  0
+## CUERVO-ALARCON L, 2018, TREE GENET GENOMES ENGLISH ARTICLE ARTICLE  1
+## SYLVESTER EVA, 2018, MOL ECOL              ENGLISH ARTICLE ARTICLE  0
+##                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       CR
+## DICKSON BG, 2019, CONSERV BIOL                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    AHMADI M, 2017, DIVERS DISTRIB, V23, P592, DOI 10.1111/DDI.12560.;ANDERSON CD, 2010, MOL ECOL, V19, P3565, DOI 10.1111/J.1365-294X.2010.04757.X.;ANDERSON M. G., 2016, RESILIENT CONNECTED.;BEIER P, 2011, CONSERV BIOL, V25, P879, DOI 10.1111/J.1523-1739.2011.01716.X.;BELL RC, 2010, MOL ECOL, V19, P2531, DOI 10.1111/J.1365-294X.2010.04676.X.;BENNIE J, 2014, METHODS ECOL EVOL, V5, P534, DOI 10.1111/2041-210X.12182.;BEZANSON J, 2017, SIAM REV, V59, P65, DOI 10.1137/141000671.;BISHOP-TAYLOR R, 2015, LANDSCAPE ECOL, V30, P2045, DOI 10.1007/S10980-015-0230-4.;BLEYHL B, 2017, REMOTE SENS ENVIRON, V193, P193, DOI 10.1016/J.RSE.2017.03.001.;BRAAKER S, 2014, ECOL APPL, V24, P1583.;BRECKHEIMER I, 2014, CONSERV BIOL, V28, P1584, DOI 10.1111/COBI.12362.;BRODIE JF, 2015, CONSERV BIOL, V29, P122, DOI 10.1111/COBI.12337.;CASTILHO CS, 2015, ENVIRON MANAGE, V55, P1377, DOI 10.1007/S00267-015-0463-7.;CHANDRA A. K., 1996, COMPUTATIONAL COMPLEXITY, V6, P312, DOI 10.1007/BF01270385.;CREECH TG, 2017, PLOS ONE, V12, DOI 10.1371/JOURNAL.PONE.0176960.;CUSHMAN SA, 2010, LANDSCAPE ECOL, V25, P1613, DOI 10.1007/S10980-010-9534-6.;DAMBACH J, 2016, MAR ECOL-EVOL PERSP, V37, P1336, DOI 10.1111/MAEC.12343.;DICKSON BG, 2017, CONSERV LETT, V10, P564, DOI 10.1111/CONL.12322.;DICKSON BG, 2013, PLOS ONE, V8, DOI 10.1371/JOURNAL.PONE.0081898.;DILKINA B, 2017, CONSERV BIOL, V31, P192, DOI 10.1111/COBI.12814.;DONG XY, 2016, SCI REP-UK, V6, DOI 10.1038/SREP24711.;DOYLE PG, 1984, RANDOM WALKELECT N.;DUDANIEC RY, 2016, MOL ECOL, V25, P470, DOI 10.1111/MEC.13482.;DUTTA T, 2016, REG ENVIRON CHANGE, V16, P53, DOI 10.1007/S10113-015-0877-Z.;EPPS CW, 2011, DIVERS DISTRIB, V17, P603, DOI 10.1111/J.1472-4642.2011.00773.X.;FAGAN ME, 2016, ECOL APPL, V26, P1456, DOI 10.1890/14-2188.;FALKE JA, 2011, ECOHYDROLOGY, V4, P682, DOI 10.1002/ECO.158.;FETTER CW, 2001, APPL HYDROGEOLOGY.;GANTCHOFF MG, 2017, BIOL CONSERV, V214, P66, DOI 10.1016/J.BIOCON.2017.07.023.;GOULSON D, 2011, CONSERV GENET, V12, P867, DOI 10.1007/S10592-011-0190-4.;GRAFIUS DR, 2017, LANDSCAPE ECOL, V32, P1771, DOI 10.1007/S10980-017-0548-1.;GRAVES TA, 2013, MOL ECOL, V22, P3888, DOI 10.1111/MEC.12348.;GRAY ME, 2016, LANDSCAPE ECOL, V31, P1681, DOI 10.1007/S10980-016-0353-2.;GRAY ME, 2015, ECOL APPL, V25, P1099, DOI 10.1890/14-0367.1.;GUILLOT G, 2009, MOL ECOL, V18, P4734, DOI 10.1111/J.1365-294X.2009.04410.X.;HANKS EM, 2017, J AM STAT ASSOC, V112, P497, DOI 10.1080/01621459.2016.1224714.;HANKS EM, 2013, J AM STAT ASSOC, V108, P22, DOI 10.1080/01621459.2012.724647.;HARRIS L., 1984, FRAGMENTED FOREST IS.;HOWEY MCL, 2011, J ARCHAEOL SCI, V38, P2523, DOI 10.1016/J.JAS.2011.03.024.;HUNTINGTON JL, 2012, WATER RESOUR RES, V48, DOI 10.1029/2012WR012319.;INTERNATIONAL UNION FOR CONSERVATION OF NATURE (IUCN), 2017, CONNECTIVITY CONSERV.;JAFFE R, 2016, MOL ECOL, V25, P5345, DOI 10.1111/MEC.13852.;JAFFE R, 2016, CONSERV GENET, V17, P267, DOI 10.1007/S10592-015-0779-0.;JAQUIERY J, 2011, MOL ECOL, V20, P692, DOI 10.1111/J.1365-294X.2010.04966.X.;JARCHOW CJ, 2016, J HERPETOL, V50, P63, DOI 10.1670/14-172.;KEELEY ATH, 2017, LANDSCAPE URBAN PLAN, V161, P90, DOI 10.1016/J.LANDURBPLAN.2017.01.007.;KNAAPEN JP, 1992, LANDSCAPE URBAN PLAN, V23, P1, DOI 10.1016/0169-2046(92)90060-D.;KOEN EL, 2014, METHODS ECOL EVOL, V5, P626, DOI 10.1111/2041-210X.12197.;KOEN EL, 2012, MOL ECOL RESOUR, V12, P686, DOI 10.1111/J.1755-0998.2012.03123.X.;KOH I, 2013, ECOL APPL, V23, P1554, DOI 10.1890/12-1595.1.;KROSBY M, 2016, WASHINGTON BRIT COLU.;LANDER TA, 2013, LANDSCAPE ECOL, V28, P1769, DOI 10.1007/S10980-013-9920-Y.;LAWLER JJ, 2013, ECOL LETT, V16, P1014, DOI 10.1111/ELE.12132.;LAWLER JOSHUA, 2018, CONSERV BIOL, DOI 10.1111/COBI.13235.;LECHNER AM, 2017, LANDSCAPE ECOL, V32, P99, DOI 10.1007/S10980-016-0431-5.;LEGENDRE P, 2010, MOL ECOL RESOUR, V10, P831, DOI 10.1111/J.1755-0998.2010.02866.X.;LEONARD PB, 2017, ANIM CONSERV, V20, P80, DOI 10.1111/ACV.12289.;LEONARD PB, 2017, METHODS ECOL EVOL, V8, P519, DOI 10.1111/2041-210X.12689.;LITTLEFIELD CE, 2017, CONSERV BIOL, V31, P1397, DOI 10.1111/COBI.12938.;LITVAITIS JA, 2015, ENVIRON MANAGE, V55, P1366, DOI 10.1007/S00267-015-0468-2.;LOZIER JD, 2013, CONSERV GENET, V14, P1099, DOI 10.1007/S10592-013-0498-3.;LUCK GW, 2014, ECOL MANAG RESTOR, V15, P4, DOI 10.1111/EMR.12082.;MACARTHUR RH, 1967, ACTA BIOTHEOR, V50, P133.;MAIORANO L, 2017, BASIC APPL ECOL, V21, P66, DOI 10.1016/J.BAAE.2017.02.005.;MANEL S, 2013, TRENDS ECOL EVOL, V28, P614, DOI 10.1016/J.TREE.2013.05.012.;MARROTTE RR, 2017, MOV ECOL, V5, DOI 10.1186/S40462-017-0112-2.;MARROTTE RR, 2017, PLOS ONE, V12, DOI 10.1371/JOURNAL.PONE.0174212.;MATEO-SANCHEZ MC, 2014, ANIM CONSERV, V17, P430, DOI 10.1111/ACV.12109.;MATEO-SANCHEZ MC, 2015, ECOSPHERE, V6, DOI 10.1890/ES14-00387.1.;MCCLURE ML, 2017, ECOL EVOL, V7, P3762, DOI 10.1002/ECE3.2939.;MCCLURE ML, 2016, LANDSCAPE ECOL, V31, P1419, DOI 10.1007/S10980-016-0347-0.;MCRAE BH, 2013, CIRCUITSCAPE 4 USER.;MCRAE BH, 2009, CIRCUITSCAPE USERS G.;MCRAE BH, 2016, CONSERVING NATURES S.;MCRAE BH, 2008, ECOLOGY, V89, P2712, DOI 10.1890/07-1861.1.;MCRAE BH, 2007, P NATL ACAD SCI USA, V104, P19885, DOI 10.1073/PNAS.0706568104.;MCRAE BH, 2006, EVOLUTION, V60, P1551, DOI 10.1111/J.0014-3820.2006.TB00500.X.;MCRAE BH, 2012, PLOS ONE, V7, DOI 10.1371/JOURNAL.PONE.0052604.;MILEY GH, 1990, NUCL SIMULATION, P229.;NAIDOO R, 2018, BIOL CONSERV, V217, P96, DOI 10.1016/J.BIOCON.2017.10.037.;ORTEGO J, 2015, J BIOGEOGR, V42, P328, DOI 10.1111/JBI.12419.;PARKS LC, 2015, CONSERV GENET, V16, P1195, DOI 10.1007/S10592-015-0732-2.;PELLETIER D, 2014, PLOS ONE, V9, DOI 10.1371/JOURNAL.PONE.0084135.;PETKOVA D, 2016, NAT GENET, V48, P94, DOI 10.1038/NG.3464.;POOR EE, 2012, PLOS ONE, V7, DOI 10.1371/JOURNAL.PONE.0049390.;PROCTOR MF, 2015, J WILDLIFE MANAGE, V79, P544, DOI 10.1002/JWMG.862.;QURESHI Q, 2014, TR201402 NAT TIG CON.;RIZZO V, 2017, J BIOGEOGR, V44, P2527, DOI 10.1111/JBI.13074.;ROBINOVE CJ., 1962, 468 US DEP INT GEOL.;RODDER D, 2016, ENVIRON MANAGE, V58, P130, DOI 10.1007/S00267-016-0698-Y.;RUIZ-GONZALEZ A, 2015, MOL ECOL, V24, P5110, DOI 10.1111/MEC.13392.;SHAFROTH PB, 2010, FRESHWATER BIOL, V55, P68, DOI 10.1111/J.1365-2427.2009.02271.X.;SHIRK AJ, 2010, MOL ECOL, V19, P3603, DOI 10.1111/J.1365-294X.2010.04745.X.;SIMPKINS CE, 2018, ECOL MODEL, V367, P13, DOI 10.1016/J.ECOLMODEL.2017.11.001.;SINGH A, 2014, SCI TOTAL ENVIRON, V499, P414, DOI 10.1016/J.SCITOTENV.2014.05.048.;TARKHNISHVILI D, 2017, HUM BIOL, V88, P287, DOI 10.13110/HUMANBIOLOGY.88.4.0287.;TASSI F, 2015, INVESTIG GENET, V6, DOI 10.1186/S13323-015-0030-2.;THAYN JB, 2016, PROF GEOGR, V68, P595, DOI 10.1080/00330124.2015.1124787.;THEOBALD DM, 2012, CONSERV LETT, V5, P123, DOI 10.1111/J.1755-263X.2011.00218.X.;TILLMAN FD, 2016, J ARID ENVIRON, V124, P278, DOI 10.1016/J.JARIDENV.2015.09.005.;TORRUBIA S, 2014, FRONT ECOL ENVIRON, V12, P491, DOI 10.1890/130136.;TROMBULAK SC, 2000, CONSERV BIOL, V14, P18, DOI 10.1046/J.1523-1739.2000.99084.X.;UNITED NATIONS ENVIRONMENT PROGRAMME (UNEP), 2015, UNEP LAUNCH GLOB CON.;VELO-ANTON G, 2013, MOL ECOL, V22, P3261, DOI 10.1111/MEC.12310.;WALPOLE AA, 2012, LANDSCAPE ECOL, V27, P761, DOI 10.1007/S10980-012-9728-1.;WANG F, 2014, PLOS ONE, V9, DOI 10.1371/JOURNAL.PONE.0105086.;WASHINGTON WILDLIFE HABITAT CONNECTIVITY WORKING GROUP (WWHCWG), 2010, WASH CONN LANDSC PRO.;WELCH N, 2015, SGC1302 W ASS FISH W.;WITH KA, 1997, OIKOS, V78, P151, DOI 10.2307/3545811.;ZELLER KA, 2012, LANDSCAPE ECOL, V27, P777, DOI 10.1007/S10980-012-9737-0.;ZEPPENFELD T, 2017, PLOS ONE, V12, DOI 10.1371/JOURNAL.PONE.0182188.;ZIOLKOWSKA E, 2016, BIOL CONSERV, V195, P106, DOI 10.1016/J.BIOCON.2015.12.032.
+## ZHAO X, 2019, BIOL CONSERV                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            APTROOT A, 2009, CLIMATE CHANGE: OBSERVED IMPACTS ON PLANET EARTH, P401, DOI 10.1016/B978-0-444-53301-2.00023-3.;BALKENHOL N, 2011, MOL ECOL, V20, P667, DOI 10.1111/J.1365-294X.2010.04967.X.;BARBET-MASSIN M, 2012, METHODS ECOL EVOL, V3, P327, DOI 10.1111/J.2041-210X.2011.00172.X.;BEERLI P, 2001, P NATL ACAD SCI USA, V98, P4563, DOI 10.1073/PNAS.081068098.;BELLARD C, 2012, ECOL LETT, V15, P365, DOI 10.1111/J.1461-0248.2011.01736.X.;BENITEZ-LOPEZ A, 2017, SCIENCE, V356, P180, DOI 10.1126/SCIENCE.AAJ1891.;CHETKIEWICZ CLB, 2009, J APPL ECOL, V46, P1036, DOI 10.1111/J.1365-2664.2009.01686.X.;CLARK CJ, 2009, CONSERV BIOL, V23, P1281, DOI 10.1111/J.1523-1739.2009.01243.X.;CLELAND EE, 2012, ECOLOGY, V93, P1765, DOI 10.1890/11-1912.1.;CORD AF, 2014, ECOL MODEL, V272, P129, DOI 10.1016/J.ECOLMODEL.2013.09.011.;COZZOLINO R, 1992, PRIMATES, V33, P329, DOI 10.1007/BF02381194.;CROOKS KR, 2017, P NATL ACAD SCI USA, V114, P7635, DOI 10.1073/PNAS.1705769114.;CUI LW, 2006, J ZOOL, V270, P192, DOI 10.1111/J.1469-7998.2006.00137.X.;ELITH J, 2011, DIVERS DISTRIB, V17, P43, DOI 10.1111/J.1472-4642.2010.00725.X.;ELLIOT NB, 2014, J APPL ECOL, V51, P1169, DOI 10.1111/1365-2664.12282.;ELLIS EC, 2008, FRONT ECOL ENVIRON, V6, P439, DOI 10.1890/070062.;ESTRADA A, 2017, SCI ADV, V3, DOI 10.1126/SCIADV.1600946.;FERNANDEZ-JURICIC E, 2003, APPL ANIM BEHAV SCI, V84, P219, DOI 10.1016/J.APPLANIM.2003.08.004.;FOURCADE Y, 2018, GLOBAL ECOL BIOGEOGR, V27, P245, DOI 10.1111/GEB.12684.;FRID A, 2002, CONSERV ECOL, V6.;GOLDEWIJK K. K., 2016, EGU GEN ASS C.;GRUETER CC, 2008, INT J PRIMATOL, V29, P1121, DOI 10.1007/S10764-008-9299-9.;GRUETER CC, 2013, PRIMATES, V54, P125, DOI 10.1007/S10329-012-0333-3.;GRUETER CYRIL C., 2010, ZOOLOGICAL RESEARCH, V31, P516, DOI 10.3724/SP.J.1141.2010.05516.;GRUETER CC, 2009, AM J PHYS ANTHROPOL, V140, P700, DOI 10.1002/AJPA.21024.;GUISAN A, 2005, ECOL LETT, V8, P993, DOI 10.1111/J.1461-0248.2005.00792.X.;HANSKI I, 2013, P NATL ACAD SCI USA, V110, P12715, DOI 10.1073/PNAS.1311491110.;HE LJ, 2010, J EXP MAR BIOL ECOL, V385, P20, DOI 10.1016/J.JEMBE.2010.01.019.;HICKEY JR, 2013, BIODIVERS CONSERV, V22, P3085, DOI 10.1007/S10531-013-0572-7.;HUANG ZP, 2012, PRIMATES, V53, P237, DOI 10.1007/S10329-012-0305-7.;JAQUIERY J, 2011, MOL ECOL, V20, P692, DOI 10.1111/J.1365-294X.2010.04966.X.;KERR JT, 2015, SCIENCE, V349, P177, DOI 10.1126/SCIENCE.AAA7031.;KHATCHIKIAN C, 2011, MED VET ENTOMOL, V25, P268, DOI 10.1111/J.1365-2915.2010.00935.X.;KIRKPATRICK RC, 2010, EVOL ANTHROPOL, V19, P98, DOI 10.1002/EVAN.20259.;KIRKPATRICK RC, 1998, INT J PRIMATOL, V19, P13, DOI 10.1023/A:1020302809584.;KOEN EL, 2012, LANDSCAPE ECOL, V27, P29, DOI 10.1007/S10980-011-9675-2.;KUHL HS, 2017, AM J PRIMATOL, V79, DOI 10.1002/AJP.22681.;LAURANCE WF, 2015, CURR BIOL, V25, PR259, DOI 10.1016/J.CUB.2015.02.050.;LI BG, 2018, BIODIVERS CONSERV, V27, P3301, DOI 10.1007/S10531-018-1614-Y.;LI BBV, 2017, BIOL CONSERV, V216, P18, DOI 10.1016/J.BIOCON.2017.09.019.;LI L, 2015, ORYX, V49, P719, DOI 10.1017/S0030605313001397.;LI YIMING, 2005, SHENGWU DUOYANGXING, V13, P432, DOI 10.1360/BIODIV.050028.;LIU CR, 2005, ECOGRAPHY, V28, P385, DOI 10.1111/J.0906-7590.2005.03957.X.;LIU Z, 2007, MOL ECOL, V16, P3334, DOI 10.1111/J.1365-294X.2007.03383.X.;LIU ZJ, 2009, MOL ECOL, V18, P3831, DOI 10.1111/J.1365-294X.2009.04330.X.;LONG YC, 1994, PRIMATES, V35, P241, DOI 10.1007/BF02382060.;MANEL S, 2003, TRENDS ECOL EVOL, V18, P189, DOI 10.1016/S0169-5347(03)00008-9.;MARSHALL ANDREW J., 2009, P311.;MCCARTY JP, 2001, CONSERV BIOL, V15, P320, DOI 10.1046/J.1523-1739.2001.015002320.X.;MCRAE BH, 2009, CIRCUITSCAPE USERS G.;MCRAE BH, 2007, P NATL ACAD SCI USA, V104, P19885, DOI 10.1073/PNAS.0706568104.;PARMESAN C, 2003, NATURE, V421, P37, DOI 10.1038/NATURE01286.;PERES CA, 2003, CONSERV BIOL, V17, P521, DOI 10.1046/J.1523-1739.2003.01413.X.;PHILLIPS SJ, 2006, ECOL MODEL, V190, P231, DOI 10.1016/J.ECOLMODEL.2005.03.026.;PIMM SL, 2014, SCIENCE, V344, P987, DOI 10.1126/SCIENCE.1246752.;POLAINA E, 2016, DIVERS DISTRIB, V22, P881, DOI 10.1111/DDI.12452.;QUAN G.Q., 2002, RES GOLDEN MONKEY.;REHNUS M., 2018, GLOBAL CHANGE BIOL, P1.;REINERS WA, 1994, ECOL APPL, V4, P363, DOI 10.2307/1941940.;REN BP, 2008, INT J PRIMATOL, V29, P783, DOI 10.1007/S10764-008-9251-Z.;REN BP, 2009, AM J PRIMATOL, V71, P233, DOI 10.1002/AJP.20641.;ROEVER CL, 2014, DIVERS DISTRIB, V20, P322, DOI 10.1111/DDI.12164.;ROOT TL, 2003, NATURE, V421, P57, DOI 10.1038/NATURE01333.;SALMONA J, 2017, MOL ECOL, V26, P5203, DOI 10.1111/MEC.14173.;SANTIKA T, 2017, SCI REP-UK, V7, DOI 10.1038/S41598-017-04435-9.;SCHIPPER J, 2008, SCIENCE, V322, P225, DOI 10.1126/SCIENCE.1165115.;STEIDL RJ, 2000, ECOL APPL, V10, P258, DOI 10.1890/1051-0761(2000)010[0258:EEOHAB]2.0.CO,2.;THOMAS CD, 2004, NATURE, V427, P145, DOI 10.1038/NATURE02121.;TUANMU MN, 2013, NAT CLIM CHANGE, V3, P249, DOI [10.1038/NCLIMATE1727, 10.1038/NCLIMATE1727].;WALTHER GR, 2002, NATURE, V416, P389, DOI 10.1038/416389A.;WONG MHG, 2013, BIOL CONSERV, V158, P401, DOI 10.1016/J.BIOCON.2012.08.030.;WUETHRICH B, 2000, SCIENCE, V287, P793, DOI 10.1126/SCIENCE.287.5454.793.;XIANG ZF, 2010, CURR ZOOL, V56, P650.;XIAO W, 2003, INT J PRIMATOL, V24, P389, DOI 10.1023/A:1023009518806.;ZHAO XM, 2018, DIVERS DISTRIB, V24, P92, DOI 10.1111/DDI.12657.;ZIOLKOWSKA E, 2016, LANDSCAPE ECOL, V31, P1863, DOI 10.1007/S10980-016-0368-8.
+## BRUCE SA, 2018, ECOL EVOL                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     ABDUL-MUNEER PM, 2014, GENET RES INT, DOI 10.1155/2014/691759.;ADLARD RD, 2015, TRENDS PARASITOL, V31, P160, DOI 10.1016/J.PT.2014.11.001.;ALLENDORF FW, 2010, NAT REV GENET, V11, P697, DOI 10.1038/NRG2844.;ANTAO T, 2008, BMC BIOINFORMATICS, V9, DOI 10.1186/1471-2105-9-323.;ARAKI H, 2008, EVOL APPL, V1, P342, DOI 10.1111/J.1752-4571.2008.00026.X.;BAKER J. P., 1990, ORNLM1148 AD LAK SUR.;BRUCE SA, 2018, CONSERV GENET, V19, P71, DOI 10.1007/S10592-017-1019-6.;BUSHAR LM, 2014, COPEIA, P694, DOI 10.1643/CE-14-047.;CORNILLE A, 2015, EVOL APPL, V8, P373, DOI 10.1111/EVA.12250.;COUVET D, 2002, CONSERV BIOL, V16, P369, DOI 10.1046/J.1523-1739.2002.99518.X.;CRIBARI-NETO F, 2010, J STAT SOFTW, V34, P1.;CUNNINGHAM AA, 1996, CONSERV BIOL, V10, P349, DOI 10.1046/J.1523-1739.1996.10020349.X.;CURRY RA, 2002, T AM FISH SOC, V131, P551, DOI 10.1577/1548-8659(2002)131<0551:SATMOA>2.0.CO,2.;DANIELS RA, 2011, FISHERIES, V36, P179, DOI 10.1080/03632415.2011.564504.;DEWEBER JT, 2015, T AM FISH SOC, V144, P11, DOI 10.1080/00028487.2014.963256.;DO C, 2014, MOL ECOL RESOUR, V14, P209, DOI 10.1111/1755-0998.12157.;EARL DA, 2012, CONSERV GENET RESOUR, V4, P359, DOI 10.1007/S12686-011-9548-7.;EDMANDS S, 2007, MOL ECOL, V16, P463, DOI 10.1111/J.1365-294X.2006.03148.X.;EMERY L., 1985, REV FISH SPECIES INT, V45, P4.;EPA, 2015, 430R15001 EPA OFF AT.;EVANNO G, 2005, MOL ECOL, V14, P2611, DOI 10.1111/J.1365-294X.2005.02553.X.;EVANS PD, 2006, P NATL ACAD SCI USA, V103, P18178, DOI 10.1073/PNAS.0606966103.;EXCOFFIER L, 2010, MOL ECOL RESOUR, V10, P564, DOI 10.1111/J.1755-0998.2010.02847.X.;FAHRIG L, 2003, ANNU REV ECOL EVOL S, V34, P487, DOI 10.1146/ANNUREV.ECOLSYS.34.011802.132419.;FERRARI SLP, 2004, J APPL STAT, V31, P799, DOI 10.1080/0266476042000214501.;FICKE AD, 2007, REV FISH BIOL FISHER, V17, P581, DOI 10.1007/S11160-007-9059-5.;FRASER DJ, 2008, EVOL APPL, V1, P535, DOI 10.1111/J.1752-4571.2008.00036.X.;GAO KS, 2012, NAT CLIM CHANGE, V2, P519, DOI 10.1038/NCLIMATE1507.;GARCIA DE LEANIZ C, 2007, BIOL REV, V82, P173, DOI 10.1111/J.1469-185X.2006.00004.X.;GAUGHAN DJ, 2001, REV FISH BIOL FISHER, V11, P113, DOI 10.1023/A:1015255900836.;GOUDET J, 2001, FSTAT PROGRAM ESTIMA.;GREELEY J. R., 1955, PROGR FISH CULTURIST, V17, P89, DOI [10. 1577/1548-8659(1955)17[89:ASSONY]2. 0. CO,2, DOI 10.1577/1548-8659(1955)17[89:ASS0NY]2.0.C0,2].;GUO SW, 1992, BIOMETRICS, V48, P361, DOI 10.2307/2532296.;HOLT RD, 1997, AM NAT, V149, P563, DOI 10.1086/286005.;HUDY M, 2010, T AM FISH SOC, V139, P1276, DOI 10.1577/T10-027.1.;INOUE K, 2015, MOL ECOL, V24, P1910, DOI 10.1111/MEC.13156.;KANNO Y, 2011, CONSERV GENET, V12, P619, DOI 10.1007/S10592-010-0166-9.;KING TL, 2012, CONSERV GENET RESOUR, V4, P539, DOI 10.1007/S12686-012-9603-Z.;KOPELMAN NM, 2015, MOL ECOL RESOUR, V15, P1179, DOI 10.1111/1755-0998.12387.;LAIKRE L, 2005, AMBIO, V34, P111, DOI 10.1639/0044-7447(2005)034[0111:GPSOFI]2.0.CO,2.;LAIKRE L, 1996, AMBIO, V25, P504.;LAIKRE L, 2010, TRENDS ECOL EVOL, V25, P520, DOI 10.1016/J.TREE.2010.06.013.;LOUKMASA J., 2015, REV RIVER STREAM BLA.;MERRIAM ER, 2017, SCI TOTAL ENVIRON, V607, P1225, DOI 10.1016/J.SCITOTENV.2017.07.049.;NYSDEC, 2010, RECL TROUT PONDS E A.;NYSDEC, 2017, SEARCH FISH STOCK 20.;ODELL T. T., 1932, T AM FISH SOC, V62, P331, DOI [10. 1577/1548-8659(1932)62[331:TDDOCS]2. 0. CO,2, DOI 10.1577/1548-8659(1932)62[331:TDD0CS]2.0.C0,2].;OZEROV MY, 2016, MOL ECOL, V25, P1275, DOI 10.1111/MEC.13570.;PERKINS D. L., 1993, HERITAGE BROOK TROUT.;PERKINS DL, 1993, T AM FISH SOC, V122, P515, DOI 10.1577/1548-8659(1993)122<0515:HBTINU>2.3.CO,2.;PRITCHARD JK, 2000, GENETICS, V155, P945.;RHYMER JM, 1996, ANNU REV ECOL SYST, V27, P83, DOI 10.1146/ANNUREV.ECOLSYS.27.1.83.;ROUSSET F, 1997, GENETICS, V145, P1219.;ROUSSET F, 2008, MOL ECOL RESOUR, V8, P103, DOI 10.1111/J.1471-8286.2007.01931.X.;RYMAN N, 1991, CONSERV BIOL, V5, P325, DOI 10.1111/J.1523-1739.1991.TB00144.X.;SCHWARTZ MK, 2007, TRENDS ECOL EVOL, V22, P25, DOI 10.1016/J.TREE.2006.08.009.;SEXTON JP, 2014, EVOLUTION, V68, P1, DOI 10.1111/EVO.12258.;SHEDS DEVELOPMENT TEAM, 2017, SHEDS STREAM TEMP DA.;TEIXEIRA CP, 2007, ANIM BEHAV, V73, P1, DOI 10.1016/J.ANBEHAV.2006.06.002.;TYERS M. B., 2016, RIVERDIST RIVER NETW.;VAN OFFELEN HENRY K., 1993, NORTH AMERICAN JOURNAL OF FISHERIES MANAGEMENT, V13, P86, DOI 10.1577/1548-8675(1993)013<0086:SGMADO>2.3.CO,2.;WANG JL, 2017, MOL ECOL RESOUR, V17, P981, DOI 10.1111/1755-0998.12650.;WEBSTER DA, 1981, CAN J FISH AQUAT SCI, V38, P1701, DOI 10.1139/F81-218.;WEIR BS, 1984, EVOLUTION, V38, P1358, DOI 10.1111/J.1558-5646.1984.TB05657.X.;WILSON GA, 2003, GENETICS, V163, P1177.;YOUNG A, 1996, TRENDS ECOL EVOL, V11, P413, DOI 10.1016/0169-5347(96)10045-8.
+## ANTUNES B, 2018, CONSERV GENET                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         ALCOBENDAS M, 2000, HERPETOLOGICA, V56, P14.;ALLENDORF F. W., 2013, CONSERVATION GENETIC.;ALVAREZ D, 2015, CONSERV GENET RESOUR, V7, P705, DOI 10.1007/S12686-015-0480-0.;[ANONYMOUS], 2015, R LANG ENV STAT COMP.;[ANONYMOUS], 2012, ARCGIS 10 1.;BAGUETTE M, 2013, BIOL REV, V88, P310, DOI 10.1111/BRV.12000.;BENJAMINI Y, 1995, J R STAT SOC B, V57, P289.;BEUKEMA W, 2016, J ZOOL SYST EVOL RES, V54, P127, DOI 10.1111/JZS.12119.;CARVALHO SB, 2017, NAT ECOL EVOL, V1, DOI 10.1038/S41559-017-0151.;CARVALHO SB, 2011, BIOL CONSERV, V144, P2020, DOI 10.1016/J.BIOCON.2011.04.024.;CHYBICKI IJ, 2009, J HERED, V100, P106, DOI 10.1093/JHERED/ESN088.;CUSHMAN SA, 2006, BIOL CONSERV, V128, P231, DOI 10.1016/J.BIOCON.2005.09.031.;DARRIBA D, 2012, NAT METHODS, V9, P772, DOI 10.1038/NMETH.2109.;DIAS G, 2015, CONSERV GENET, V16, P459, DOI 10.1007/S10592-014-0672-2.;DIAZ-RODRIGUEZ J, 2015, MOL PHYLOGENET EVOL, V83, P224, DOI 10.1016/J.YMPEV.2014.12.007.;DONAIRE-BARROSO D, 2009, BUTLL SOC CAT HERP, V18, P10.;DORMANN CF, 2013, ECOGRAPHY, V36, P27, DOI 10.1111/J.1600-0587.2012.07348.X.;DRUMMOND AJ, 2012, MOL BIOL EVOL, V29, P1969, DOI 10.1093/MOLBEV/MSS075.;DYER RJ, 2004, MOL ECOL, V13, P1713, DOI 10.1111/J.1365-294X.2004.02177.X.;DYER RJ, 2014, GSTUDIO PACKAGE SPAT.;EARL DA, 2012, CONSERV GENET RESOUR, V4, P359, DOI 10.1007/S12686-011-9548-7.;EGEA-SERRANO A, 2006, HYDROBIOLOGIA, V560, P363, DOI 10.1007/S10750-005-1589-Z.;ELITH J, 2010, METHODS ECOL EVOL, V1, P330, DOI 10.1111/J.2041-210X.2010.00036.X.;ESCORIZA D, 2014, ACTA HERPETOL, V9, P33.;EVANNO G, 2005, MOL ECOL, V14, P2611, DOI 10.1111/J.1365-294X.2005.02553.X.;EXCOFFIER L, 2009, ANNU REV ECOL EVOL S, V40, P481, DOI 10.1146/ANNUREV.ECOLSYS.39.110707.173414.;FERREIRA M, 2013, BIOL CONSERV, V165, P179, DOI 10.1016/J.BIOCON.2013.05.029.;FOURCADE Y, 2014, PLOS ONE, V9, DOI 10.1371/JOURNAL.PONE.0097122.;FRANCIS RM, 2017, MOL ECOL RESOUR, V17, P27, DOI 10.1111/1755-0998.12509.;FRANKHAM R, 2005, BIOL CONSERV, V126, P131, DOI 10.1016/J.BIOCON.2005.05.002.;FROST DR, 2018, AMPHIBIAN SPECIES WO.;GARCIA-PARIS M, 1998, COPEIA, P173, DOI 10.2307/1447714.;GARCIA-PARIS M, 2003, EVOLUTION, V57, P129.;GONCALVES H, 2009, MOL ECOL, V18, P5143, DOI 10.1111/J.1365-294X.2009.04426.X.;GUTIERREZ-RODRIGUEZ J, 2017, MOL ECOL, V26, P5407, DOI 10.1111/MEC.14272.;GUTIERREZ-RODRIGUEZ J, 2017, J BIOGEOGR, V44, P245, DOI 10.1111/JBI.12791.;HE QX, 2013, EVOLUTION, V67, P3386, DOI 10.1111/EVO.12159.;HENDRIX R, 2017, MOL ECOL, V26, P6400, DOI 10.1111/MEC.14345.;HIJMANS RJ, 2005, INT J CLIMATOL, V25, P1965, DOI 10.1002/JOC.1276.;JOGER ULRICH, 1994, ABHANDLUNGEN UND BERICHTE FUER NATURKUNDE, V17, P83.;JOMBART T, 2008, HEREDITY, V101, P92, DOI 10.1038/HDY.2008.34.;JOMBART T, 2010, BMC GENET, V11, DOI 10.1186/1471-2156-11-94.;JONES OR, 2010, MOL ECOL RESOUR, V10, P551, DOI 10.1111/J.1755-0998.2009.02787.X.;KALINOWSKI ST, 2005, MOL ECOL NOTES, V5, P187, DOI 10.1111/J.1471-8286.2004.00845.X.;KEENAN K, 2013, METHODS ECOL EVOL, V4, P782, DOI 10.1111/2041-210X.12067.;KONOWALIK A, 2016, AMPHIBIA-REPTILIA, V37, P405, DOI 10.1163/15685381-00003071.;LEE CR, 2011, MOL ECOL, V20, P4631, DOI 10.1111/J.1365-294X.2011.05310.X.;LEGENDRE P, 2010, MOL ECOL RESOUR, V10, P831, DOI 10.1111/J.1755-0998.2010.02866.X.;LOURENCO A, 2017, MOL ECOL, V26, P1498, DOI 10.1111/MEC.14019.;MARTINEZ-FREIRIA F, 2015, DIVERS DISTRIB, V21, P331, DOI 10.1111/DDI.12265.;MCRAE BH, 2008, ECOLOGY, V89, P2712, DOI 10.1890/07-1861.1.;MCRAE BH, 2006, EVOLUTION, V60, P1551, DOI 10.1111/J.0014-3820.2006.TB00500.X.;MILLER MA, 2010, GAT COMP ENV WORKSH, V14, P1, DOI DOI 10.1109/GCE.2010.5676129.;MUNOZ-PAJARES AJ, 2017, MOL ECOL, V26, P1576, DOI 10.1111/MEC.13971.;MYERS N, 2000, NATURE, V403, P853, DOI 10.1038/35002501.;NAJBAR A, 2015, AMPHIBIA-REPTILIA, V36, P301, DOI 10.1163/15685381-00003005.;NOGUERALES V, 2016, J EVOLUTION BIOL, V29, P2129, DOI 10.1111/JEB.12915.;PEAKALL R, 2012, BIOINFORMATICS, V28, P2537, DOI 10.1093/BIOINFORMATICS/BTS460.;PEREIRA P, 2018, J BIOGEOGR, V45, P2202, DOI 10.1111/JBI.13412.;PETERMAN W, 2016, PEERJ, V4, DOI 10.7717/PEERJ.1813.;PHILLIPS SJ, 2006, ECOL MODEL, V190, P231, DOI 10.1016/J.ECOLMODEL.2005.03.026.;PLEGUEZUELOS JM, 2004, ATLAS LIBRO ROJO ANF.;PRITCHARD JK, 2000, GENETICS, V155, P945.;PRUNIER JG, 2015, MOL ECOL, V24, P263, DOI 10.1111/MEC.13029.;QUELLER DC, 1989, EVOLUTION, V43, P258, DOI 10.1111/J.1558-5646.1989.TB04226.X.;RAZGOUR O, 2018, MOL ECOL RESOUR, V18, P18, DOI 10.1111/1755-0998.12694.;RISSLER LJ, 2016, P NATL ACAD SCI USA, V113, P8079, DOI 10.1073/PNAS.1601073113.;ROMERO D, 2013, ENVIRON CONSERV, V40, P48, DOI 10.1017/S0376892912000227.;ROUSSET F, 2008, MOL ECOL RESOUR, V8, P103, DOI 10.1111/J.1471-8286.2007.01931.X.;SANCHEZ-MONTES G, 2017, J HERED, V108, P535, DOI 10.1093/JHERED/ESX038.;SANTOS X, 2012, J ZOOL SYST EVOL RES, V50, P210, DOI 10.1111/J.1439-0469.2012.00663.X.;SEXTON JP, 2014, EVOLUTION, V68, P1, DOI 10.1111/EVO.12258.;SMITH MA, 2005, ECOGRAPHY, V28, P110.;STEINFARTZ S, 2004, MOL ECOL NOTES, V4, P626, DOI 10.1111/J.1471-8286.2004.00716.X.;STEINFARTZ S, 2000, MOL ECOL, V9, P397, DOI 10.1046/J.1365-294X.2000.00870.X.;STUART SN, 2004, SCIENCE, V306, P1783, DOI 10.1126/SCIENCE.1103538.;TODD BD, 2009, J APPL ECOL, V46, P554, DOI 10.1111/J.1365-2664.2009.01645.X.;VAN OOSTERHOUT C, 2004, MOL ECOL NOTES, V4, P535, DOI 10.1111/J.1471-8286.2004.00684.X.;VELO-ANTON G, 2013, MOL ECOL, V22, P3261, DOI 10.1111/MEC.12310.;VELO-ANTON G, 2012, MOL PHYLOGENET EVOL, V65, P965, DOI 10.1016/J.YMPEV.2012.08.016.;VELO-ANTON G, 2012, HEREDITY, V108, P410, DOI 10.1038/HDY.2011.91.;VELO-ANTON G, 2015, ENCICLOPEDIA VIRTUAL.;VELO-ANTON G, 2015, EVOL ECOL, V29, P185, DOI 10.1007/S10682-014-9720-0.;VENCES M, 2014, MOL PHYLOGENET EVOL, V73, P208, DOI 10.1016/J.YMPEV.2013.12.009.;WANG IJ, 2014, MOL ECOL, V23, P5649, DOI 10.1111/MEC.12938.;WANG IJ, 2013, EVOLUTION, V67, P3403, DOI 10.1111/EVO.12134.;WANG IJ, 2013, ECOL LETT, V16, P175, DOI 10.1111/ELE.12025.;WANG JL, 2018, MOL ECOL RESOUR, V18, P41, DOI 10.1111/1755-0998.12708.;WEIR BS, 1984, EVOLUTION, V38, P1358, DOI 10.1111/J.1558-5646.1984.TB05657.X.;WRIGHT S, 1943, GENETICS, V28, P114.;ZELLMER AJ, 2009, MOL ECOL, V18, P3593, DOI 10.1111/J.1365-294X.2009.04305.X.;ZHANG P, 2008, MOL PHYLOGENET EVOL, V49, P586, DOI 10.1016/J.YMPEV.2008.08.020.;ZHANG YH, 2016, SCI REP-UK, V6, DOI 10.1038/SREP24041.;ZUUR AF, 2010, METHODS ECOL EVOL, V1, P3, DOI 10.1111/J.2041-210X.2009.00001.X.
+## CUERVO-ALARCON L, 2018, TREE GENET GENOMES AHRENS CW, 2018, MOL ECOL, V27, P1342, DOI 10.1111/MEC.14549.;AITKEN SN, 2008, EVOL APPL, V1, P95, DOI 10.1111/J.1752-4571.2007.00013.X.;ALBERTO FJ, 2013, GENETICS, V195, P495, DOI 10.1534/GENETICS.113.153783.;ALLEN CD, 2010, FOREST ECOL MANAG, V259, P660, DOI 10.1016/J.FORECO.2009.09.001.;ALVAREZ N, 2009, ECOL LETT, V12, P632, DOI 10.1111/J.1461-0248.2009.01312.X.;ANTAO T, 2008, BMC BIOINFORMATICS, V9, DOI 10.1186/1471-2105-9-323.;APWEILER R, 2004, NUCLEIC ACIDS RES, V32, PD115, DOI 10.1093/NAR/GKH131.;AREND M, 2016, TREE PHYSIOL, V36, P78, DOI 10.1093/TREEPHYS/TPV087.;ASUKA Y, 2004, MOL ECOL NOTES, V4, P101, DOI 10.1046/J.1471-8286.2003.00583.X.;BALDING DJ, 2006, NAT REV GENET, V7, P781, DOI 10.1038/NRG1916.;BARRETT LW, 2012, CELL MOL LIFE SCI, V69, P3613, DOI 10.1007/S00018-012-0990-9.;BARUCK J, 2016, GEODERMA, V264, P312, DOI 10.1016/J.GEODERMA.2015.08.005.;BEAUMONT MA, 1996, P ROY SOC B-BIOL SCI, V263, P1619, DOI 10.1098/RSPB.1996.0237.;BEGUERIA S, 2017, SPEI CALCULATION STA.;BELMONTE J, 2008, INT J BIOMETEOROL, V52, P675, DOI 10.1007/S00484-008-0160-9.;BENISTON M, 2007, GLOBAL PLANET CHANGE, V57, P1, DOI 10.1016/J.GLOPLACHA.2006.11.004.;BENJAMINI Y, 1995, J R STAT SOC B, V57, P289.;BLAIR LM, 2014, HUM GENOMICS, V8, DOI 10.1186/1479-7364-8-1.;BONTEMPS A, 2013, FOREST ECOL MANAG, V305, P67, DOI 10.1016/J.FORECO.2013.05.033.;BUGMANN H, 2014, CH 2014 IMPACTS QUAN, P79.;BUITEVELD J, 2007, FOREST ECOL MANAG, V247, P98, DOI 10.1016/J.FORECO.2007.04.018.;CHAMARY JV, 2006, NAT REV GENET, V7, P98, DOI 10.1038/NRG1770.;CHMURA DJ, 2011, FOREST ECOL MANAG, V261, P1121, DOI 10.1016/J.FORECO.2010.12.040.;CHRISTMAS MJ, 2016, MOL ECOL, V25, P4216, DOI 10.1111/MEC.13750.;COOP G, 2010, GENETICS, V185, P1411, DOI 10.1534/GENETICS.110.114819.;CROOKSTON NL, 2010, FOREST ECOL MANAG, V260, P1198, DOI 10.1016/J.FORECO.2010.07.013.;CSILLERY K, 2014, MOL ECOL, V23, P4696, DOI 10.1111/MEC.12902.;CUSHMAN SA, 2010, MOL ECOL, V19, P3592, DOI 10.1111/J.1365-294X.2010.04656.X.;DE MITA S, 2013, MOL ECOL, V22, P1383, DOI 10.1111/MEC.12182.;DE VILLEMEREUIL P, 2014, MOL ECOL, V23, P2006, DOI 10.1111/MEC.12705.;DELL INC, 2015, DELL STAT DAT AN SOF.;DING KY, 2005, BMC BIOINFORMATICS, V6, DOI 10.1186/1471-2105-6-38.;DURAND J, 2010, BMC GENOMICS, V11, DOI 10.1186/1471-2164-11-570.;EARL DA, 2012, CONSERV GENET RESOUR, V4, P359, DOI 10.1007/S12686-011-9548-7.;ECKERT AJ, 2010, GENETICS, V185, P969, DOI 10.1534/GENETICS.110.115543.;ECKERT AJ, 2010, MOL ECOL, V19, P3789, DOI 10.1111/J.1365-294X.2010.04698.X.;ECKERT AJ, 2009, GENETICS, V182, P1289, DOI [10.1534/GENETICS.108.102350, 10.1534/GENETICS.109.102350].;ELLENBERG H.H., 1988, VEGETATION ECOLOGY C.;ELLIS JR, 2007, HEREDITY, V99, P125, DOI 10.1038/SJ.HDY.6801001.;EMILIANI G., 2004, GENET SLOVAK REPUB, V10, P231.;EVANNO G, 2005, MOL ECOL, V14, P2611, DOI 10.1111/J.1365-294X.2005.02553.X.;EXCOFFIER L, 2009, HEREDITY, V103, P285, DOI 10.1038/HDY.2009.74.;EXCOFFIER L, 2010, MOL ECOL RESOUR, V10, P564, DOI 10.1111/J.1755-0998.2010.02847.X.;FANG JY, 2006, J BIOGEOGR, V33, P1804, DOI 10.1111/J.1365-2699.2006.01533.X.;FISCHER MC, 2017, BMC GENOMICS, V18, DOI 10.1186/S12864-016-3459-7.;FOLL M, 2008, GENETICS, V180, P977, DOI 10.1534/GENETICS.108.092221.;FU WQ, 2013, ANNU REV GENOM HUM G, V14, P467, DOI 10.1146/ANNUREV-GENOM-091212-153509.;FYON F, 2015, PLOS GENET, V11, DOI 10.1371/JOURNAL.PGEN.1005665.;GARTNER S, 2008, J VEG SCI, V19, P757, DOI 10.3170/2008-8-18442.;GOUDET J, 1995, J HERED, V86, P485, DOI 10.1093/OXFORDJOURNALS.JHERED.A111627.;GRIVET D, 2011, MOL BIOL EVOL, V28, P101, DOI 10.1093/MOLBEV/MSQ190.;GUNTHER T, 2013, GENETICS, V195, P205, DOI 10.1534/GENETICS.113.152462.;HOLDEREGGER R, 2006, LANDSCAPE ECOL, V21, P793, DOI 10.1007/S10980-005-6058-6.;HOLDEREGGER R, 2010, TRENDS PLANT SCI, V15, P675, DOI 10.1016/J.TPLANTS.2010.09.002.;HUBISZ MJ, 2009, MOL ECOL RESOUR, V9, P1322, DOI 10.1111/J.1755-0998.2009.02591.X.;INGVARSSON PK, 2011, NEW PHYTOL, V189, P909, DOI 10.1111/J.1469-8137.2010.03593.X.;JAHN G, 1991, ECOSYSTEMS WORLD, V7, P377.;JEFFREYS H., 1961, THEORY PROBABILITY.;JUMP AS, 2007, MOL ECOL, V16, P925, DOI 10.1111/J.1365-294X.2006.03203.X.;JUMP AS, 2006, MOL ECOL, V15, P3469, DOI 10.1111/J.1365-294X.2006.03027.X.;KALINOWSKI ST, 2005, MOL ECOL NOTES, V5, P187, DOI 10.1111/J.1471-8286.2004.00845.X.;KIRK H, 2011, INT J MOL SCI, V12, P3966, DOI 10.3390/IJMS12063966.;KOMAR AA, 2007, SCIENCE, V315, P466, DOI 10.1126/SCIENCE.1138239.;KONIJNENDIJK N, 2015, ECOL EVOL, V5, P4174, DOI 10.1002/ECE3.1671.;KOPELMAN NM, 2015, MOL ECOL RESOUR, V15, P1179, DOI 10.1111/1755-0998.12387.;KOVATS RS, 2014, CLIMATE CHANGE 2014: IMPACTS, ADAPTATION, AND VULNERABILITY, PT B: REGIONAL ASPECTS, P1267.;KRAJ W, 2009, ANN FOREST SCI, V66, DOI 10.1051/FOREST/2008085.;KRAJMEROVA D, 2017, NEW FOREST, V48, P463, DOI 10.1007/S11056-017-9573-9.;KRAMER K, 2010, FOREST ECOL MANAG, V259, P2213, DOI 10.1016/J.FORECO.2009.12.023.;KREMER A, 2012, ECOL LETT, V15, P378, DOI 10.1111/J.1461-0248.2012.01746.X.;KRUTOVSKY KV, 2009, TREE GENET GENOMES, V5, P641, DOI 10.1007/S11295-009-0216-Y.;LALAGUE H, 2014, TREE GENET GENOMES, V10, P15, DOI 10.1007/S11295-013-0658-0.;LAMESCH P, 2012, NUCLEIC ACIDS RES, V40, PD1202, DOI 10.1093/NAR/GKR1090.;LEFEVRE S, 2012, MOL ECOL RESOUR, V12, P484, DOI 10.1111/J.1755-0998.2011.03094.X.;LEWONTIN RC, 1973, GENETICS, V74, P175.;LI JR, 2012, MOL ECOL, V21, P28, DOI 10.1111/J.1365-294X.2011.05308.X.;LOTTERHOS KE, 2015, MOL ECOL, V24, P1031, DOI 10.1111/MEC.13100.;MALIVA R., 2012, ARID LANDS WATER EVA, DOI [10.1007/978-3-642-29104-3, DOI 10.1007/978-3-642-29104-3\\_].;MANEL S, 2010, MOL ECOL, V19, P3824, DOI 10.1111/J.1365-294X.2010.04716.X.;MANEL S, 2012, MOL ECOL, V21, P3729, DOI 10.1111/J.1365-294X.2012.05656.X.;MCCUNE B, 2002, J VEG SCI, V13, P603, DOI 10.1111/J.1654-1103.2002.TB02087.X.;MEIRMANS PG, 2011, MOL ECOL RESOUR, V11, P5, DOI 10.1111/J.1755-0998.2010.02927.X.;MEIRMANS PG, 2004, MOL ECOL NOTES, V4, P792, DOI 10.1111/J.1471-8286.2004.00770.X.;MORIN PA, 2004, TRENDS ECOL EVOL, V19, P208, DOI 10.1016/J.TREE.2004.01.009.;MULLER M, 2015, SILVAE GENET, V64, P1, DOI 10.1515/SG-2015-0001.;MULLER M, 2015, TREE GENET GENOMES, V11, DOI 10.1007/S11295-015-0943-1.;MULLER M, 2013, THESIS.;NAMROUD MC, 2008, MOL ECOL, V17, P3599, DOI 10.1111/J.1365-294X.2008.03840.X.;NARUM SR, 2011, MOL ECOL RESOUR, V11, P184, DOI 10.1111/J.1755-0998.2011.02987.X.;ODDOU-MURATORIO S, 2011, MOL ECOL, V20, P1997, DOI 10.1111/J.1365-294X.2011.05039.X.;PAFFETTI D, 2012, FOREST ECOL MANAG, V284, P34, DOI 10.1016/J.FORECO.2012.07.026.;PAGANI F, 2005, P NATL ACAD SCI USA, V102, P6368, DOI 10.1073/PNAS.0502288102.;PASTORELLI R, 2003, MOL ECOL NOTES, V3, P76, DOI 10.1046/J.1471-8286.2003.00355.X.;PEAKALL R, 2006, MOL ECOL NOTES, V6, P288, DOI 10.1111/J.1471-8286.2005.01155.X.;PEAKALL R, 2012, BIOINFORMATICS, V28, P2537, DOI 10.1093/BIOINFORMATICS/BTS460.;PETIT RJ, 2006, ANNU REV ECOL EVOL S, V37, P187, DOI 10.1146/ANNUREV.ECOLSYS.37.091305.110215.;PIEDALLU C, 2013, GLOBAL ECOL BIOGEOGR, V22, P470, DOI 10.1111/GEB.12012.;PIOTTI A, 2012, HEREDITY, V108, P322, DOI 10.1038/HDY.2011.77.;PLUESS AR, 2016, NEW PHYTOL, V210, P589, DOI 10.1111/NPH.13809.;PLUESS AR, 2013, CONSERV GENET RESOUR, V5, P311, DOI 10.1007/S12686-012-9791-6.;PLUESS AR, 2012, PLOS ONE, V7, DOI 10.1371/JOURNAL.PONE.0033636.;PONCET BN, 2010, MOL ECOL, V19, P2896, DOI 10.1111/J.1365-294X.2010.04696.X.;PRITCHARD JK, 2000, GENETICS, V155, P945.;PRITCHARD JK, 2010, NAT REV GENET, V11, P665, DOI 10.1038/NRG2880.;PRUNIER J, 2013, BMC GENOMICS, V14, DOI 10.1186/1471-2164-14-368.;PRUNIER J, 2011, MOL ECOL, V20, P1702, DOI 10.1111/J.1365-294X.2011.05045.X.;R CORE TEAM, 2016, R LANG ENV STAT COMP.;RAJENDRA KC, 2014, FOREST ECOL MANAG, V319, P138, DOI 10.1016/J.FORECO.2014.02.003.;RAJORA OP, 2016, PLOS ONE, V11, DOI 10.1371/JOURNAL.PONE.0158691.;RAYMOND M, 1995, J HERED, V86, P248, DOI 10.1093/OXFORDJOURNALS.JHERED.A111573.;RELLSTAB C, 2016, MOL ECOL, V25, P5907, DOI 10.1111/MEC.13889.;RELLSTAB C, 2015, MOL ECOL, V24, P4348, DOI 10.1111/MEC.13322.;ROUSSET F, 2008, MOL ECOL RESOUR, V8, P103, DOI 10.1111/J.1471-8286.2007.01931.X.;RUSSELLO MA, 2012, EVOL APPL, V5, P39, DOI 10.1111/J.1752-4571.2011.00206.X.;SANDER T, 2000, MOL ECOL, V9, P1349, DOI 10.1046/J.1365-294X.2000.01014.X.;SCHOVILLE SD, 2012, ANNU REV ECOL EVOL S, V43, P23, DOI 10.1146/ANNUREV-ECOLSYS-110411-160248.;SEIFERT S, 2012, CONSERV GENET RESOUR, V4, P1045, DOI 10.1007/S12686-012-9703-9.;SEIFERT S., 2012, THESIS.;SELKOE KA, 2006, ECOL LETT, V9, P615, DOI 10.1111/J.1461-0248.2006.00889.X.;SORK VL, 2010, MOL ECOL, V19, P3806, DOI 10.1111/J.1365-294X.2010.04726.X.;STEPHAN W, 2016, MOL ECOL, V25, P79, DOI 10.1111/MEC.13288.;STUCKI S, 2017, MOL ECOL RESOUR, V17, P1072, DOI 10.1111/1755-0998.12629.;THORNTHWAITE CW, 1948, GEOGR REV, V38, P55, DOI 10.2307/210739.;TIGANO A, 2016, MOL ECOL, V25, P2144, DOI 10.1111/MEC.13606.;TRENBERTH KE, 2011, CLIM RES, V47, P123, DOI 10.3354/CR00953.;TSUMURA Y, 2014, G3-GENES GENOM GENET, V4, P2389, DOI [10.1534/G3.114.013896/-/DC1, 10.1534/G3.114.013896].;VAN OOSTERHOUT C, 2004, MOL ECOL NOTES, V4, P535, DOI 10.1111/J.1471-8286.2004.00684.X.;VARSHNEY RK, 2005, TRENDS BIOTECHNOL, V23, P48, DOI 10.1016/J.TIBTECH.2004.11.005.;VITTI JJ, 2013, ANNU REV GENET, V47, P97, DOI 10.1146/ANNUREV-GENET-111212-133526.;VORNAM B, 2004, CONSERV GENET, V5, P561, DOI 10.1023/B:COGE.0000041025.82917.AC.;WEBER P, 2011, COST ACTION 52 GENET, P248.
+## SYLVESTER EVA, 2018, MOL ECOL                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                ANDERSON T. C., 1985, RIVERS LABRADOR, V81.;AYVAZIAN SG, 1994, MAR BIOL, V118, P25, DOI 10.1007/BF00699216.;BARTON N. H., 2001, INTEGRATING ECOLOGY, V14, P365.;BAY RA, 2018, SCIENCE, V359, P83, DOI 10.1126/SCIENCE.AAN4380.;BEHEREGARAY LB, 2001, MOL ECOL, V10, P2849, DOI 10.1046/J.1365-294X.2001.T01-1-01406.X.;BOWLBY HD, 2016, CONSERV GENET, V17, P823, DOI 10.1007/S10592-016-0824-7.;BRADBURY IR, 2008, CAN J FISH AQUAT SCI, V65, P147, DOI 10.1139/FO7-154.;BRADBURY IR, 2018, EVOL APPL, V11, P918, DOI 10.1111/EVA.12606.;BRADBURY IR, 2015, MOL ECOL, V24, P5130, DOI 10.1111/MEC.13395.;BRADBURY IR, 2014, CAN J FISH AQUAT SCI, V71, P246, DOI 10.1139/CJFAS-2013-0240.;BREIMAN L, 2001, MACH LEARN, V45, P5, DOI 10.1023/A:1010933404324.;BRIDLE J. R., 2009, P ROY SOC LOND B BIO, V276, P1505.;BUREAU A, 2005, GENET EPIDEMIOL, V28, P171, DOI 10.1002/GEPI.20041.;CAYE K, 2016, MOL ECOL RESOUR, V16, P540, DOI 10.1111/1755-0998.12471.;CHANG HJ, 2013, SCI TOTAL ENVIRON, V461, P587, DOI 10.1016/J.SCITOTENV.2013.05.033.;CLAIR TA, 2007, ENVIRON REV, V15, P153, DOI 10.1139/A07-004.;CUNNINGHAM KM, 2009, CAN J FISH AQUAT SCI, V66, P153, DOI 10.1139/F08-199.;CUSHMAN SA, 2006, AM NAT, V168, P486, DOI 10.1086/506976.;DENG HT, 2013, PATTERN RECOGN, V46, P3483, DOI 10.1016/J.PATCOG.2013.05.018.;DFO \\& MRNF, 2009, 2870 DFO MRNF, PVIII.;DIONNE M, 2008, MOL ECOL, V17, P2382, DOI 10.1111/J.1365-294X.2008.03771.X.;DIONNE M, 2007, EVOLUTION, V61, P2154, DOI 10.1111/J.1558-5646.2007.00178.X.;DIONNE M, 2009, PHILOS T R SOC B, V364, P1555, DOI 10.1098/RSTB.2009.0011.;DO C, 2014, MOL ECOL RESOUR, V14, P209, DOI 10.1111/1755-0998.12157.;DUDANIEC RY, 2012, PLOS ONE, V7, DOI 10.1371/JOURNAL.PONE.0036769.;EARL DA, 2012, CONSERV GENET RESOUR, V4, P359, DOI 10.1007/S12686-011-9548-7.;ELLIOTT JM, 1997, FUNCT ECOL, V11, P592, DOI 10.1046/J.1365-2435.1997.00130.X.;EVANNO G, 2005, MOL ECOL, V14, P2611, DOI 10.1111/J.1365-294X.2005.02553.X.;EXCOFFIER L, 2010, MOL ECOL RESOUR, V10, P564, DOI 10.1111/J.1755-0998.2010.02847.X.;FICK SE, 2017, INT J CLIMATOL, V37, P4302, DOI 10.1002/JOC.5086.;FITZPATRICK MC, 2015, ECOL LETT, V18, P1, DOI 10.1111/ELE.12376.;FOLL M, 2008, GENETICS, V180, P977, DOI 10.1534/GENETICS.108.092221.;FUNK WC, 2012, TRENDS ECOL EVOL, V27, P489, DOI 10.1016/J.TREE.2012.05.012.;GARCIARAMOS G, 1997, EVOLUTION, V51, P21, DOI 10.1111/J.1558-5646.1997.TB02384.X.;GASTON K. J., 2003, STRUCTURE DYNAMICS G.;GIBSON SY, 2009, CONSERV BIOL, V23, P1369, DOI 10.1111/J.1523-1739.2009.01375.X.;GLOVER KA, 2010, BMC GENET, V11, DOI 10.1186/1471-2156-11-2.;GOLDSTEIN DB, 1995, GENETICS, V139, P463.;GOUDET J, 2005, MOL ECOL NOTES, V5, P184, DOI 10.1111/J.1471-8278.2004.00828.X.;HALDANE JBS, 1956, PROC R SOC SER B-BIO, V145, P306, DOI 10.1098/RSPB.1956.0039.;HANSEN GJA, 2017, GLOBAL CHANGE BIOL, V23, P1463, DOI 10.1111/GCB.13462.;HARDEWIG I, 1999, AM J PHYSIOL-REG I, V277, PR508.;HARE MP, 1996, EVOLUTION, V50, P2305, DOI 10.1111/J.1558-5646.1996.TB03618.X.;HAUSER L, 2011, MOL ECOL RESOUR, V11, P150, DOI 10.1111/J.1755-0998.2010.02961.X.;HECHT BC, 2015, MOL ECOL, V24, P5573, DOI 10.1111/MEC.13409.;HEDRICK PW, 2005, EVOLUTION, V59, P1633, DOI 10.1111/J.0014-3820.2005.TB01814.X.;HENDRY AP, 2004, EVOL ECOL RES, V6, P1219.;HOLT RD, 2003, EVOL ECOL RES, V5, P159.;ICES, 2018, REP WORK GROUP N ATL.;JEFFERY NW, 2017, ROY SOC OPEN SCI, V4, DOI 10.1098/RSOS.171394.;JEFFRIES KM, 2012, ECOL EVOL, V2, P1747, DOI 10.1002/ECE3.274.;JOHNSTON IA, 2000, J EXP BIOL, V203, P2539.;JOMBART T, 2008, HEREDITY, V101, P92, DOI 10.1038/HDY.2008.34.;JOMBART T, 2008, BIOINFORMATICS, V24, P1403, DOI 10.1093/BIOINFORMATICS/BTN129.;KANEHISA M, 2012, NUCLEIC ACIDS RES, V40, PD109, DOI 10.1093/NAR/GKR988.;KEENAN K, 2013, METHODS ECOL EVOL, V4, P782, DOI 10.1111/2041-210X.12067.;KHIMOUN A, 2017, MOL ECOL, V26, P4906, DOI 10.1111/MEC.14233.;KNOWLES LL, 2007, CURR BIOL, V17, P940, DOI 10.1016/J.CUB.2007.04.033.;KOVACH RP, 2015, GLOBAL CHANGE BIOL, V21, P1821, DOI 10.1111/GCB.12829.;LARSON WA, 2016, J EVOLUTION BIOL, V29, P1846, DOI 10.1111/JEB.12926.;LE MORVAN C, 1998, J EXP BIOL, V201, P165.;LIAW A, 2002, R NEWS, V2, P18, DOI DOI 10.1177/154405910408300516.;LIEN S, 2016, NATURE, V533, P200, DOI 10.1038/NATURE17164.;LU Z., 2014, 20141 MEM U NEWF PHY.;LU Z., 2013, 20131 MEM U NEWF PHY.;MANEL S, 2003, TRENDS ECOL EVOL, V18, P189, DOI 10.1016/S0169-5347(03)00008-9.;MANEL S, 2013, TRENDS ECOL EVOL, V28, P614, DOI 10.1016/J.TREE.2013.05.012.;MICHELETTI SJ, 2018, MOL ECOL, V27, P128, DOI 10.1111/MEC.14407.;MOORE JS, 2014, MOL ECOL, V23, P5680, DOI 10.1111/MEC.12972.;OKSANEN J., 2016, R PACKAGE VERSION, V2, P3, DOI DOI 10.4135/9781412971874.N145.;PETKOVA D, 2016, NAT GENET, V48, P94, DOI 10.1038/NG.3464.;PETREN K, 2005, MOL ECOL, V14, P2943, DOI 10.1111/J.1365-294X.2005.02632.X.;PORTNER HO, 2008, CLIM RES, V37, P253, DOI 10.3354/CR00766.;POLECHOVA J, 2015, P NATL ACAD SCI USA, V112, P6401, DOI 10.1073/PNAS.1421515112.;PRITCHARD JK, 2000, GENETICS, V155, P945.;PUTMAN AI, 2014, ECOL EVOL, V4, P4399, DOI 10.1002/ECE3.1305.;REID NM, 2016, SCIENCE, V354, P1305, DOI 10.1126/SCIENCE.AAH4993.;RELLSTAB C, 2015, MOL ECOL, V24, P4348, DOI 10.1111/MEC.13322.;ROUGEMONT Q, 2018, EVOLUTION, V72, P1261, DOI 10.1111/EVO.13486.;RUZZANTE DE, 1999, FISH RES, V43, P79, DOI 10.1016/S0165-7836(99)00067-3.;SEGELBACHER G, 2010, CONSERV GENET, V11, P375, DOI 10.1007/S10592-009-0044-5.;SELKOE KA, 2008, FISH FISH, V9, P363, DOI 10.1111/J.1467-2979.2008.00300.X.;SEXTON JP, 2009, ANNU REV ECOL EVOL S, V40, P415, DOI 10.1146/ANNUREV.ECOLSYS.110308.120317.;STAHL G, 1987, POPULATION GENETICS, P121.;STANLEY R, 2017, CARTDIST REPROJECTIO, DOI [10.5281/ZENODO.802875, DOI 10.5281/ZENODO.802875].;STANLEY RRE, 2018, SCI ADV, V4, DOI 10.1126/SCIADV.AAQ0929.;STORFER A, 2007, HEREDITY, V98, P128, DOI 10.1038/SJ.HDY.6800917.;SYLVESTER EVA, 2018, EVOL APPL, V11, P153, DOI 10.1111/EVA.12524.;THANASAKSIRI K, 2014, FISH SHELLFISH IMMUN, V40, P441, DOI 10.1016/J.FSI.2014.07.035.;VAHA JP, 2007, MOL ECOL, V16, P2638, DOI 10.1111/J.1365-294X.2007.03329.X.;VARRIALE ANNALISA, 2014, INTERNATIONAL JOURNAL OF EVOLUTIONARY BIOLOGY, P1, DOI 10.1155/2014/475981.;VINCENT B, 2013, EVOLUTION, V67, P3469, DOI 10.1111/EVO.12139.;WATTS RJ, 2004, MAR FRESHWATER RES, V55, P641, DOI 10.1071/MF04051.;WEIR BS, 1984, EVOLUTION, V38, P1358, DOI 10.1111/J.1558-5646.1984.TB05657.X.;WILLOUGHBY JR, 2018, MOL ECOL, V27, P4041, DOI 10.1111/MEC.14726.;YU GC, 2012, OMICS, V16, P284, DOI 10.1089/OMI.2011.0118.;ZHAN LY, 2017, MOL ECOL RESOUR, V17, P247, DOI 10.1111/1755-0998.12561.
+##                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       C1
+## DICKSON BG, 2019, CONSERV BIOL             DICKSON, BG (REPRINT AUTHOR), CONSERVAT SCI PARTNERS INC, 11050 PIONEER TRAIL,SUITE 202, TRUCKEE, CA 96161 USA.;DICKSON, BG (REPRINT AUTHOR), NO ARIZONA UNIV, LANDSCAPE CONSERVAT INITIAT, BOX 5694, FLAGSTAFF, AZ 86011 USA.;DICKSON, BRETT G., ALBANO, CHRISTINE M., GRAY, MIRANDA E., MCCLURE, MEREDITH L., THEOBALD, DAVID M., CONSERVAT SCI PARTNERS INC, 11050 PIONEER TRAIL,SUITE 202, TRUCKEE, CA 96161 USA.;DICKSON, BRETT G., NO ARIZONA UNIV, LANDSCAPE CONSERVAT INITIAT, BOX 5694, FLAGSTAFF, AZ 86011 USA.;ANANTHARAMAN, RANJAN, SHAH, VIRAL B., JULIA COMP, 45 PROSPECT ST, CAMBRIDGE, MA 02139 USA.;BEIER, PAUL, NO ARIZONA UNIV, SCH FORESTRY, BOX 15018, FLAGSTAFF, AZ 86011 USA.;FARGIONE, JOE, HALL, KIMBERLY R., NAT CONSERVANCY NORTH AMER REG, 1101 WEST RIVER PKWY,SUITE 200, MINNEAPOLIS, MN 55415 USA.;GRAVES, TABITHA A., US GEOL SURVEY, NORTHERN ROCKY MT SCI CTR, 38 MATHER DR, WEST GLACIER, MT 59936 USA.;LAWLER, JOSH J., LITTLEFIELD, CAITLIN E., UNIV WASHINGTON, SCH ENVIRONM \\& FOREST SCI, BOX 352100, SEATTLE, WA 98195 USA.;LEONARD, PAUL B., US FISH \\& WILDLIFE SERV, SCI APPLICAT, 101 12TH AVE,110, FAIRBANKS, AK 99701 USA.;NOVEMBRE, JOHN, UNIV CHICAGO, DEPT HUMAN GENET, DEPT ECOL \\& EVOLUT, 920 EAST 58TH ST, CHICAGO, IL 60637 USA.;SCHLOSS, CARRIE A., NATURE CONSERVANCY, 201 MISSION ST, SAN FRANCISCO, CA 94105 USA.;SCHUMAKER, NATHAN H., US EPA, 200 SOUTHWEST 35TH ST, CORVALLIS, OR 97330 USA.
+## ZHAO X, 2019, BIOL CONSERV                                                                                                                                                                                                                                                                                                                                                         LIU, ZJ (REPRINT AUTHOR), INST ZOOL, CAS KEY LAB ANIM ECOL \\& CONSERVAT BIOL, BEIJING 100101, PEOPLES R CHINA.;LI, M (REPRINT AUTHOR), CHINESE ACAD SCI, CTR EXCELLENCE ANIM EVOLUT \\& GENET, KUNMING 650223, YUNNAN, PEOPLES R CHINA.;ZHAO, XUMAO, REN, BAOPING, ZHU, PINGFEN, LIU, ZHIJIN, LI, MING, INST ZOOL, CAS KEY LAB ANIM ECOL \\& CONSERVAT BIOL, BEIJING 100101, PEOPLES R CHINA.;ZHAO, XUMAO, UNIV CHINESE ACAD SCI, BEIJING 100049, PEOPLES R CHINA.;LI, DAYONG, CHINA WEST NORMAL UNIV, MINIST EDUC, KEY LAB SOUTHWEST CHINA WILDLIFE RESOURCES CONSER, NANCHONG 637009, PEOPLES R CHINA.;GARBER, PAUL A., UNIV ILLINOIS, DEPT ANTHROPOL, 109 DAVENPORT HALL, URBANA, IL 61801 USA.;GARBER, PAUL A., UNIV ILLINOIS, PROGRAM ECOL \\& EVOLUTIONARY BIOL, URBANA, IL 61801 USA.;XIANG, ZUOFU, CENT SOUTH UNIV FORESTRY \\& TECHNOL, COLL LIFE SCI \\& TECHNOL, CHANGSHA 410004, HUNAN, PEOPLES R CHINA.;GRUETER, CYRIL C., UNIV WESTERN AUSTRALIA, SCH HUMAN SCI, PERTH, WA 6009, AUSTRALIA.;LI, MING, CHINESE ACAD SCI, CTR EXCELLENCE ANIM EVOLUT \\& GENET, KUNMING 650223, YUNNAN, PEOPLES R CHINA.
+## BRUCE SA, 2018, ECOL EVOL                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   BRUCE, SA (REPRINT AUTHOR), SUNY ALBANY, DEPT BIOL SCI, ALBANY, NY 12222 USA.;BRUCE, SPENCER A., SUNY ALBANY, DEPT BIOL SCI, ALBANY, NY 12222 USA.;BRUCE, SPENCER A., WRIGHT, JEREMY J., NEW YORK STATE MUSEUM \\& SCI SERV, ALBANY, NY USA.
+## ANTUNES B, 2018, CONSERV GENET                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              VELO-ANTON, G (REPRINT AUTHOR), UNIV PORTO, INST CIENCIAS AGR VAIRAO, CTR INVEST BIODIVERSIDADE \\& RECURSOS GENET, CIBIO INBIO, RUA PADRE ARMANDO QUINTAS 7, P-4485661 VAIRAO, PORTUGAL.;ANTUNES, B., LOURENCO, A., CAEIRO-DIAS, G., DINIS, M., GONCALVES, H., TARROSO, P., VELO-ANTON, G., UNIV PORTO, INST CIENCIAS AGR VAIRAO, CTR INVEST BIODIVERSIDADE \\& RECURSOS GENET, CIBIO INBIO, RUA PADRE ARMANDO QUINTAS 7, P-4485661 VAIRAO, PORTUGAL.;ANTUNES, B., LOURENCO, A., CAEIRO-DIAS, G., DINIS, M., UNIV PORTO, DEPT BIOL, FAC CIENCIAS, RUA CAMPO ALEGRE, P-4169007 PORTO, PORTUGAL.;CAEIRO-DIAS, G., UNIV PAUL VALERY MONTPELLIER, UNIV MONTPELLIER, CNRS, CEFE,EPHE,UMR 5175, 1919 ROUTE MENDE, F-34293 MONTPELLIER 5, FRANCE.;GONCALVES, H., MHNC UP, PRACA GOMES TEIXEIRA, P-4099002 PORTO, PORTUGAL.;MARTINEZ-SOLANO, I., CSIC, MNCN, DEPT BIODIVERSIDAD \\& BIOL EVOLUT, C JOSE GUTIERREZ ABASCAL 2, E-28006 MADRID, SPAIN.
+## CUERVO-ALARCON L, 2018, TREE GENET GENOMES                                                              KRUTOVSKY, KV (REPRINT AUTHOR), GEORG AUGUST UNIV GOTTINGEN, DEPT FOREST GENET \\& FOREST TREE BREEDING, BUESGENWEG 2, D-37077 GOTTINGEN, GERMANY.;KRUTOVSKY, KV (REPRINT AUTHOR), RUSSIAN ACAD SCI, VAVILOV INST GEN GENET, 3 GUBKINA STR, MOSCOW 119333, RUSSIA.;KRUTOVSKY, KV (REPRINT AUTHOR), SIBERIAN FED UNIV, LAB FOREST GENOM, GENOME RES \\& EDUC CTR, 50A-2 AKADEMGORODOK, KRASNOYARSK 660036, RUSSIA.;KRUTOVSKY, KV (REPRINT AUTHOR), TEXAS A\\&M UNIV, DEPT ECOSYST SCI \\& MANAGEMENT, COLLEGE STN, TX 77843 USA.;CUERVO-ALARCON, LAURA, MUELLER, MARKUS, KRUTOVSKY, KONSTANTIN V., GEORG AUGUST UNIV GOTTINGEN, DEPT FOREST GENET \\& FOREST TREE BREEDING, BUESGENWEG 2, D-37077 GOTTINGEN, GERMANY.;AREND, MATTHIAS, SPERISEN, CHRISTOPH, SWISS FED INST FOREST SNOW \\& LANDSCAPE RES WSL, ZURCHERSTR 111, CH-8903 BIRMENSDORF, SWITZERLAND.;AREND, MATTHIAS, UNIV BASEL, DEPT ENVIRONM SCI, SCHONBEINSTR 6, CH-4056 BASEL, SWITZERLAND.;FINKELDEY, REINER, UNIV KASSEL, MONCHEBERGSTR 19, D-34109 KASSEL, GERMANY.;KRUTOVSKY, KONSTANTIN V., RUSSIAN ACAD SCI, VAVILOV INST GEN GENET, 3 GUBKINA STR, MOSCOW 119333, RUSSIA.;KRUTOVSKY, KONSTANTIN V., SIBERIAN FED UNIV, LAB FOREST GENOM, GENOME RES \\& EDUC CTR, 50A-2 AKADEMGORODOK, KRASNOYARSK 660036, RUSSIA.;KRUTOVSKY, KONSTANTIN V., TEXAS A\\&M UNIV, DEPT ECOSYST SCI \\& MANAGEMENT, COLLEGE STN, TX 77843 USA.
+## SYLVESTER EVA, 2018, MOL ECOL                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         SYLVESTER, EVA (REPRINT AUTHOR), DEPT FISHERIES \\& OCEANS CANADA, SCI BRANCH, ST JOHN, NF, CANADA.;SYLVESTER, EMMA V. A., LEHNERT, SARAH, DUFFY, STEVEN, ROBERTSON, MARTHA J., BRADBURY, IAN R., DEPT FISHERIES \\& OCEANS CANADA, SCI BRANCH, ST JOHN, NF, CANADA.;BEIKO, ROBERT G., PATERSON, IAN, BRADBURY, IAN R., DALHOUSIE UNIV, FAC COMP SCI, HALIFAX, NS, CANADA.;BENTZEN, PAUL, WATSON, BETH, BRADBURY, IAN R., DALHOUSIE UNIV, DEPT BIOL, MARINE GENE PROBE LAB, HALIFAX, NS, CANADA.;HORNE, JOHN B., UNIV SOUTHERN MISSISSIPPI, GULF COAST RES LAB, OCEAN SPRINGS, MS USA.;CLEMENT, MARIE, MEM UNIV NEWFOUNDLAND, FISHERIES \\& MARINE INST, CTR FISHERIES ECOSYST RES, ST JOHN, NF, CANADA.;CLEMENT, MARIE, MEM UNIV NEWFOUNDLAND, LABRADOR INST, HAPPY VALLEY GOOSE BAY, NF, CANADA.
+##                                                                      DI
+## DICKSON BG, 2019, CONSERV BIOL                       10.1111/COBI.13230
+## ZHAO X, 2019, BIOL CONSERV                 10.1016/J.BIOCON.2019.01.007
+## BRUCE SA, 2018, ECOL EVOL                             10.1002/ECE3.4556
+## ANTUNES B, 2018, CONSERV GENET                10.1007/S10592-018-1110-7
+## CUERVO-ALARCON L, 2018, TREE GENET GENOMES    10.1007/S11295-018-1297-2
+## SYLVESTER EVA, 2018, MOL ECOL                         10.1111/MEC.14849
+##                                                                                                                 PA
+## DICKSON BG, 2019, CONSERV BIOL                                            111 RIVER ST, HOBOKEN 07030-5774, NJ USA
+## ZHAO X, 2019, BIOL CONSERV                 THE BOULEVARD, LANGFORD LANE, KIDLINGTON, OXFORD OX5 1GB, OXON, ENGLAND
+## BRUCE SA, 2018, ECOL EVOL                                                 111 RIVER ST, HOBOKEN 07030-5774, NJ USA
+## ANTUNES B, 2018, CONSERV GENET                              VAN GODEWIJCKSTRAAT 30, 3311 GZ DORDRECHT, NETHERLANDS
+## CUERVO-ALARCON L, 2018, TREE GENET GENOMES                       TIERGARTENSTRASSE 17, D-69121 HEIDELBERG, GERMANY
+## SYLVESTER EVA, 2018, MOL ECOL                                             111 RIVER ST, HOBOKEN 07030-5774, NJ USA
+##                                              AR
+## DICKSON BG, 2019, CONSERV BIOL             <NA>
+## ZHAO X, 2019, BIOL CONSERV                 <NA>
+## BRUCE SA, 2018, ECOL EVOL                  <NA>
+## ANTUNES B, 2018, CONSERV GENET             <NA>
+## CUERVO-ALARCON L, 2018, TREE GENET GENOMES   84
+## SYLVESTER EVA, 2018, MOL ECOL              <NA>
+##                                                                                                                                                                                                                                                                                                                                                                                                                                                                              FU
+## DICKSON BG, 2019, CONSERV BIOL                                                                                                                            WILBURFORCE FOUNDATION, COUGAR FUND, NATIONAL AERONAUTICS AND SPACE ADMINISTRATION (NASA), NATIONAL CENTER FOR ECOLOGICAL ANALYSIS AND SYNTHESIS, THE NATURE CONSERVANCY (TNC), UNIVERSITY OF WASHINGTON, U.S. ENVIRONMENTAL PROTECTION AGENCY, NASA APPLIED SCIENCES-ECOLOGICAL FORECASTING GRANT [16-ECO4CAST-0018]
+## ZHAO X, 2019, BIOL CONSERV                                                                                                                                                                  STRATEGIC PRIORITY RESEARCH PROGRAM OF THE CHINESE ACADEMY OF SCIENCES [XDB31020000, XDA19050202], NATIONAL KEY R AND D PROGRAM OF CHINA [2016YFC0503200], NATIONAL NATURAL SCIENCE FOUNDATION OF CHINA [31821001], STATE FORESTRY ADMINISTRATION OF THE PEOPLE'S REPUBLIC OF CHINA
+## BRUCE SA, 2018, ECOL EVOL                                                                                                                                                                                                                                                                                                                                                                                                        NEW YORK STATE MUSEUM, HUDSON RIVER FOUNDATION
+## ANTUNES B, 2018, CONSERV GENET                                                                                                    FEDER FUNDS THROUGH THE OPERATIONAL PROGRAMME FOR COMPETITIVENESS FACTORS-COMPETE, FCT-FOUNDATION FOR SCIENCE AND TECHNOLOGY [PTDC/BIA-EVF/3036/2012, PTDC/BIA-BEC/099915/2008, POCI-01-0145-FEDER-006821, FCOMP-01-0124-FEDER-028325], FCT [IF/01425/2014, SFRH/BPD/102966/2014, SFRH/BD/89750/2012, PD/BD/106060/2015, SFRH/BPD/93473/2013]
+## CUERVO-ALARCON L, 2018, TREE GENET GENOMES                                                                                                                                                                                                                                                                                                                   SWISS FEDERAL OFFICE FOR THE ENVIRONMENT FOEN, SWISS FEDERAL INSTITUTE FOR FOREST, SNOW AND LANDSCAPE RESEARCH WSL
+## SYLVESTER EVA, 2018, MOL ECOL              NATURAL SCIENCES AND ENGINEERING RESEARCH COUNCIL OF CANADA (NSERC), GENOMICS RESEARCH AND DEVELOPMENT INITIATIVE (GRDI), NATIONAL SCIENCES NSERC, ATLANTIC SALMON FEDERATION OLIN FELLOWSHIP, ATLANTIC SALMON CONSERVATION FOUNDATION, LABRADOR INSTITUTE (ATLANTIC CANADA OPPORTUNITIES AGENCY), LABRADOR INSTITUTE (DEPARTMENT OF TOURISM, CULTURE, INDUSTRY AND INNOVATION), TORNGAT WILDLIFE, PLANTS, AND FISHERIES SECRETARIAT
+##                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 FX
+## DICKSON BG, 2019, CONSERV BIOL             WE THANK THE MANY SUPPORTERS OF BRAD MCRAE AND HIS VISION FOR THE DEVELOPMENT OF CIRCUIT THEORY AND CIRCUITSCAPE SOFTWARE FOR CONSERVATION, INCLUDING THE WILBURFORCE FOUNDATION, COUGAR FUND, NATIONAL AERONAUTICS AND SPACE ADMINISTRATION (NASA), NATIONAL CENTER FOR ECOLOGICAL ANALYSIS AND SYNTHESIS, THE NATURE CONSERVANCY (TNC), UNIVERSITY OF WASHINGTON, AND U.S. ENVIRONMENTAL PROTECTION AGENCY. WE ALSO THANK T. MOHAPATRA AND OTHERS AT JULIA COMPUTING FOR THEIR CONTRIBUTIONS TO THE ONGOING DEVELOPMENT OF CIRCUITSCAPE AND RELATED SOFTWARE, FUNDED THROUGH A NASA APPLIED SCIENCES-ECOLOGICAL FORECASTING GRANT (16-ECO4CAST-0018) TO TNC, WITH MATCHING FUNDS FROM THE WILBURFORCE FOUNDATION. WE ARE GRATEFUL TO THE CIRCUITSCAPE USER COMMUNITY FOR THEIR CREATIVITY AND DEDICATION TO INNOVATION IN CONSERVATION. THE COMMENTS OF M. BURGMAN, C. EPPS, C. MURCIA, T. NOGEIRE MCRAE, AND 3 ANONYMOUS REVIEWERS GREATLY IMPROVED OUR MANUSCRIPT. ANY USE OF TRADE, FIRM, OR PRODUCT NAMES IS FOR DESCRIPTIVE PURPOSES ONLY AND DOES NOT IMPLY ENDORSEMENT BY THE U.S. GOVERNMENT.
+## ZHAO X, 2019, BIOL CONSERV                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            THIS PROJECT WAS SUPPORTED BY STRATEGIC PRIORITY RESEARCH PROGRAM OF THE CHINESE ACADEMY OF SCIENCES (XDB31020000 AND XDA19050202), NATIONAL KEY R AND D PROGRAM OF CHINA (2016YFC0503200), THE NATIONAL NATURAL SCIENCE FOUNDATION OF CHINA (31821001) AND STATE FORESTRY ADMINISTRATION OF THE PEOPLE'S REPUBLIC OF CHINA. WE THANK CHRISSIE, SARA, JENNI, AND YU ZHANG FOR THEIR SUPPORT.
+## BRUCE SA, 2018, ECOL EVOL                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 THE NEW YORK STATE MUSEUM, GRANT/AWARD NUMBER: GRADUATE RESEARCH FELLOWSHIP, THE HUDSON RIVER FOUNDATION, GRANT/AWARD NUMBER: TIBOR T. POLGAR FELLOWSHIP
+## ANTUNES B, 2018, CONSERV GENET                                                                                                                                                                                                                                                                                                               WE THANK DAVID BUCKLEY, DAVID DONAIRE, FRANCISCO JIMENEZ CAZALLA, JESUS DIAZ-RODRIGUEZ, LUIS GARCIA-CARDENETE AND SAUL YUBERO FOR PROVIDING SAMPLES AND HELP WITH FIELD WORK. S. LOPES HELPED WITH GENOTYPING. FIELDWORK FOR OBTAINING TISSUE SAMPLES WAS DONE WITH THE CORRESPONDING PERMITS FROM THE REGIONAL ADMINISTRATIONS THIS WORK WAS FUNDED BY FEDER FUNDS THROUGH THE OPERATIONAL PROGRAMME FOR COMPETITIVENESS FACTORS-COMPETE-AND BY NATIONAL FUNDS THROUGH FCT-FOUNDATION FOR SCIENCE AND TECHNOLOGY-UNDER THE PTDC/BIA-EVF/3036/2012, PTDC/BIA-BEC/099915/2008, POCI-01-0145-FEDER-006821 AND FCOMP-01-0124-FEDER-028325. GVA, HG, GCD, AL AND PT ARE SUPPORTED BY FCT (IF/01425/2014, SFRH/BPD/102966/2014, SFRH/BD/89750/2012, PD/BD/106060/2015, SFRH/BPD/93473/2013), RESPECTIVELY.
+## CUERVO-ALARCON L, 2018, TREE GENET GENOMES                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  THIS STUDY WAS FINANCIALLY SUPPORTED BY THE SWISS FEDERAL OFFICE FOR THE ENVIRONMENT FOEN AND THE SWISS FEDERAL INSTITUTE FOR FOREST, SNOW AND LANDSCAPE RESEARCH WSL.
+## SYLVESTER EVA, 2018, MOL ECOL                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 NATURAL SCIENCES AND ENGINEERING RESEARCH COUNCIL OF CANADA (NSERC) STRATEGIC GRANT, GENOMICS RESEARCH AND DEVELOPMENT INITIATIVE (GRDI) GRANT, NATIONAL SCIENCES NSERC DISCOVERY GRANT AND STRATEGIC PROJECT GRANT, ATLANTIC SALMON FEDERATION OLIN FELLOWSHIP, TORNGAT WILDLIFE, PLANTS, AND FISHERIES SECRETARIAT, ATLANTIC SALMON CONSERVATION FOUNDATION, LABRADOR INSTITUTE (ATLANTIC CANADA OPPORTUNITIES AGENCY AND DEPARTMENT OF TOURISM, CULTURE, INDUSTRY AND INNOVATION)
+##                                                   SN   PN          PP
+## DICKSON BG, 2019, CONSERV BIOL             0888-8892    2     239-249
+## ZHAO X, 2019, BIOL CONSERV                 0006-3207 <NA>       88-97
+## BRUCE SA, 2018, ECOL EVOL                  2045-7758   23 11410-11422
+## ANTUNES B, 2018, CONSERV GENET             1566-0621    6   1411-1424
+## CUERVO-ALARCON L, 2018, TREE GENET GENOMES 1614-2942    6        <NA>
+## SYLVESTER EVA, 2018, MOL ECOL              0962-1083   20   4026-4040
+##                                                             PU  VL   PY
+## DICKSON BG, 2019, CONSERV BIOL                           WILEY  33 2019
+## ZHAO X, 2019, BIOL CONSERV                    ELSEVIER SCI LTD 231 2019
+## BRUCE SA, 2018, ECOL EVOL                                WILEY   8 2018
+## ANTUNES B, 2018, CONSERV GENET                        SPRINGER  19 2018
+## CUERVO-ALARCON L, 2018, TREE GENET GENOMES SPRINGER HEIDELBERG  14 2018
+## SYLVESTER EVA, 2018, MOL ECOL                            WILEY  27 2018
+##                                                            UT  NR
+## DICKSON BG, 2019, CONSERV BIOL             ISI000460664300002 112
+## ZHAO X, 2019, BIOL CONSERV                 ISI000459357500011  76
+## BRUCE SA, 2018, ECOL EVOL                  ISI000454107200004  66
+## ANTUNES B, 2018, CONSERV GENET             ISI000450473600012  94
+## CUERVO-ALARCON L, 2018, TREE GENET GENOMES ISI000448863600001 131
+## SYLVESTER EVA, 2018, MOL ECOL              ISI000448182400005  97
+##                                                                                                                                      SC
+## DICKSON BG, 2019, CONSERV BIOL                                        BIODIVERSITY \\& CONSERVATION, ENVIRONMENTAL SCIENCES \\& ECOLOGY
+## ZHAO X, 2019, BIOL CONSERV                                            BIODIVERSITY \\& CONSERVATION, ENVIRONMENTAL SCIENCES \\& ECOLOGY
+## BRUCE SA, 2018, ECOL EVOL                                                      ENVIRONMENTAL SCIENCES \\& ECOLOGY, EVOLUTIONARY BIOLOGY
+## ANTUNES B, 2018, CONSERV GENET                                                     BIODIVERSITY \\& CONSERVATION, GENETICS \\& HEREDITY
+## CUERVO-ALARCON L, 2018, TREE GENET GENOMES                                                 FORESTRY, GENETICS \\& HEREDITY, AGRICULTURE
+## SYLVESTER EVA, 2018, MOL ECOL              BIOCHEMISTRY \\& MOLECULAR BIOLOGY, ENVIRONMENTAL SCIENCES \\& ECOLOGY, EVOLUTIONARY BIOLOGY
+##                                            U2
+## DICKSON BG, 2019, CONSERV BIOL             26
+## ZHAO X, 2019, BIOL CONSERV                 15
+## BRUCE SA, 2018, ECOL EVOL                   7
+## ANTUNES B, 2018, CONSERV GENET             21
+## CUERVO-ALARCON L, 2018, TREE GENET GENOMES 28
+## SYLVESTER EVA, 2018, MOL ECOL              15
+##                                                                                                           WC
+## DICKSON BG, 2019, CONSERV BIOL                    BIODIVERSITY CONSERVATION, ECOLOGY, ENVIRONMENTAL SCIENCES
+## ZHAO X, 2019, BIOL CONSERV                        BIODIVERSITY CONSERVATION, ECOLOGY, ENVIRONMENTAL SCIENCES
+## BRUCE SA, 2018, ECOL EVOL                                                      ECOLOGY, EVOLUTIONARY BIOLOGY
+## ANTUNES B, 2018, CONSERV GENET                              BIODIVERSITY CONSERVATION, GENETICS \\& HEREDITY
+## CUERVO-ALARCON L, 2018, TREE GENET GENOMES                     FORESTRY, GENETICS \\& HEREDITY, HORTICULTURE
+## SYLVESTER EVA, 2018, MOL ECOL              BIOCHEMISTRY \\& MOLECULAR BIOLOGY, ECOLOGY, EVOLUTIONARY BIOLOGY
+##                                                                                                                                                                        EM
+## DICKSON BG, 2019, CONSERV BIOL                                                                                                                           BRETTCSP-INC.ORG
+## ZHAO X, 2019, BIOL CONSERV                 ZHAOXUMAOIOZ.AC.CN RENBPIOZ.AC.CN P-GARBERILLINOIS.EDU ZHUPINGFENIOZ.AC.CN CYRIL.GRUETERUWA.EDU.AU LIUZJIOZ.AC.CN LIMIOZ.AC.CN
+## BRUCE SA, 2018, ECOL EVOL                                                                                                                                SBRUCEALBANY.EDU
+## ANTUNES B, 2018, CONSERV GENET                                                                                                                  GUILLERMO.VELOCIBIO.UP.PT
+## CUERVO-ALARCON L, 2018, TREE GENET GENOMES                                                                                    KONSTANTIN.KRUTOVSKYFORST.UNI-GOETTINGEN.DE
+## SYLVESTER EVA, 2018, MOL ECOL                                                                                                                     EMMASYLVESTER7GMAIL.COM
+##                                               GA
+## DICKSON BG, 2019, CONSERV BIOL             HO1KN
+## ZHAO X, 2019, BIOL CONSERV                 HM3EX
+## BRUCE SA, 2018, ECOL EVOL                  HF3AF
+## ANTUNES B, 2018, CONSERV GENET             HA7OY
+## CUERVO-ALARCON L, 2018, TREE GENET GENOMES GY8HH
+## SYLVESTER EVA, 2018, MOL ECOL              GY0DP
+##                                                                                                                                                                                                                                  RP
+## DICKSON BG, 2019, CONSERV BIOL                                                                                       DICKSON, BG (REPRINT AUTHOR), CONSERVAT SCI PARTNERS INC, 11050 PIONEER TRAIL,SUITE 202, TRUCKEE, CA 96161 USA
+## ZHAO X, 2019, BIOL CONSERV                                                                                           LIU, ZJ (REPRINT AUTHOR), INST ZOOL, CAS KEY LAB ANIM ECOL \\& CONSERVAT BIOL, BEIJING 100101, PEOPLES R CHINA
+## BRUCE SA, 2018, ECOL EVOL                                                                                                                              BRUCE, SA (REPRINT AUTHOR), SUNY ALBANY, DEPT BIOL SCI, ALBANY, NY 12222 USA
+## ANTUNES B, 2018, CONSERV GENET             VELO-ANTON, G (REPRINT AUTHOR), UNIV PORTO, INST CIENCIAS AGR VAIRAO, CTR INVEST BIODIVERSIDADE \\& RECURSOS GENET, CIBIO INBIO, RUA PADRE ARMANDO QUINTAS 7, P-4485661 VAIRAO, PORTUGAL
+## CUERVO-ALARCON L, 2018, TREE GENET GENOMES                                        KRUTOVSKY, KV (REPRINT AUTHOR), GEORG AUGUST UNIV GOTTINGEN, DEPT FOREST GENET \\& FOREST TREE BREEDING, BUESGENWEG 2, D-37077 GOTTINGEN, GERMANY
+## SYLVESTER EVA, 2018, MOL ECOL                                                                                                    SYLVESTER, EVA (REPRINT AUTHOR), DEPT FISHERIES \\& OCEANS CANADA, SCI BRANCH, ST JOHN, NF, CANADA
+##                                             DB
+## DICKSON BG, 2019, CONSERV BIOL             ISI
+## ZHAO X, 2019, BIOL CONSERV                 ISI
+## BRUCE SA, 2018, ECOL EVOL                  ISI
+## ANTUNES B, 2018, CONSERV GENET             ISI
+## CUERVO-ALARCON L, 2018, TREE GENET GENOMES ISI
+## SYLVESTER EVA, 2018, MOL ECOL              ISI
+##                                                                                                                                                                                                      AU_UN
+## DICKSON BG, 2019, CONSERV BIOL                            CONSERVAT SCI PARTNERS INC;NO ARIZONA UNIV;NO ARIZONA UNIV;NORTHERN ROCKY MT SCI CTR;UNIV WASHINGTON;SCI APPLICAT;UNIV CHICAGO;SCHLOSS;SCHUMAKER
+## ZHAO X, 2019, BIOL CONSERV                 INST ZOOL;UNIV CHINESE ACAD SCI;CHINA WEST NORMAL UNIV;UNIV ILLINOIS;UNIV ILLINOIS;CENT SOUTH UNIV FORESTRY AND TECHNOL;UNIV WESTERN AUSTRALIA;CHINESE ACAD SCI
+## BRUCE SA, 2018, ECOL EVOL                                                                                                                                 DEPT BIOL SCI;NEW YORK STATE MUSEUM AND SCI SERV
+## ANTUNES B, 2018, CONSERV GENET                                                                                                                          UNIV PORTO;UNIV PORTO;UNIV PAUL VALERY MONTPELLIER
+## CUERVO-ALARCON L, 2018, TREE GENET GENOMES   GEORG AUGUST UNIV GOTTINGEN;SWISS FED INST FOREST SNOW AND LANDSCAPE RES WSL;UNIV BASEL;UNIV KASSEL;VAVILOV INST GEN GENET;SIBERIAN FED UNIV;TEXAS AANDM UNIV
+## SYLVESTER EVA, 2018, MOL ECOL                                                               SCI BRANCH;DALHOUSIE UNIV;DALHOUSIE UNIV;UNIV SOUTHERN MISSISSIPPI;MEM UNIV NEWFOUNDLAND;MEM UNIV NEWFOUNDLAND
+##                                                                 AU1_UN
+## DICKSON BG, 2019, CONSERV BIOL              CONSERVAT SCI PARTNERS INC
+## ZHAO X, 2019, BIOL CONSERV                                   INST ZOOL
+## BRUCE SA, 2018, ECOL EVOL                                DEPT BIOL SCI
+## ANTUNES B, 2018, CONSERV GENET                              UNIV PORTO
+## CUERVO-ALARCON L, 2018, TREE GENET GENOMES GEORG AUGUST UNIV GOTTINGEN
+## SYLVESTER EVA, 2018, MOL ECOL                               SCI BRANCH
+##                                            AU_UN_NR
+## DICKSON BG, 2019, CONSERV BIOL                   NA
+## ZHAO X, 2019, BIOL CONSERV                       NA
+## BRUCE SA, 2018, ECOL EVOL                        NA
+## ANTUNES B, 2018, CONSERV GENET                   NA
+## CUERVO-ALARCON L, 2018, TREE GENET GENOMES       NA
+## SYLVESTER EVA, 2018, MOL ECOL                    NA
+##                                                                               SR_FULL
+## DICKSON BG, 2019, CONSERV BIOL                         DICKSON BG, 2019, CONSERV BIOL
+## ZHAO X, 2019, BIOL CONSERV                                 ZHAO X, 2019, BIOL CONSERV
+## BRUCE SA, 2018, ECOL EVOL                                   BRUCE SA, 2018, ECOL EVOL
+## ANTUNES B, 2018, CONSERV GENET                         ANTUNES B, 2018, CONSERV GENET
+## CUERVO-ALARCON L, 2018, TREE GENET GENOMES CUERVO-ALARCON L, 2018, TREE GENET GENOMES
+## SYLVESTER EVA, 2018, MOL ECOL                           SYLVESTER EVA, 2018, MOL ECOL
+##                                                                                    SR
+## DICKSON BG, 2019, CONSERV BIOL                         DICKSON BG, 2019, CONSERV BIOL
+## ZHAO X, 2019, BIOL CONSERV                                 ZHAO X, 2019, BIOL CONSERV
+## BRUCE SA, 2018, ECOL EVOL                                   BRUCE SA, 2018, ECOL EVOL
+## ANTUNES B, 2018, CONSERV GENET                         ANTUNES B, 2018, CONSERV GENET
+## CUERVO-ALARCON L, 2018, TREE GENET GENOMES CUERVO-ALARCON L, 2018, TREE GENET GENOMES
+## SYLVESTER EVA, 2018, MOL ECOL                           SYLVESTER EVA, 2018, MOL ECOL
+\end{verbatim}
+
+\subsection{\texorpdfstring{\textbf{AnÃ¡lise
+BibliomÃ©trica}}{AnÃ¡lise BibliomÃ©trica}}\label{analise-bibliomatrica}
+
+\subsubsection{AnÃ¡lise descritiva}\label{analise-descritiva}
+
+A funÃ§Ã£o \emph{biblioAnalysis} calcula as principais medidas
+bibliomÃ©tricas.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{results <-}\StringTok{ }\KeywordTok{biblioAnalysis}\NormalTok{(M, }\DataTypeTok{sep =} \StringTok{";"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\paragraph{Resumo das informaÃ§Ãµes}\label{resumo-das-informaaaes}
+
+A funÃ§Ã£o \emph{Summary} sumariza as principais informaÃ§Ãµes
+encontradas no dataset.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{options}\NormalTok{(}\DataTypeTok{width=}\DecValTok{100}\NormalTok{)}
+\NormalTok{S <-}\StringTok{ }\KeywordTok{summary}\NormalTok{(}\DataTypeTok{object =}\NormalTok{ results, }\DataTypeTok{k =} \DecValTok{10}\NormalTok{, }\DataTypeTok{pause =} \OtherTok{FALSE}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 
+## 
+## Main Information about data
+## 
+##  Documents                             104 
+##  Sources (Journals, Books, etc.)       47 
+##  Keywords Plus (ID)                    528 
+##  Author's Keywords (DE)                383 
+##  Period                                2008 - 2019 
+##  Average citations per documents       18.38 
+## 
+##  Authors                               493 
+##  Author Appearances                    565 
+##  Authors of single-authored documents  4 
+##  Authors of multi-authored documents   489 
+##  Single-authored documents             4 
+## 
+##  Documents per Author                  0.211 
+##  Authors per Document                  4.74 
+##  Co-Authors per Documents              5.43 
+##  Collaboration Index                   4.89 
+##  
+##  Document types                     
+##  ARTICLE                         89 
+##  ARTICLE, PROCEEDINGS PAPER      2 
+##  REVIEW                          13 
+##  
+## 
+## Annual Scientific Production
+## 
+##  Year    Articles
+##     2008        1
+##     2009        5
+##     2010        3
+##     2011        6
+##     2012        7
+##     2013       10
+##     2014       13
+##     2015       14
+##     2016       15
+##     2017       12
+##     2018       16
+##     2019        2
+## 
+## Annual Percentage Growth Rate 6.504109 
+## 
+## 
+## Most Productive Authors
+## 
+##    Authors        Articles  Authors        Articles Fractionalized
+## 1   CUSHMAN SA           9 CUSHMAN SA                        2.210
+## 2   LANDGUTH EL          7 LANDGUTH EL                       1.894
+## 3   MANEL S              6 MANEL S                           1.279
+## 4   HOLDEREGGER R        3 RAZGOUR O                         1.222
+## 5   LUIKART G            3 HOLDEREGGER R                     1.143
+## 6   MUHLFELD CC          3 RICO Y                            1.100
+## 7   RAZGOUR O            3 KOOL JT                           1.000
+## 8   SMITH TB             3 MORALES HOJAS R                   1.000
+## 9   THOMASSEN HA         3 TOLLEY KA                         0.833
+## 10  WAYNE RK             3 BRUCE SA                          0.750
+## 
+## 
+## Top manuscripts per citations
+## 
+##                         Paper           TC TCperYear
+## 1  MANEL S, 2013, TRENDS ECOL EVOL     245     40.83
+## 2  HOLDEREGGER R, 2008, BIOSCIENCE     228     20.73
+## 3  CRISPO E, 2011, BIOESSAYS            92     11.50
+## 4  CASTILLO JA, 2014, MOL ECOL          71     14.20
+## 5  SCOBLE J, 2010, DIVERS DISTRIB       67      7.44
+## 6  SELKOE KA, 2016, MAR ECOL -PROG SER  55     18.33
+## 7  THOMASSEN HA, 2011, EVOL APPL        50      6.25
+## 8  FAULKS LK, 2010, MOL ECOL            50      5.56
+## 9  STEPIEN CA, 2009, MOL ECOL           50      5.00
+## 10 RICHARDSON JL, 2016, MOL ECOL        46     15.33
+## 
+## 
+## Corresponding Author's Countries
+## 
+##           Country Articles   Freq SCP MCP MCP_Ratio
+## 1  USA                  44 0.4231  33  11     0.250
+## 2  CANADA                8 0.0769   4   4     0.500
+## 3  UNITED KINGDOM        8 0.0769   2   6     0.750
+## 4  AUSTRALIA             6 0.0577   4   2     0.333
+## 5  CHINA                 5 0.0481   3   2     0.400
+## 6  FRANCE                4 0.0385   1   3     0.750
+## 7  GERMANY               4 0.0385   2   2     0.500
+## 8  MEXICO                4 0.0385   3   1     0.250
+## 9  PORTUGAL              4 0.0385   1   3     0.750
+## 10 SOUTH AFRICA          3 0.0288   2   1     0.333
+## 
+## 
+## SCP: Single Country Publications
+## 
+## MCP: Multiple Country Publications
+## 
+## 
+## Total Citations per Country
+## 
+##      Country      Total Citations Average Article Citations
+## 1  USA                        705                     16.02
+## 2  FRANCE                     288                     72.00
+## 3  SWITZERLAND                232                    116.00
+## 4  AUSTRALIA                  151                     25.17
+## 5  CANADA                     137                     17.12
+## 6  SOUTH AFRICA                76                     25.33
+## 7  UNITED KINGDOM              56                      7.00
+## 8  PORTUGAL                    49                     12.25
+## 9  ESTONIA                     41                     41.00
+## 10 COLOMBIA                    37                     37.00
+## 
+## 
+## Most Relevant Sources
+## 
+##               Sources        Articles
+## 1  MOLECULAR ECOLOGY               14
+## 2  CONSERVATION GENETICS           13
+## 3  PLOS ONE                         6
+## 4  EVOLUTIONARY APPLICATIONS        5
+## 5  ECOLOGY AND EVOLUTION            4
+## 6  JOURNAL OF BIOGEOGRAPHY          4
+## 7  JOURNAL OF HEREDITY              4
+## 8  BIOLOGICAL CONSERVATION          3
+## 9  ECOLOGICAL APPLICATIONS          3
+## 10 SCIENTIFIC REPORTS               3
+## 
+## 
+## Most Relevant Keywords
+## 
+##    Author Keywords (DE)      Articles   Keywords-Plus (ID)     Articles
+## 1      LANDSCAPE GENETICS          50 CLIMATE CHANGE                 67
+## 2      CLIMATE CHANGE              19 LANDSCAPE GENETICS             51
+## 3      GENE FLOW                   17 CONSERVATION                   27
+## 4      CONNECTIVITY                12 POPULATION STRUCTURE           25
+## 5      PHYLOGEOGRAPHY              11 DIVERSITY                      17
+## 6      DISPERSAL                   10 DISPERSAL                      15
+## 7      CONSERVATION GENETICS        8 HABITAT FRAGMENTATION          15
+## 8      CONSERVATION                 7 MULTILOCUS GENOTYPE DATA       14
+## 9      GENETIC DIVERSITY            7 FLOW                           12
+## 10     HABITAT FRAGMENTATION        7 COMPUTER PROGRAM               11
+\end{verbatim}
+
+Alguns grÃ¡ficos bÃ¡sicos podem ser desenhados usando a funÃ§Ã£o
+genÃ©rica \emph{plot}.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{plot}\NormalTok{(}\DataTypeTok{x =}\NormalTok{ results, }\DataTypeTok{k =} \DecValTok{10}\NormalTok{, }\DataTypeTok{pause =} \OtherTok{FALSE}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{biblio_final_files/figure-latex/unnamed-chunk-10-1.pdf}
+\includegraphics{biblio_final_files/figure-latex/unnamed-chunk-10-2.pdf}
+\includegraphics{biblio_final_files/figure-latex/unnamed-chunk-10-3.pdf}
+
+\begin{verbatim}
+## Warning: Removed 1 rows containing missing values (position_stack).
+\end{verbatim}
+
+\begin{verbatim}
+## Warning: Removed 1 rows containing missing values (geom_path).
+\end{verbatim}
+
+\includegraphics{biblio_final_files/figure-latex/unnamed-chunk-10-4.pdf}
+\includegraphics{biblio_final_files/figure-latex/unnamed-chunk-10-5.pdf}
+
+\subsubsection{AnÃ¡lise das referÃªncias
+citadas}\label{analise-das-referancias-citadas}
+
+Para uma extraÃ§Ã£o correta, primeiro identificamos o campo separador
+entre diferentes referÃªncias:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{M}\OperatorTok{$}\NormalTok{CR[}\DecValTok{1}\NormalTok{]}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] "AHMADI M, 2017, DIVERS DISTRIB, V23, P592, DOI 10.1111/DDI.12560.;ANDERSON CD, 2010, MOL ECOL, V19, P3565, DOI 10.1111/J.1365-294X.2010.04757.X.;ANDERSON M. G., 2016, RESILIENT CONNECTED.;BEIER P, 2011, CONSERV BIOL, V25, P879, DOI 10.1111/J.1523-1739.2011.01716.X.;BELL RC, 2010, MOL ECOL, V19, P2531, DOI 10.1111/J.1365-294X.2010.04676.X.;BENNIE J, 2014, METHODS ECOL EVOL, V5, P534, DOI 10.1111/2041-210X.12182.;BEZANSON J, 2017, SIAM REV, V59, P65, DOI 10.1137/141000671.;BISHOP-TAYLOR R, 2015, LANDSCAPE ECOL, V30, P2045, DOI 10.1007/S10980-015-0230-4.;BLEYHL B, 2017, REMOTE SENS ENVIRON, V193, P193, DOI 10.1016/J.RSE.2017.03.001.;BRAAKER S, 2014, ECOL APPL, V24, P1583.;BRECKHEIMER I, 2014, CONSERV BIOL, V28, P1584, DOI 10.1111/COBI.12362.;BRODIE JF, 2015, CONSERV BIOL, V29, P122, DOI 10.1111/COBI.12337.;CASTILHO CS, 2015, ENVIRON MANAGE, V55, P1377, DOI 10.1007/S00267-015-0463-7.;CHANDRA A. K., 1996, COMPUTATIONAL COMPLEXITY, V6, P312, DOI 10.1007/BF01270385.;CREECH TG, 2017, PLOS ONE, V12, DOI 10.1371/JOURNAL.PONE.0176960.;CUSHMAN SA, 2010, LANDSCAPE ECOL, V25, P1613, DOI 10.1007/S10980-010-9534-6.;DAMBACH J, 2016, MAR ECOL-EVOL PERSP, V37, P1336, DOI 10.1111/MAEC.12343.;DICKSON BG, 2017, CONSERV LETT, V10, P564, DOI 10.1111/CONL.12322.;DICKSON BG, 2013, PLOS ONE, V8, DOI 10.1371/JOURNAL.PONE.0081898.;DILKINA B, 2017, CONSERV BIOL, V31, P192, DOI 10.1111/COBI.12814.;DONG XY, 2016, SCI REP-UK, V6, DOI 10.1038/SREP24711.;DOYLE PG, 1984, RANDOM WALKELECT N.;DUDANIEC RY, 2016, MOL ECOL, V25, P470, DOI 10.1111/MEC.13482.;DUTTA T, 2016, REG ENVIRON CHANGE, V16, P53, DOI 10.1007/S10113-015-0877-Z.;EPPS CW, 2011, DIVERS DISTRIB, V17, P603, DOI 10.1111/J.1472-4642.2011.00773.X.;FAGAN ME, 2016, ECOL APPL, V26, P1456, DOI 10.1890/14-2188.;FALKE JA, 2011, ECOHYDROLOGY, V4, P682, DOI 10.1002/ECO.158.;FETTER CW, 2001, APPL HYDROGEOLOGY.;GANTCHOFF MG, 2017, BIOL CONSERV, V214, P66, DOI 10.1016/J.BIOCON.2017.07.023.;GOULSON D, 2011, CONSERV GENET, V12, P867, DOI 10.1007/S10592-011-0190-4.;GRAFIUS DR, 2017, LANDSCAPE ECOL, V32, P1771, DOI 10.1007/S10980-017-0548-1.;GRAVES TA, 2013, MOL ECOL, V22, P3888, DOI 10.1111/MEC.12348.;GRAY ME, 2016, LANDSCAPE ECOL, V31, P1681, DOI 10.1007/S10980-016-0353-2.;GRAY ME, 2015, ECOL APPL, V25, P1099, DOI 10.1890/14-0367.1.;GUILLOT G, 2009, MOL ECOL, V18, P4734, DOI 10.1111/J.1365-294X.2009.04410.X.;HANKS EM, 2017, J AM STAT ASSOC, V112, P497, DOI 10.1080/01621459.2016.1224714.;HANKS EM, 2013, J AM STAT ASSOC, V108, P22, DOI 10.1080/01621459.2012.724647.;HARRIS L., 1984, FRAGMENTED FOREST IS.;HOWEY MCL, 2011, J ARCHAEOL SCI, V38, P2523, DOI 10.1016/J.JAS.2011.03.024.;HUNTINGTON JL, 2012, WATER RESOUR RES, V48, DOI 10.1029/2012WR012319.;INTERNATIONAL UNION FOR CONSERVATION OF NATURE (IUCN), 2017, CONNECTIVITY CONSERV.;JAFFE R, 2016, MOL ECOL, V25, P5345, DOI 10.1111/MEC.13852.;JAFFE R, 2016, CONSERV GENET, V17, P267, DOI 10.1007/S10592-015-0779-0.;JAQUIERY J, 2011, MOL ECOL, V20, P692, DOI 10.1111/J.1365-294X.2010.04966.X.;JARCHOW CJ, 2016, J HERPETOL, V50, P63, DOI 10.1670/14-172.;KEELEY ATH, 2017, LANDSCAPE URBAN PLAN, V161, P90, DOI 10.1016/J.LANDURBPLAN.2017.01.007.;KNAAPEN JP, 1992, LANDSCAPE URBAN PLAN, V23, P1, DOI 10.1016/0169-2046(92)90060-D.;KOEN EL, 2014, METHODS ECOL EVOL, V5, P626, DOI 10.1111/2041-210X.12197.;KOEN EL, 2012, MOL ECOL RESOUR, V12, P686, DOI 10.1111/J.1755-0998.2012.03123.X.;KOH I, 2013, ECOL APPL, V23, P1554, DOI 10.1890/12-1595.1.;KROSBY M, 2016, WASHINGTON BRIT COLU.;LANDER TA, 2013, LANDSCAPE ECOL, V28, P1769, DOI 10.1007/S10980-013-9920-Y.;LAWLER JJ, 2013, ECOL LETT, V16, P1014, DOI 10.1111/ELE.12132.;LAWLER JOSHUA, 2018, CONSERV BIOL, DOI 10.1111/COBI.13235.;LECHNER AM, 2017, LANDSCAPE ECOL, V32, P99, DOI 10.1007/S10980-016-0431-5.;LEGENDRE P, 2010, MOL ECOL RESOUR, V10, P831, DOI 10.1111/J.1755-0998.2010.02866.X.;LEONARD PB, 2017, ANIM CONSERV, V20, P80, DOI 10.1111/ACV.12289.;LEONARD PB, 2017, METHODS ECOL EVOL, V8, P519, DOI 10.1111/2041-210X.12689.;LITTLEFIELD CE, 2017, CONSERV BIOL, V31, P1397, DOI 10.1111/COBI.12938.;LITVAITIS JA, 2015, ENVIRON MANAGE, V55, P1366, DOI 10.1007/S00267-015-0468-2.;LOZIER JD, 2013, CONSERV GENET, V14, P1099, DOI 10.1007/S10592-013-0498-3.;LUCK GW, 2014, ECOL MANAG RESTOR, V15, P4, DOI 10.1111/EMR.12082.;MACARTHUR RH, 1967, ACTA BIOTHEOR, V50, P133.;MAIORANO L, 2017, BASIC APPL ECOL, V21, P66, DOI 10.1016/J.BAAE.2017.02.005.;MANEL S, 2013, TRENDS ECOL EVOL, V28, P614, DOI 10.1016/J.TREE.2013.05.012.;MARROTTE RR, 2017, MOV ECOL, V5, DOI 10.1186/S40462-017-0112-2.;MARROTTE RR, 2017, PLOS ONE, V12, DOI 10.1371/JOURNAL.PONE.0174212.;MATEO-SANCHEZ MC, 2014, ANIM CONSERV, V17, P430, DOI 10.1111/ACV.12109.;MATEO-SANCHEZ MC, 2015, ECOSPHERE, V6, DOI 10.1890/ES14-00387.1.;MCCLURE ML, 2017, ECOL EVOL, V7, P3762, DOI 10.1002/ECE3.2939.;MCCLURE ML, 2016, LANDSCAPE ECOL, V31, P1419, DOI 10.1007/S10980-016-0347-0.;MCRAE BH, 2013, CIRCUITSCAPE 4 USER.;MCRAE BH, 2009, CIRCUITSCAPE USERS G.;MCRAE BH, 2016, CONSERVING NATURES S.;MCRAE BH, 2008, ECOLOGY, V89, P2712, DOI 10.1890/07-1861.1.;MCRAE BH, 2007, P NATL ACAD SCI USA, V104, P19885, DOI 10.1073/PNAS.0706568104.;MCRAE BH, 2006, EVOLUTION, V60, P1551, DOI 10.1111/J.0014-3820.2006.TB00500.X.;MCRAE BH, 2012, PLOS ONE, V7, DOI 10.1371/JOURNAL.PONE.0052604.;MILEY GH, 1990, NUCL SIMULATION, P229.;NAIDOO R, 2018, BIOL CONSERV, V217, P96, DOI 10.1016/J.BIOCON.2017.10.037.;ORTEGO J, 2015, J BIOGEOGR, V42, P328, DOI 10.1111/JBI.12419.;PARKS LC, 2015, CONSERV GENET, V16, P1195, DOI 10.1007/S10592-015-0732-2.;PELLETIER D, 2014, PLOS ONE, V9, DOI 10.1371/JOURNAL.PONE.0084135.;PETKOVA D, 2016, NAT GENET, V48, P94, DOI 10.1038/NG.3464.;POOR EE, 2012, PLOS ONE, V7, DOI 10.1371/JOURNAL.PONE.0049390.;PROCTOR MF, 2015, J WILDLIFE MANAGE, V79, P544, DOI 10.1002/JWMG.862.;QURESHI Q, 2014, TR201402 NAT TIG CON.;RIZZO V, 2017, J BIOGEOGR, V44, P2527, DOI 10.1111/JBI.13074.;ROBINOVE CJ., 1962, 468 US DEP INT GEOL.;RODDER D, 2016, ENVIRON MANAGE, V58, P130, DOI 10.1007/S00267-016-0698-Y.;RUIZ-GONZALEZ A, 2015, MOL ECOL, V24, P5110, DOI 10.1111/MEC.13392.;SHAFROTH PB, 2010, FRESHWATER BIOL, V55, P68, DOI 10.1111/J.1365-2427.2009.02271.X.;SHIRK AJ, 2010, MOL ECOL, V19, P3603, DOI 10.1111/J.1365-294X.2010.04745.X.;SIMPKINS CE, 2018, ECOL MODEL, V367, P13, DOI 10.1016/J.ECOLMODEL.2017.11.001.;SINGH A, 2014, SCI TOTAL ENVIRON, V499, P414, DOI 10.1016/J.SCITOTENV.2014.05.048.;TARKHNISHVILI D, 2017, HUM BIOL, V88, P287, DOI 10.13110/HUMANBIOLOGY.88.4.0287.;TASSI F, 2015, INVESTIG GENET, V6, DOI 10.1186/S13323-015-0030-2.;THAYN JB, 2016, PROF GEOGR, V68, P595, DOI 10.1080/00330124.2015.1124787.;THEOBALD DM, 2012, CONSERV LETT, V5, P123, DOI 10.1111/J.1755-263X.2011.00218.X.;TILLMAN FD, 2016, J ARID ENVIRON, V124, P278, DOI 10.1016/J.JARIDENV.2015.09.005.;TORRUBIA S, 2014, FRONT ECOL ENVIRON, V12, P491, DOI 10.1890/130136.;TROMBULAK SC, 2000, CONSERV BIOL, V14, P18, DOI 10.1046/J.1523-1739.2000.99084.X.;UNITED NATIONS ENVIRONMENT PROGRAMME (UNEP), 2015, UNEP LAUNCH GLOB CON.;VELO-ANTON G, 2013, MOL ECOL, V22, P3261, DOI 10.1111/MEC.12310.;WALPOLE AA, 2012, LANDSCAPE ECOL, V27, P761, DOI 10.1007/S10980-012-9728-1.;WANG F, 2014, PLOS ONE, V9, DOI 10.1371/JOURNAL.PONE.0105086.;WASHINGTON WILDLIFE HABITAT CONNECTIVITY WORKING GROUP (WWHCWG), 2010, WASH CONN LANDSC PRO.;WELCH N, 2015, SGC1302 W ASS FISH W.;WITH KA, 1997, OIKOS, V78, P151, DOI 10.2307/3545811.;ZELLER KA, 2012, LANDSCAPE ECOL, V27, P777, DOI 10.1007/S10980-012-9737-0.;ZEPPENFELD T, 2017, PLOS ONE, V12, DOI 10.1371/JOURNAL.PONE.0182188.;ZIOLKOWSKA E, 2016, BIOL CONSERV, V195, P106, DOI 10.1016/J.BIOCON.2015.12.032."
+\end{verbatim}
+
+A funÃ§Ã£o \emph{citation} gera a tabela de frequÃªncias das
+referÃªncias mais citadas ou os primeiros autores mais citados (de
+referÃªncias).
+
+\paragraph{Manuscritos mais citados}\label{manuscritos-mais-citados}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{CR <-}\StringTok{ }\KeywordTok{citations}\NormalTok{(M, }\DataTypeTok{field =} \StringTok{"article"}\NormalTok{, }\DataTypeTok{sep =} \StringTok{";"}\NormalTok{)}
+\KeywordTok{cbind}\NormalTok{(CR}\OperatorTok{$}\NormalTok{Cited[}\DecValTok{1}\OperatorTok{:}\DecValTok{10}\NormalTok{])}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##                                                                                   [,1]
+## MANEL S, 2003, TRENDS ECOL EVOL, V18, P189, DOI 10.1016/S0169-5347(03)00008-9.      43
+## PRITCHARD JK, 2000, GENETICS, V155, P945.                                           39
+## EVANNO G, 2005, MOL ECOL, V14, P2611, DOI 10.1111/J.1365-294X.2005.02553.X.         32
+## MANEL S, 2013, TRENDS ECOL EVOL, V28, P614, DOI 10.1016/J.TREE.2013.05.012.         24
+## MCRAE BH, 2006, EVOLUTION, V60, P1551, DOI 10.1111/J.0014-3820.2006.TB00500.X.      24
+## STORFER A, 2007, HEREDITY, V98, P128, DOI 10.1038/SJ.HDY.6800917.                   23
+## MANTEL N, 1967, CANCER RES, V27, P209.                                              22
+## CUSHMAN SA, 2006, AM NAT, V168, P486, DOI 10.1086/506976.                           21
+## WEIR BS, 1984, EVOLUTION, V38, P1358, DOI 10.1111/J.1558-5646.1984.TB05657.X.       21
+## ROUSSET F, 2008, MOL ECOL RESOUR, V8, P103, DOI 10.1111/J.1471-8286.2007.01931.X.   19
+\end{verbatim}
+
+\paragraph{Primeiro autor mais citado}\label{primeiro-autor-mais-citado}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{CR <-}\StringTok{ }\KeywordTok{citations}\NormalTok{(M, }\DataTypeTok{field =} \StringTok{"author"}\NormalTok{, }\DataTypeTok{sep =} \StringTok{";"}\NormalTok{)}
+\KeywordTok{cbind}\NormalTok{(CR}\OperatorTok{$}\NormalTok{Cited[}\DecValTok{1}\OperatorTok{:}\DecValTok{10}\NormalTok{])}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##              [,1]
+## MANEL S        93
+## CUSHMAN SA     88
+## MCRAE BH       61
+## EXCOFFIER L    57
+## LANDGUTH EL    57
+## PRITCHARD JK   47
+## GUILLOT G      45
+## STORFER A      45
+## BALKENHOL N    39
+## ROUSSET F      35
+\end{verbatim}
+
+A funÃ§Ã£o \emph{localCitations} gera a tabela de frequÃªncia dos
+autores mais citados localmente.
+
+\subparagraph{Autores citados localmente mais
+frequentes}\label{autores-citados-localmente-mais-frequentes}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{CR <-}\StringTok{ }\KeywordTok{localCitations}\NormalTok{(M, }\DataTypeTok{sep =} \StringTok{";"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Articles analysed   94
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{CR}\OperatorTok{$}\NormalTok{Authors[}\DecValTok{1}\OperatorTok{:}\DecValTok{10}\NormalTok{,]}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##            Author LocalCitations
+## 145 HOLDEREGGER R             34
+## 233       MANEL S             25
+## 68     CUSHMAN SA             19
+## 46    CASTILLO JA             11
+## 71       DAVIS AR             11
+## 85        EPPS CW             11
+## 195   LANDGUTH EL             11
+## 411     WAGNER HH             10
+## 304     RAZGOUR O              7
+## 223     LUIKART G              6
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{CR}\OperatorTok{$}\NormalTok{Papers[}\DecValTok{1}\OperatorTok{:}\DecValTok{10}\NormalTok{,]}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##                                Paper                              DOI Year LCS GCS
+## 23   MANEL S, 2013, TRENDS ECOL EVOL       10.1016/J.TREE.2013.05.012 2013  24 245
+## 44       CASTILLO JA, 2014, MOL ECOL                10.1111/MEC.12650 2014  11  71
+## 1    HOLDEREGGER R, 2008, BIOSCIENCE                  10.1641/B580306 2008  10 228
+## 8     SCOBLE J, 2010, DIVERS DISTRIB 10.1111/J.1472-4642.2010.00658.X 2010   5  67
+## 29 WASSERMAN TN, 2013, CONSERV GENET        10.1007/S10592-012-0336-Z 2013   4  20
+## 37   RAZGOUR O, 2014, DIVERS DISTRIB                10.1111/DDI.12200 2014   4  17
+## 19      CUSHMAN SA, 2012, ECOL MODEL  10.1016/J.ECOLMODEL.2012.02.011 2012   3  41
+## 30           BLAIR C, 2013, PLOS ONE     10.1371/JOURNAL.PONE.0057433 2013   3  12
+## 12     THOMASSEN HA, 2011, EVOL APPL 10.1111/J.1752-4571.2010.00172.X 2011   2  50
+## 13     OLSEN JB, 2011, CONSERV GENET        10.1007/S10592-010-0135-3 2011   2  25
+\end{verbatim}
+
+\subsubsection{Ranking de domÃ­nio dos
+autores}\label{ranking-de-domanio-dos-autores}
+
+A funÃ§Ã£o \emph{dominace} calcula o ranking de dominÃ¢ncia dos autores,
+conforme proposto por Kumar \& Kumar, 2008.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{DF <-}\StringTok{ }\KeywordTok{dominance}\NormalTok{(results, }\DataTypeTok{k =} \DecValTok{10}\NormalTok{)}
+\NormalTok{DF}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##           Author Dominance Factor Tot Articles Single-Authored Multi-Authored First-Authored Rank by Articles
+## 1      RAZGOUR O        1.0000000            3               1              2              2                4
+## 2   THOMASSEN HA        1.0000000            3               0              3              3                4
+## 3       BRUCE SA        1.0000000            2               0              2              2                1
+## 4    CASTILLO JA        1.0000000            2               0              2              2                1
+## 5        MIMS MC        1.0000000            2               0              2              2                1
+## 6    LANDGUTH EL        0.4285714            7               0              7              3                9
+## 7  HOLDEREGGER R        0.3333333            3               0              3              1                4
+## 8         ZHAO X        0.3333333            3               0              3              1                4
+## 9        MANEL S        0.1666667            6               0              6              1                8
+## 10    CUSHMAN SA        0.1111111            9               0              9              1               10
+##    Rank by DF
+## 1           1
+## 2           1
+## 3           1
+## 4           1
+## 5           1
+## 6           6
+## 7           7
+## 8           7
+## 9           9
+## 10         10
+\end{verbatim}
+
+\subsubsection{H-Index dos autores}\label{h-index-dos-autores}
+
+O Ã­ndice h Ã© uma mÃ©trica no nÃ­vel do autor que tenta medir o impacto
+da produtividade e da citaÃ§Ã£o das publicaÃ§Ãµes de um cientista ou
+estudioso. A funÃ§Ã£o \emph{Hindex} calcula o Ã­ndice H dos autores ou o
+Ã­ndice H das fontes e suas variantes (Ã­ndice-g e Ã­ndice-m) em uma
+coleÃ§Ã£o bibliogrÃ¡fica.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{indices <-}\StringTok{ }\KeywordTok{Hindex}\NormalTok{(M, }\DataTypeTok{field =} \StringTok{"author"}\NormalTok{, }\DataTypeTok{elements=}\StringTok{"RENAUT J"}\NormalTok{, }\DataTypeTok{sep =} \StringTok{";"}\NormalTok{, }\DataTypeTok{years =} \DecValTok{10}\NormalTok{)}
+\CommentTok{#Bornmann's impact indices:}
+\NormalTok{indices}\OperatorTok{$}\NormalTok{H}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##     Author h_index g_index m_index TC NP PY_start
+## 1 RENAUT J       0       0       0  0  0       NA
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{indices}\OperatorTok{$}\NormalTok{CitationList}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## list()
+\end{verbatim}
+
+\paragraph{H-Index dos primeiros 10 autores mais
+produtivos}\label{h-index-dos-primeiros-10-autores-mais-produtivos}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{authors=}\KeywordTok{gsub}\NormalTok{(}\StringTok{","}\NormalTok{,}\StringTok{" "}\NormalTok{,}\KeywordTok{names}\NormalTok{(results}\OperatorTok{$}\NormalTok{Authors)[}\DecValTok{1}\OperatorTok{:}\DecValTok{10}\NormalTok{])}
+\NormalTok{indices <-}\StringTok{ }\KeywordTok{Hindex}\NormalTok{(M, }\DataTypeTok{field =} \StringTok{"author"}\NormalTok{, }\DataTypeTok{elements=}\NormalTok{authors, }\DataTypeTok{sep =} \StringTok{";"}\NormalTok{, }\DataTypeTok{years =} \DecValTok{50}\NormalTok{)}
+\NormalTok{indices}\OperatorTok{$}\NormalTok{H}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##           Author h_index g_index   m_index  TC NP PY_start
+## 1     CUSHMAN SA       6       9 0.7500000 184  9     2012
+## 2    LANDGUTH EL       6       7 0.7500000 103  7     2012
+## 3        MANEL S       4       6 0.5714286 290  6     2013
+## 4  HOLDEREGGER R       3       3 0.2500000 491  3     2008
+## 5      LUIKART G       3       3 0.3750000  36  3     2012
+## 6    MUHLFELD CC       3       3 0.3750000  36  3     2012
+## 7      RAZGOUR O       3       3 0.5000000  33  3     2014
+## 8       SMITH TB       2       3 0.2000000  84  3     2010
+## 9   THOMASSEN HA       2       3 0.2000000  84  3     2010
+## 10      WAYNE RK       2       3 0.2000000  84  3     2010
+\end{verbatim}
+
+\subsubsection{Produtividade dos principais autores ao longo do
+tempo}\label{produtividade-dos-principais-autores-ao-longo-do-tempo}
+
+A funÃ§Ã£o \emph{AuthorProdOverTime} calcula e plota a produÃ§Ã£o dos
+autores (em termos de nÃºmero de publicaÃ§Ãµes e total de citaÃ§Ãµes por
+ano) ao longo do tempo.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{topAU <-}\StringTok{ }\KeywordTok{authorProdOverTime}\NormalTok{(M, }\DataTypeTok{k =} \DecValTok{10}\NormalTok{, }\DataTypeTok{graph =} \OtherTok{TRUE}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{biblio_final_files/figure-latex/unnamed-chunk-19-1.pdf}
+
+\paragraph{Produtividade dos autores por
+ano}\label{produtividade-dos-autores-por-ano}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{head}\NormalTok{(topAU}\OperatorTok{$}\NormalTok{dfAU)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##       Author year freq TC      TCpY
+## 1 CUSHMAN SA 2012    1 41  5.125000
+## 2 CUSHMAN SA 2013    1 20  2.857143
+## 3 CUSHMAN SA 2014    2 92 15.333333
+## 4 CUSHMAN SA 2016    1 12  3.000000
+## 5 CUSHMAN SA 2017    3 18  6.000000
+## 6 CUSHMAN SA 2018    1  1  0.500000
+\end{verbatim}
+
+\paragraph{Lista de documentos dos
+autores}\label{lista-de-documentos-dos-autores}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{head}\NormalTok{(topAU}\OperatorTok{$}\NormalTok{dfPapersAU)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##       Author year
+## 2 CUSHMAN SA 2018
+## 3 CUSHMAN SA 2017
+## 4 CUSHMAN SA 2017
+## 5 CUSHMAN SA 2017
+## 6 CUSHMAN SA 2016
+## 7 CUSHMAN SA 2014
+##                                                                                                                                                                                                         TI
+## 2                                                     SIMULATING IMPACTS OF RAPID FOREST LOSS ON POPULATION SIZE, CONNECTIVITY AND GENETIC DIVERSITY OF SUNDA CLOUDED LEOPARDS (NEOFELIS DIARDI) IN BORNEO
+## 3                                                                                                                         A COMPARISON OF INDIVIDUAL-BASED GENETIC DISTANCE METRICS FOR LANDSCAPE GENETICS
+## 4 CONSERVING THREATENED RIPARIAN ECOSYSTEMS IN THE AMERICAN WEST: PRECIPITATION GRADIENTS AND RIVER NETWORKS DRIVE GENETIC CONNECTIVITY AND DIVERSITY IN A FOUNDATION RIPARIAN TREE (POPULUS ANGUSTIFOLIA)
+## 5                                                                               USING LANDSCAPE GENETICS SIMULATIONS FOR PLANTING BLISTER RUST RESISTANT WHITEBARK PINE IN THE US NORTHERN ROCKY MOUNTAINS
+## 6                                                                                            PREDICTING GLOBAL POPULATION CONNECTIVITY AND TARGETING CONSERVATION ACTION FOR SNOW LEOPARD ACROSS ITS RANGE
+## 7                                    LANDSCAPE GENETICS FOR THE EMPIRICAL ASSESSMENT OF RESISTANCE SURFACES: THE EUROPEAN PINE MARTEN (MARTES MARTES) AS A TARGET-SPECIES OF A REGIONAL ECOLOGICAL NETWORK
+##                            SO                          DOI TC TCpY
+## 2                    PLOS ONE 10.1371/JOURNAL.PONE.0196974  1  0.5
+## 3 MOLECULAR ECOLOGY RESOURCES      10.1111/1755-0998.12684  6  2.0
+## 4           MOLECULAR ECOLOGY            10.1111/MEC.14281  3  1.0
+## 5       FRONTIERS IN GENETICS     10.3389/FGENE.2017.00009  9  3.0
+## 6                   ECOGRAPHY           10.1111/ECOG.01691 12  3.0
+## 7                    PLOS ONE 10.1371/JOURNAL.PONE.0110552 21  3.5
+\end{verbatim}
+
+\subsubsection{Estimativa do coeficiente de Lotkaâs
+Law}\label{estimativa-do-coeficiente-de-lotkaas-law}
+
+A funÃ§Ã£o \emph{lotka} a estima os coeficientes da Lei de Lotka para a
+produtividade cientÃ­fica (Lotka AJ, 1926). AtravÃ©s dessa funÃ§Ã£o Ã©
+possÃ­vel estimar a similaridade desta distribuiÃ§Ã£o empÃ­rica com a
+teÃ³rica.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{L <-}\StringTok{ }\KeywordTok{lotka}\NormalTok{(results)}
+\CommentTok{# Produtividade dos autores DistribuiÃ§Ã£o empÃ­rica}
+\NormalTok{L}\OperatorTok{$}\NormalTok{AuthorProd}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##   N.Articles N.Authors        Freq
+## 1          1       445 0.902636917
+## 2          2        37 0.075050710
+## 3          3         8 0.016227181
+## 4          6         1 0.002028398
+## 5          7         1 0.002028398
+## 6          9         1 0.002028398
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{# Estimativa do coefficiente Beta}
+\NormalTok{L}\OperatorTok{$}\NormalTok{Beta}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 2.917897
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{# Constante}
+\NormalTok{L}\OperatorTok{$}\NormalTok{C}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 0.6199142
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{# Qualidade do ajuste}
+\NormalTok{L}\OperatorTok{$}\NormalTok{R2}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 0.9661949
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{# P-value de K-S para o teste de duas amostras}
+\NormalTok{L}\OperatorTok{$}\NormalTok{p.value}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 0.4413066
+\end{verbatim}
+
+\paragraph{DistribuiÃ§Ã£o observada}\label{distribuiaao-observada}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{Observed=L}\OperatorTok{$}\NormalTok{AuthorProd[,}\DecValTok{3}\NormalTok{]}
+\end{Highlighting}
+\end{Shaded}
+
+\paragraph{DistribuiÃ§Ã£o teÃ³rica com Beta =
+2}\label{distribuiaao-tearica-com-beta-2}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{Theoretical=}\DecValTok{10}\OperatorTok{^}\NormalTok{(}\KeywordTok{log10}\NormalTok{(L}\OperatorTok{$}\NormalTok{C)}\OperatorTok{-}\DecValTok{2}\OperatorTok{*}\KeywordTok{log10}\NormalTok{(L}\OperatorTok{$}\NormalTok{AuthorProd[,}\DecValTok{1}\NormalTok{]))}
+\KeywordTok{plot}\NormalTok{(L}\OperatorTok{$}\NormalTok{AuthorProd[,}\DecValTok{1}\NormalTok{],Theoretical,}\DataTypeTok{type=}\StringTok{"l"}\NormalTok{,}\DataTypeTok{col=}\StringTok{"red"}\NormalTok{, }\DataTypeTok{ylim=}\KeywordTok{c}\NormalTok{(}\DecValTok{0}\NormalTok{, }\DecValTok{1}\NormalTok{), }
+     \DataTypeTok{xlab=}\StringTok{"Articles"}\NormalTok{,}\DataTypeTok{ylab=}\StringTok{"Freq. of Authors"}\NormalTok{, }\DataTypeTok{main=}\StringTok{"Scientific Productivity"}\NormalTok{)}
+\KeywordTok{lines}\NormalTok{(L}\OperatorTok{$}\NormalTok{AuthorProd[,}\DecValTok{1}\NormalTok{],Observed,}\DataTypeTok{col=}\StringTok{"blue"}\NormalTok{)}
+\KeywordTok{legend}\NormalTok{(}\DataTypeTok{x=}\StringTok{"topright"}\NormalTok{,}\KeywordTok{c}\NormalTok{(}\StringTok{"Theoretical (B=2)"}\NormalTok{,}\StringTok{"Observed"}\NormalTok{), }\DataTypeTok{col=}\KeywordTok{c}\NormalTok{(}\StringTok{"red"}\NormalTok{,}\StringTok{"blue"}\NormalTok{),}
+       \DataTypeTok{lty =} \KeywordTok{c}\NormalTok{(}\DecValTok{1}\NormalTok{,}\DecValTok{1}\NormalTok{,}\DecValTok{1}\NormalTok{),}\DataTypeTok{cex=}\FloatTok{0.6}\NormalTok{,}\DataTypeTok{bty=}\StringTok{"n"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{biblio_final_files/figure-latex/unnamed-chunk-28-1.pdf}
+
+\subsubsection{Matrizes de redes
+bibliogrÃ¡ficas}\label{matrizes-de-redes-bibliograficas}
+
+\paragraph{Redes bipartidas}\label{redes-bipartidas}
+
+\emph{cocMatrix} Ã© uma funÃ§Ã£o geral para calcular uma rede bipartida
+selecionando um dos atributos de metadados.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{A <-}\StringTok{ }\KeywordTok{cocMatrix}\NormalTok{(M, }\DataTypeTok{Field =} \StringTok{"SO"}\NormalTok{, }\DataTypeTok{sep =} \StringTok{";"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+Classificando, em ordem decrescente, as somas da coluna de \texttt{A},
+vocÃª pode ver as fontes de publicaÃ§Ã£o mais relevantes:
+
+\paragraph{Ordem decrescente}\label{ordem-decrescente}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{sort}\NormalTok{(Matrix}\OperatorTok{::}\KeywordTok{colSums}\NormalTok{(A), }\DataTypeTok{decreasing =} \OtherTok{TRUE}\NormalTok{)[}\DecValTok{1}\OperatorTok{:}\DecValTok{5}\NormalTok{]}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##         MOLECULAR ECOLOGY     CONSERVATION GENETICS                  PLOS ONE EVOLUTIONARY APPLICATIONS 
+##                        14                        13                         6                         5 
+##     ECOLOGY AND EVOLUTION 
+##                         4
+\end{verbatim}
+
+Seguindo essa abordagem, vocÃª pode calcular vÃ¡rias redes bipartidas:
+
+\paragraph{Rede de citaÃ§Ã£o}\label{rede-de-citaaao}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{A <-}\StringTok{ }\KeywordTok{cocMatrix}\NormalTok{(M, }\DataTypeTok{Field =} \StringTok{"CR"}\NormalTok{, }\DataTypeTok{sep =} \StringTok{".  "}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\paragraph{Rede de autor}\label{rede-de-autor}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{A <-}\StringTok{ }\KeywordTok{cocMatrix}\NormalTok{(M, }\DataTypeTok{Field =} \StringTok{"AU"}\NormalTok{, }\DataTypeTok{sep =} \StringTok{";"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\paragraph{Redes do paÃ­s}\label{redes-do-paas}
+
+PaÃ­ses dos autores nÃ£o Ã© um atributo padrÃ£o do quadro de dados
+bibliogrÃ¡ficos. VocÃª precisa extrair essas informaÃ§Ãµes do atributo
+de afiliaÃ§Ã£o usando a funÃ§Ã£o metaTagExtraction .
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{M <-}\StringTok{ }\KeywordTok{metaTagExtraction}\NormalTok{(M, }\DataTypeTok{Field =} \StringTok{"AU_CO"}\NormalTok{, }\DataTypeTok{sep =} \StringTok{";"}\NormalTok{)}
+\NormalTok{A <-}\StringTok{ }\KeywordTok{cocMatrix}\NormalTok{(M, }\DataTypeTok{Field =} \StringTok{"AU_CO"}\NormalTok{, }\DataTypeTok{sep =} \StringTok{";"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\paragraph{Rede de palavra-chave de
+autores}\label{rede-de-palavra-chave-de-autores}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{A <-}\StringTok{ }\KeywordTok{cocMatrix}\NormalTok{(M, }\DataTypeTok{Field =} \StringTok{"DE"}\NormalTok{, }\DataTypeTok{sep =} \StringTok{";"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\paragraph{Rede de palavras-chave
+adicional}\label{rede-de-palavras-chave-adicional}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{A <-}\StringTok{ }\KeywordTok{cocMatrix}\NormalTok{(M, }\DataTypeTok{Field =} \StringTok{"ID"}\NormalTok{, }\DataTypeTok{sep =} \StringTok{";"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\paragraph{Acoplamento bibliogrÃ¡fico}\label{acoplamento-bibliografico}
+
+A funÃ§Ã£o \emph{biblioNetwork} calcula, a partir de um quadro de dados
+bibliogrÃ¡ficos, as redes de acoplamento mais utilizadas: Autores,
+Fontes e PaÃ­ses.
+
+\paragraph{Redes de acoplamento de artigos
+clÃ¡ssicos}\label{redes-de-acoplamento-de-artigos-classicos}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{NetMatrix <-}\StringTok{ }\KeywordTok{biblioNetwork}\NormalTok{(M, }\DataTypeTok{analysis =} \StringTok{"coupling"}\NormalTok{, }
+                           \DataTypeTok{network =} \StringTok{"references"}\NormalTok{, }\DataTypeTok{sep =} \StringTok{".  "}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\paragraph{NormalizaÃ§Ã£o}\label{normalizaaao}
+
+A funÃ§Ã£o \emph{normalizeSimilarity} calcula a forÃ§a de associaÃ§Ã£o,
+inclusÃ£o, similaridade de Jaccard ou Salton entre os vÃ©rtices de uma
+rede. \emph{normalizeSimilarity} pode ser recuperada diretamente da
+funÃ§Ã£o networkPlot () usando o argumento \emph{normalize} .
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{NetMatrix <-}\StringTok{ }\KeywordTok{biblioNetwork}\NormalTok{(M, }\DataTypeTok{analysis =} \StringTok{"coupling"}\NormalTok{, }
+                           \DataTypeTok{network =} \StringTok{"authors"}\NormalTok{, }\DataTypeTok{sep =} \StringTok{";"}\NormalTok{)}
+\NormalTok{net=}\KeywordTok{networkPlot}\NormalTok{(NetMatrix,  }\DataTypeTok{normalize =} \StringTok{"salton"}\NormalTok{, }\DataTypeTok{weighted=}\OtherTok{NULL}\NormalTok{, }
+                \DataTypeTok{n =} \DecValTok{100}\NormalTok{, }\DataTypeTok{Title =} \StringTok{"Authors' Coupling"}\NormalTok{, }\DataTypeTok{type =} \StringTok{"fruchterman"}\NormalTok{,}
+                \DataTypeTok{size=}\DecValTok{5}\NormalTok{,}\DataTypeTok{size.cex=}\NormalTok{T,}\DataTypeTok{remove.multiple=}\OtherTok{TRUE}\NormalTok{,}\DataTypeTok{labelsize=}\FloatTok{0.8}\NormalTok{, }
+                \DataTypeTok{label.n=}\DecValTok{10}\NormalTok{,}\DataTypeTok{label.cex=}\NormalTok{F)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{biblio_final_files/figure-latex/unnamed-chunk-37-1.pdf}
+
+\paragraph{Co-citaÃ§Ãµes
+bibliogrÃ¡ficas}\label{co-citaaaes-bibliograficas}
+
+\paragraph{Redes de co-citaÃ§Ã£o de referÃªncias
+clÃ¡ssicas}\label{redes-de-co-citaaao-de-referancias-classicas}
+
+Usando a funÃ§Ã£o \emph{biblioNetwork} , vocÃª pode calcular uma rede
+clÃ¡ssica de co-citaÃ§Ã£o de referÃªncia:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{NetMatrix <-}\StringTok{ }\KeywordTok{biblioNetwork}\NormalTok{(M, }\DataTypeTok{analysis =} \StringTok{"co-citation"}\NormalTok{, }
+                           \DataTypeTok{network =} \StringTok{"references"}\NormalTok{, }\DataTypeTok{sep =} \StringTok{".  "}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\paragraph{ColaboraÃ§Ã£o
+bibliogrÃ¡fica}\label{colaboraaao-bibliografica}
+
+Usando a funÃ§Ã£o \emph{biblioNetwork} , vocÃª pode calcular a rede de
+colaboraÃ§Ã£o de um autor:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{NetMatrix <-}\StringTok{ }\KeywordTok{biblioNetwork}\NormalTok{(M, }\DataTypeTok{analysis =} \StringTok{"collaboration"}\NormalTok{, }\DataTypeTok{network =} \StringTok{"authors"}\NormalTok{, }\DataTypeTok{sep =} \StringTok{";"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+ou uma rede de colaboraÃ§Ã£o do paÃ­s:
+
+\paragraph{Redes de colaboraÃ§Ã£o entre
+paÃ­ses}\label{redes-de-colaboraaao-entre-paases}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{NetMatrix <-}\StringTok{ }\KeywordTok{biblioNetwork}\NormalTok{(M, }\DataTypeTok{analysis =} \StringTok{"collaboration"}\NormalTok{, }\DataTypeTok{network =} \StringTok{"countries"}\NormalTok{, }\DataTypeTok{sep =} \StringTok{";"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\subsubsection{AnÃ¡lise descritiva das caracterÃ­sticas de grÃ¡ficos de
+rede}\label{analise-descritiva-das-caracterasticas-de-graficos-de-rede}
+
+A funÃ§Ã£o \emph{networkStat} calcula vÃ¡rias estatÃ­sticas de resumo.
+
+\paragraph{Um exemplo de redes de co-ocorrÃªncia
+clÃ¡ssica}\label{um-exemplo-de-redes-de-co-ocorrancia-classica}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{NetMatrix <-}\StringTok{ }\KeywordTok{biblioNetwork}\NormalTok{(M, }\DataTypeTok{analysis =} \StringTok{"co-occurrences"}\NormalTok{, }\DataTypeTok{network =} \StringTok{"keywords"}\NormalTok{, }\DataTypeTok{sep =} \StringTok{";"}\NormalTok{)}
+\NormalTok{netstat <-}\StringTok{ }\KeywordTok{networkStat}\NormalTok{(NetMatrix)}
+\end{Highlighting}
+\end{Shaded}
+
+\paragraph{As estatÃ­sticas resumidas da
+rede}\label{as-estatasticas-resumidas-da-rede}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{names}\NormalTok{(netstat}\OperatorTok{$}\NormalTok{network)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##  [1] "networkSize"             "networkDensity"          "networkTransitivity"     "networkDiameter"        
+##  [5] "networkDegreeDist"       "networkCentrDegree"      "networkCentrCloseness"   "networkCentrEigen"      
+##  [9] "networkCentrbetweenness" "NetworkAverPathLeng"
+\end{verbatim}
+
+\paragraph{Os principais Ã­ndices de centralidade e prestÃ­gio dos
+vÃ©rtices}\label{os-principais-andices-de-centralidade-e-prestagio-dos-vartices}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{names}\NormalTok{(netstat}\OperatorTok{$}\NormalTok{vertex)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## NULL
+\end{verbatim}
+
+\paragraph{\texorpdfstring{Resumo dos principais resultados da funÃ§Ã£o
+\emph{networkStat}}{Resumo dos principais resultados da funÃ§Ã£o networkStat}}\label{resumo-dos-principais-resultados-da-funaao-networkstat}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{summary}\NormalTok{(netstat, }\DataTypeTok{k=}\DecValTok{10}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 
+## 
+## Main statistics about the network
+## 
+##  Size                                  529 
+##  Density                               0.028 
+##  Transitivity                          0.182 
+##  Diameter                              4 
+##  Degree Centralization                 0.644 
+##  Average path length                   2.263 
+## 
+\end{verbatim}
+
+\subsubsection{VisualizaÃ§Ã£o de redes
+bibliogrÃ¡ficas}\label{visualizaaao-de-redes-bibliograficas}
+
+\paragraph{ColaboraÃ§Ã£o cientÃ­fica nos
+paÃ­ses}\label{colaboraaao-cientafica-nos-paases}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{# CriaÃ§Ã£o de uma rede de colaboraÃ§Ã£o entre paÃ­ses}
+\NormalTok{M <-}\StringTok{ }\KeywordTok{metaTagExtraction}\NormalTok{(M, }\DataTypeTok{Field =} \StringTok{"AU_CO"}\NormalTok{, }\DataTypeTok{sep =} \StringTok{";"}\NormalTok{)}
+\NormalTok{NetMatrix <-}\StringTok{ }\KeywordTok{biblioNetwork}\NormalTok{(M, }\DataTypeTok{analysis =} \StringTok{"collaboration"}\NormalTok{, }
+                           \DataTypeTok{network =} \StringTok{"countries"}\NormalTok{, }\DataTypeTok{sep =} \StringTok{";"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\paragraph{GrÃ¡fico da rede}\label{grafico-da-rede}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{net=}\KeywordTok{networkPlot}\NormalTok{(NetMatrix, }\DataTypeTok{n =} \KeywordTok{dim}\NormalTok{(NetMatrix)[}\DecValTok{1}\NormalTok{], }\DataTypeTok{Title =} \StringTok{"Country Collaboration"}\NormalTok{, }
+                \DataTypeTok{type =} \StringTok{"circle"}\NormalTok{, }\DataTypeTok{size=}\NormalTok{T, }\DataTypeTok{remove.multiple=}\OtherTok{FALSE}\NormalTok{, }
+                \DataTypeTok{labelsize=}\FloatTok{0.7}\NormalTok{,}\DataTypeTok{cluster=}\StringTok{"none"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{biblio_final_files/figure-latex/unnamed-chunk-46-1.pdf}
+
+\paragraph{Redes de co-citaÃ§Ã£o}\label{redes-de-co-citaaao}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{# CriaÃ§Ã£o de uma rede de co-citaÃ§Ã£o}
+\NormalTok{NetMatrix <-}\StringTok{ }\KeywordTok{biblioNetwork}\NormalTok{(M, }\DataTypeTok{analysis =} \StringTok{"co-citation"}\NormalTok{, }
+                           \DataTypeTok{network =} \StringTok{"references"}\NormalTok{, }\DataTypeTok{sep =} \StringTok{";"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\paragraph{GrÃ¡fico da rede}\label{grafico-da-rede-1}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{net=}\KeywordTok{networkPlot}\NormalTok{(NetMatrix, }\DataTypeTok{n =} \DecValTok{30}\NormalTok{, }\DataTypeTok{Title =} \StringTok{"Co-Citation Network"}\NormalTok{, }
+                \DataTypeTok{type =} \StringTok{"fruchterman"}\NormalTok{, }\DataTypeTok{size=}\NormalTok{T, }\DataTypeTok{remove.multiple=}\OtherTok{FALSE}\NormalTok{,}
+                \DataTypeTok{labelsize=}\FloatTok{0.7}\NormalTok{,}\DataTypeTok{edgesize =} \DecValTok{5}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{biblio_final_files/figure-latex/unnamed-chunk-48-1.pdf}
+
+\paragraph{Co-ocorrÃªncia de
+palavras-chave}\label{co-ocorrancia-de-palavras-chave}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{# CriaÃ§Ã£o de rede de co-ocorrÃªncia de palavras-chave}
+\NormalTok{NetMatrix <-}\StringTok{ }\KeywordTok{biblioNetwork}\NormalTok{(M, }\DataTypeTok{analysis =} \StringTok{"co-occurrences"}\NormalTok{, }\DataTypeTok{network =} \StringTok{"keywords"}\NormalTok{, }\DataTypeTok{sep =} \StringTok{";"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\paragraph{GrÃ¡fico da rede}\label{grafico-da-rede-2}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{net=}\KeywordTok{networkPlot}\NormalTok{(NetMatrix, }\DataTypeTok{normalize=}\StringTok{"association"}\NormalTok{, }\DataTypeTok{weighted=}\NormalTok{T, }\DataTypeTok{n =} \DecValTok{30}\NormalTok{, }\DataTypeTok{Title =} \StringTok{"Keyword Co-occurrences"}\NormalTok{, }\DataTypeTok{type =} \StringTok{"fruchterman"}\NormalTok{, }\DataTypeTok{size=}\NormalTok{T,}\DataTypeTok{edgesize =} \DecValTok{5}\NormalTok{,}\DataTypeTok{labelsize=}\FloatTok{0.7}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{biblio_final_files/figure-latex/unnamed-chunk-50-1.pdf}
+
+\subsubsection{\texorpdfstring{AnÃ¡lise de \emph{Co-Word}: A estrutura
+conceitual de um
+campo}{AnÃ¡lise de Co-Word: A estrutura conceitual de um campo}}\label{analise-de-co-word-a-estrutura-conceitual-de-um-campo}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{# Estrutura conceitual usando palavras-chave (mÃ©todo="CA")}
+\NormalTok{CS <-}\StringTok{ }\KeywordTok{conceptualStructure}\NormalTok{(M,}\DataTypeTok{field=}\StringTok{"ID"}\NormalTok{, }\DataTypeTok{method=}\StringTok{"CA"}\NormalTok{, }\DataTypeTok{minDegree=}\DecValTok{4}\NormalTok{, }\DataTypeTok{k.max=}\DecValTok{8}\NormalTok{, }\DataTypeTok{stemming=}\OtherTok{FALSE}\NormalTok{, }\DataTypeTok{labelsize=}\DecValTok{10}\NormalTok{, }\DataTypeTok{documents=}\DecValTok{10}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{biblio_final_files/figure-latex/unnamed-chunk-51-1.pdf}
+\includegraphics{biblio_final_files/figure-latex/unnamed-chunk-51-2.pdf}
+\includegraphics{biblio_final_files/figure-latex/unnamed-chunk-51-3.pdf}
+\includegraphics{biblio_final_files/figure-latex/unnamed-chunk-51-4.pdf}
+
+\paragraph{Rede histÃ³rica de citaÃ§Ã£o
+direta}\label{rede-histarica-de-citaaao-direta}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{# CriaÃ§Ã£o de uma rede de citaÃ§Ã£o histÃ³rica}
+\NormalTok{histResults <-}\StringTok{ }\KeywordTok{histNetwork}\NormalTok{(M, }\DataTypeTok{min.citations =} \DecValTok{10}\NormalTok{, }\DataTypeTok{sep =} \StringTok{";"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Articles analysed   47
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{# GrÃ¡fico de uma rede de co-citaÃ§Ã£o histÃ³rica}
+\NormalTok{net <-}\StringTok{ }\KeywordTok{histPlot}\NormalTok{(histResults, }\DataTypeTok{n=}\DecValTok{15}\NormalTok{, }\DataTypeTok{size =} \DecValTok{20}\NormalTok{, }\DataTypeTok{labelsize=}\DecValTok{10}\NormalTok{, }\DataTypeTok{size.cex=}\OtherTok{TRUE}\NormalTok{, }\DataTypeTok{arrowsize =} \FloatTok{0.5}\NormalTok{, }\DataTypeTok{color =} \OtherTok{TRUE}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{biblio_final_files/figure-latex/unnamed-chunk-53-1.pdf}
+
+\begin{verbatim}
+## 
+##  Legend
+## 
+##                                       Paper                              DOI Year LCS GCS
+## 2008 - 1    HOLDEREGGER R, 2008, BIOSCIENCE                  10.1641/B580306 2008  10 228
+## 2010 - 6     SCOBLE J, 2010, DIVERS DISTRIB 10.1111/J.1472-4642.2010.00658.X 2010   5  67
+## 2011 - 10     THOMASSEN HA, 2011, EVOL APPL 10.1111/J.1752-4571.2010.00172.X 2011   2  50
+## 2011 - 11     OLSEN JB, 2011, CONSERV GENET        10.1007/S10592-010-0135-3 2011   2  25
+## 2012 - 16      CUSHMAN SA, 2012, ECOL MODEL  10.1016/J.ECOLMODEL.2012.02.011 2012   3  41
+## 2013 - 19   MANEL S, 2013, TRENDS ECOL EVOL       10.1016/J.TREE.2013.05.012 2013  24 245
+## 2013 - 22 WASSERMAN TN, 2013, CONSERV GENET        10.1007/S10592-012-0336-Z 2013   4  20
+## 2013 - 23           BLAIR C, 2013, PLOS ONE     10.1371/JOURNAL.PONE.0057433 2013   3  12
+## 2014 - 27   RAZGOUR O, 2014, DIVERS DISTRIB                10.1111/DDI.12200 2014   4  17
+## 2014 - 28      LANDGUTH EL, 2014, ECOL APPL                10.1890/13-0499.1 2014   2  18
+## 2014 - 30       CASTILLO JA, 2014, MOL ECOL                10.1111/MEC.12650 2014  11  71
+## 2015 - 33      RAZGOUR O, 2015, ECOL INFORM     10.1016/J.ECOINF.2015.05.007 2015   2  10
+## 2015 - 34          HECHT BC, 2015, MOL ECOL                10.1111/MEC.13409 2015   2  35
+## 2016 - 44      SCRIBNER KT, 2016, FISHERIES    10.1080/03632415.2016.1150838 2016   2  10
+## 2016 - 46     RICHARDSON JL, 2016, MOL ECOL                10.1111/MEC.13527 2016   2  46
+\end{verbatim}
+
+\subsection{\texorpdfstring{\textbf{Respostas
+encontradas}}{Respostas encontradas}}\label{respostas-encontradas}
+
+\subsection{\texorpdfstring{\textbf{Dificuldades
+encontradas}}{Dificuldades encontradas}}\label{dificuldades-encontradas}
+
+Primeiramente, encontrei dificuldades com a obtenÃ§Ã£o dos dados pelo
+site \textbf{Web of science}, pois como nÃ£o o conhecia, nÃ£o percebi
+que eu poderia ``adicionar linhas'' com outras palavras especÃ­ficas de
+interesse. Essa dificuldade logo foi sanada e acabei achando a
+plataforma muito interessante.
+
+Posteriormente, tive problemas em entender com o Rmarkdown funcionava.
+Achei que entre as chaves ``\{\}'' era necessÃ¡rio colocar uma funÃ§Ã£o
+especÃ­fica para rodar o cÃ³digo. Conhecia apenas o sÃ­mbolo ``\#'' para
+a formataÃ§Ã£o das palavras, com o tempo e pesquisas, conheci outros
+meios de formataÃ§Ã£o. Pude me integrar melhor com o RMArkdown atravÃ©s
+do Cheat Sheet:
+\url{https://www.rstudio.com/wp-content/uploads/2015/02/rmarkdown-cheatsheet.pdf}
+e tambÃ©m do vÃ­deo de um colega de laboratÃ³rio, Alexandre Aono:
+\url{https://www.youtube.com/watch?v=AuXTUalb0HU\&t=310s}.
+
+Quando tentei baixar o arquivo no formato PDF, o Rmarkdow apresentou um
+erro relativo ao sistema LATEX, no qual tive bastante dificuldade em
+sanar. Mesmo baixando o LATEX, o arquivo nÃ£o era gerado. Encontrei a
+soluÃ§Ã£o em um forum de discussÃ£o sugerido por um amigo atravÃ©s deste
+link:
+\url{https://tex.stackexchange.com/questions/408798/sorry-but-pdflatex-did-not-succeed?rq=1}.
+
+\subsection{\texorpdfstring{\textbf{Bibliografia}}{Bibliografia}}\label{bibliografia}
+
+Balkenhol, N.; McDevitt, A. D.; Sommer, S. Landscape genetic approaches
+in conservation biology and management. Conservation Genetics, v. 14, n.
+2, p.~249-251, april. 2013.
+
+Storfer A, Murphy MA, Evans JS, Goldberg CS, Robinson S, Spear SF,
+Dezzani R, Delmelle E, Vierling L, Waits LP (2007) Putting the
+âlandscapeâ in landscape genetics. Heredity 98:128â``142
+
+Storfer A, Murphy MA, Spear SF, Holderegger R, Waits LP (2010) Landscape
+genetics: where are we now? Mol Ecol 19:3496â``3514
+
+Holderegger R, Wagner HH (2008) Landscape genetics. Bioscience
+58:199â``207
+
+Balkenhol N, Gugerli F, Cushman SA, Waits L, Coulon A, Arntzen J,
+Holderegger R, Wagner HH (2009) Identifying future research needs in
+landscape genetics: where to from here? Landsc Ecol 24:455â``463
+
+Manel S, Joost S, Epperson BK, Holderegger R, Storfer A, Rosenberg MS,
+Scribner KT, Bonin A, Fortin MJ (2010) Perspectives on the use of
+landscape genetics to detect genetic adaptive variation in the field.
+Mol Ecol 19:3760â``3772
+
+Segelbacher G, Cushman SA, Epperson BK, Fortin M-J, Francois O, Hardy
+OJ, Holderegger R, Manel S (2010) Applications of landscape genetics in
+conservation biology: concepts and challenges. Conserv Genet
+11:375â``385
+
+Epperson BK, McRae B, Scribner K, Cushman SA, Rosenberg MS, Fortin M-J,
+James PMA, Murphy M, Manel S, Legendre P, Dale MRT (2010) Utility of
+computer simulations in landscape genetics. Mol Ecol 19:3540â``3564
+
+Sork VL, Waits L (2010) Contributions of landscape
+geneticsâapproaches, insights and future potential. Mol Ecol
+19:3489â``3495
+
+Aria, M. \& Cuccurullo, C. (2017) bibliometrix: An R-tool for
+comprehensive science mapping analysis, Journal of Informetrics, 11(4),
+pp 959-975, Elsevier.
+
+
+\end{document}

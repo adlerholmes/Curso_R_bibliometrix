@@ -1,0 +1,2313 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7000 64-bit) (preloaded format=pdflatex 2019.5.6)  6 MAY 2019 15:42
+entering extended mode
+**./biblio_final.tex
+(biblio_final.tex
+LaTeX2e <2018-12-01>
+("C:\Users\Michele\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\article.cls
+"
+Document Class: article 2018/09/03 v1.4i Standard LaTeX document class
+("C:\Users\Michele\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\size10.clo"
+File: size10.clo 2018/09/03 v1.4i Standard LaTeX file (size option)
+)
+\c@part=\count80
+\c@section=\count81
+\c@subsection=\count82
+\c@subsubsection=\count83
+\c@paragraph=\count84
+\c@subparagraph=\count85
+\c@figure=\count86
+\c@table=\count87
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+) ("C:\Users\Michele\AppData\Local\Programs\MiKTeX 2.9\tex/latex/lm\lmodern.sty
+"
+Package: lmodern 2009/10/30 v1.6 Latin Modern Fonts
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  OT1/cmr/m/n --> OT1/lmr/m/n on input line 22.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `normal'
+(Font)                  OML/cmm/m/it --> OML/lmm/m/it on input line 23.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `normal'
+(Font)                  OMS/cmsy/m/n --> OMS/lmsy/m/n on input line 24.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
+(Font)                  OMX/cmex/m/n --> OMX/lmex/m/n on input line 25.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  OT1/cmr/bx/n --> OT1/lmr/bx/n on input line 26.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `bold'
+(Font)                  OML/cmm/b/it --> OML/lmm/b/it on input line 27.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
+(Font)                  OMS/cmsy/b/n --> OMS/lmsy/b/n on input line 28.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
+(Font)                  OMX/cmex/m/n --> OMX/lmex/m/n on input line 29.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
+(Font)                  OT1/cmr/bx/n --> OT1/lmr/bx/n on input line 31.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
+(Font)                  OT1/cmss/m/n --> OT1/lmss/m/n on input line 32.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
+(Font)                  OT1/cmr/m/it --> OT1/lmr/m/it on input line 33.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
+(Font)                  OT1/cmtt/m/n --> OT1/lmtt/m/n on input line 34.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
+(Font)                  OT1/cmr/bx/n --> OT1/lmr/bx/n on input line 35.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
+(Font)                  OT1/cmss/bx/n --> OT1/lmss/bx/n on input line 36.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
+(Font)                  OT1/cmr/bx/it --> OT1/lmr/bx/it on input line 37.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
+(Font)                  OT1/cmtt/m/n --> OT1/lmtt/m/n on input line 38.
+)
+("C:\Users\Michele\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\amssymb
+.sty"
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+
+("C:\Users\Michele\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\amsfont
+s.sty"
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\@emptytoks=\toks14
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+))
+("C:\Users\Michele\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amsmath.
+sty"
+Package: amsmath 2018/12/01 v2.17b AMS math features
+\@mathmargin=\skip43
+For additional information on amsmath, use the `?' option.
+
+("C:\Users\Michele\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amstext.
+sty"
+Package: amstext 2000/06/29 v2.01 AMS text
+
+("C:\Users\Michele\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amsgen.s
+ty"
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks15
+\ex@=\dimen103
+))
+("C:\Users\Michele\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amsbsy.s
+ty"
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen104
+)
+("C:\Users\Michele\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amsopn.s
+ty"
+Package: amsopn 2016/03/08 v2.02 operator names
+)
+\inf@bad=\count88
+LaTeX Info: Redefining \frac on input line 223.
+\uproot@=\count89
+\leftroot@=\count90
+LaTeX Info: Redefining \overline on input line 385.
+\classnum@=\count91
+\DOTSCASE@=\count92
+LaTeX Info: Redefining \ldots on input line 482.
+LaTeX Info: Redefining \dots on input line 485.
+LaTeX Info: Redefining \cdots on input line 606.
+\Mathstrutbox@=\box27
+\strutbox@=\box28
+\big@size=\dimen105
+LaTeX Font Info:    Redeclaring font encoding OML on input line 729.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 730.
+\macc@depth=\count93
+\c@MaxMatrixCols=\count94
+\dotsspace@=\muskip10
+\c@parentequation=\count95
+\dspbrk@lvl=\count96
+\tag@help=\toks16
+\row@=\count97
+\column@=\count98
+\maxfields@=\count99
+\andhelp@=\toks17
+\eqnshift@=\dimen106
+\alignsep@=\dimen107
+\tagshift@=\dimen108
+\tagwidth@=\dimen109
+\totwidth@=\dimen110
+\lineht@=\dimen111
+\@envbody=\toks18
+\multlinegap=\skip44
+\multlinetaggap=\skip45
+\mathdisplay@stack=\toks19
+LaTeX Info: Redefining \[ on input line 2844.
+LaTeX Info: Redefining \] on input line 2845.
+)
+("C:\Users\Michele\AppData\Local\Programs\MiKTeX 2.9\tex/generic/ifxetex\ifxete
+x.sty"
+Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
+)
+("C:\Users\Michele\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\iflua
+tex.sty"
+Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+)
+("C:\Users\Michele\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\fixltx2e.st
+y"
+Package: fixltx2e 2016/12/29 v2.1a fixes to LaTeX (obsolete)
+Applying: [2015/01/01] Old fixltx2e package on input line 46.
+
+Package fixltx2e Warning: fixltx2e is not required with releases after 2015
+(fixltx2e)                All fixes are now in the LaTeX kernel.
+(fixltx2e)                See the latexrelease package for details.
+
+Already applied: [0000/00/00] Old fixltx2e package on input line 53.
+) ("C:\Users\Michele\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\fontenc.s
+ty"
+Package: fontenc 2018/08/11 v2.0j Standard LaTeX package
+("C:\Users\Michele\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\t1enc.def"
+File: t1enc.def 2018/08/11 v2.0j Standard LaTeX file
+LaTeX Font Info:    Redeclaring font encoding T1 on input line 48.
+))
+("C:\Users\Michele\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\inputenc.st
+y"
+Package: inputenc 2018/08/11 v1.3c Input encoding file
+\inpenc@prehook=\toks20
+\inpenc@posthook=\toks21
+)
+("C:\Users\Michele\AppData\Local\Programs\MiKTeX 2.9\tex/latex/upquote\upquote.
+sty"
+Package: upquote 2012/04/19 v1.3 upright-quote and grave-accent glyphs in verba
+tim
+
+("C:\Users\Michele\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\textcomp.st
+y"
+Package: textcomp 2018/08/11 v2.0j Standard LaTeX package
+Package textcomp Info: Sub-encoding information:
+(textcomp)               5 = only ISO-Adobe without \textcurrency
+(textcomp)               4 = 5 + \texteuro
+(textcomp)               3 = 4 + \textohm
+(textcomp)               2 = 3 + \textestimated + \textcurrency
+(textcomp)               1 = TS1 - \textcircled - \t
+(textcomp)               0 = TS1 (full)
+(textcomp)             Font families with sub-encoding setting implement
+(textcomp)             only a restricted character set as indicated.
+(textcomp)             Family '?' is the default used for unknown fonts.
+(textcomp)             See the documentation for details.
+Package textcomp Info: Setting ? sub-encoding to TS1/1 on input line 79.
+("C:\Users\Michele\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\ts1enc.def"
+File: ts1enc.def 2001/06/05 v3.0e (jk/car/fm) Standard LaTeX file
+Now handling font encoding TS1 ...
+... processing UTF-8 mapping file for font encoding TS1
+("C:\Users\Michele\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\ts1enc.dfu"
+File: ts1enc.dfu 2018/10/05 v1.2f UTF-8 support for inputenc
+   defining Unicode char U+00A2 (decimal 162)
+   defining Unicode char U+00A3 (decimal 163)
+   defining Unicode char U+00A4 (decimal 164)
+   defining Unicode char U+00A5 (decimal 165)
+   defining Unicode char U+00A6 (decimal 166)
+   defining Unicode char U+00A7 (decimal 167)
+   defining Unicode char U+00A8 (decimal 168)
+   defining Unicode char U+00A9 (decimal 169)
+   defining Unicode char U+00AA (decimal 170)
+   defining Unicode char U+00AC (decimal 172)
+   defining Unicode char U+00AE (decimal 174)
+   defining Unicode char U+00AF (decimal 175)
+   defining Unicode char U+00B0 (decimal 176)
+   defining Unicode char U+00B1 (decimal 177)
+   defining Unicode char U+00B2 (decimal 178)
+   defining Unicode char U+00B3 (decimal 179)
+   defining Unicode char U+00B4 (decimal 180)
+   defining Unicode char U+00B5 (decimal 181)
+   defining Unicode char U+00B6 (decimal 182)
+   defining Unicode char U+00B7 (decimal 183)
+   defining Unicode char U+00B9 (decimal 185)
+   defining Unicode char U+00BA (decimal 186)
+   defining Unicode char U+00BC (decimal 188)
+   defining Unicode char U+00BD (decimal 189)
+   defining Unicode char U+00BE (decimal 190)
+   defining Unicode char U+00D7 (decimal 215)
+   defining Unicode char U+00F7 (decimal 247)
+   defining Unicode char U+0192 (decimal 402)
+   defining Unicode char U+02C7 (decimal 711)
+   defining Unicode char U+02D8 (decimal 728)
+   defining Unicode char U+02DD (decimal 733)
+   defining Unicode char U+0E3F (decimal 3647)
+   defining Unicode char U+2016 (decimal 8214)
+   defining Unicode char U+2020 (decimal 8224)
+   defining Unicode char U+2021 (decimal 8225)
+   defining Unicode char U+2022 (decimal 8226)
+   defining Unicode char U+2030 (decimal 8240)
+   defining Unicode char U+2031 (decimal 8241)
+   defining Unicode char U+203B (decimal 8251)
+   defining Unicode char U+203D (decimal 8253)
+   defining Unicode char U+2044 (decimal 8260)
+   defining Unicode char U+204E (decimal 8270)
+   defining Unicode char U+2052 (decimal 8274)
+   defining Unicode char U+20A1 (decimal 8353)
+   defining Unicode char U+20A4 (decimal 8356)
+   defining Unicode char U+20A6 (decimal 8358)
+   defining Unicode char U+20A9 (decimal 8361)
+   defining Unicode char U+20AB (decimal 8363)
+   defining Unicode char U+20AC (decimal 8364)
+   defining Unicode char U+20B1 (decimal 8369)
+   defining Unicode char U+2103 (decimal 8451)
+   defining Unicode char U+2116 (decimal 8470)
+   defining Unicode char U+2117 (decimal 8471)
+   defining Unicode char U+211E (decimal 8478)
+   defining Unicode char U+2120 (decimal 8480)
+   defining Unicode char U+2122 (decimal 8482)
+   defining Unicode char U+2126 (decimal 8486)
+   defining Unicode char U+2127 (decimal 8487)
+   defining Unicode char U+212E (decimal 8494)
+   defining Unicode char U+2190 (decimal 8592)
+   defining Unicode char U+2191 (decimal 8593)
+   defining Unicode char U+2192 (decimal 8594)
+   defining Unicode char U+2193 (decimal 8595)
+   defining Unicode char U+2329 (decimal 9001)
+   defining Unicode char U+232A (decimal 9002)
+   defining Unicode char U+2422 (decimal 9250)
+   defining Unicode char U+25E6 (decimal 9702)
+   defining Unicode char U+25EF (decimal 9711)
+   defining Unicode char U+266A (decimal 9834)
+   defining Unicode char U+FEFF (decimal 65279)
+))
+LaTeX Info: Redefining \oldstylenums on input line 334.
+Package textcomp Info: Setting cmr sub-encoding to TS1/0 on input line 349.
+Package textcomp Info: Setting cmss sub-encoding to TS1/0 on input line 350.
+Package textcomp Info: Setting cmtt sub-encoding to TS1/0 on input line 351.
+Package textcomp Info: Setting cmvtt sub-encoding to TS1/0 on input line 352.
+Package textcomp Info: Setting cmbr sub-encoding to TS1/0 on input line 353.
+Package textcomp Info: Setting cmtl sub-encoding to TS1/0 on input line 354.
+Package textcomp Info: Setting ccr sub-encoding to TS1/0 on input line 355.
+Package textcomp Info: Setting ptm sub-encoding to TS1/4 on input line 356.
+Package textcomp Info: Setting pcr sub-encoding to TS1/4 on input line 357.
+Package textcomp Info: Setting phv sub-encoding to TS1/4 on input line 358.
+Package textcomp Info: Setting ppl sub-encoding to TS1/3 on input line 359.
+Package textcomp Info: Setting pag sub-encoding to TS1/4 on input line 360.
+Package textcomp Info: Setting pbk sub-encoding to TS1/4 on input line 361.
+Package textcomp Info: Setting pnc sub-encoding to TS1/4 on input line 362.
+Package textcomp Info: Setting pzc sub-encoding to TS1/4 on input line 363.
+Package textcomp Info: Setting bch sub-encoding to TS1/4 on input line 364.
+Package textcomp Info: Setting put sub-encoding to TS1/5 on input line 365.
+Package textcomp Info: Setting uag sub-encoding to TS1/5 on input line 366.
+Package textcomp Info: Setting ugq sub-encoding to TS1/5 on input line 367.
+Package textcomp Info: Setting ul8 sub-encoding to TS1/4 on input line 368.
+Package textcomp Info: Setting ul9 sub-encoding to TS1/4 on input line 369.
+Package textcomp Info: Setting augie sub-encoding to TS1/5 on input line 370.
+Package textcomp Info: Setting dayrom sub-encoding to TS1/3 on input line 371.
+Package textcomp Info: Setting dayroms sub-encoding to TS1/3 on input line 372.
+
+Package textcomp Info: Setting pxr sub-encoding to TS1/0 on input line 373.
+Package textcomp Info: Setting pxss sub-encoding to TS1/0 on input line 374.
+Package textcomp Info: Setting pxtt sub-encoding to TS1/0 on input line 375.
+Package textcomp Info: Setting txr sub-encoding to TS1/0 on input line 376.
+Package textcomp Info: Setting txss sub-encoding to TS1/0 on input line 377.
+Package textcomp Info: Setting txtt sub-encoding to TS1/0 on input line 378.
+Package textcomp Info: Setting lmr sub-encoding to TS1/0 on input line 379.
+Package textcomp Info: Setting lmdh sub-encoding to TS1/0 on input line 380.
+Package textcomp Info: Setting lmss sub-encoding to TS1/0 on input line 381.
+Package textcomp Info: Setting lmssq sub-encoding to TS1/0 on input line 382.
+Package textcomp Info: Setting lmvtt sub-encoding to TS1/0 on input line 383.
+Package textcomp Info: Setting lmtt sub-encoding to TS1/0 on input line 384.
+Package textcomp Info: Setting qhv sub-encoding to TS1/0 on input line 385.
+Package textcomp Info: Setting qag sub-encoding to TS1/0 on input line 386.
+Package textcomp Info: Setting qbk sub-encoding to TS1/0 on input line 387.
+Package textcomp Info: Setting qcr sub-encoding to TS1/0 on input line 388.
+Package textcomp Info: Setting qcs sub-encoding to TS1/0 on input line 389.
+Package textcomp Info: Setting qpl sub-encoding to TS1/0 on input line 390.
+Package textcomp Info: Setting qtm sub-encoding to TS1/0 on input line 391.
+Package textcomp Info: Setting qzc sub-encoding to TS1/0 on input line 392.
+Package textcomp Info: Setting qhvc sub-encoding to TS1/0 on input line 393.
+Package textcomp Info: Setting futs sub-encoding to TS1/4 on input line 394.
+Package textcomp Info: Setting futx sub-encoding to TS1/4 on input line 395.
+Package textcomp Info: Setting futj sub-encoding to TS1/4 on input line 396.
+Package textcomp Info: Setting hlh sub-encoding to TS1/3 on input line 397.
+Package textcomp Info: Setting hls sub-encoding to TS1/3 on input line 398.
+Package textcomp Info: Setting hlst sub-encoding to TS1/3 on input line 399.
+Package textcomp Info: Setting hlct sub-encoding to TS1/5 on input line 400.
+Package textcomp Info: Setting hlx sub-encoding to TS1/5 on input line 401.
+Package textcomp Info: Setting hlce sub-encoding to TS1/5 on input line 402.
+Package textcomp Info: Setting hlcn sub-encoding to TS1/5 on input line 403.
+Package textcomp Info: Setting hlcw sub-encoding to TS1/5 on input line 404.
+Package textcomp Info: Setting hlcf sub-encoding to TS1/5 on input line 405.
+Package textcomp Info: Setting pplx sub-encoding to TS1/3 on input line 406.
+Package textcomp Info: Setting pplj sub-encoding to TS1/3 on input line 407.
+Package textcomp Info: Setting ptmx sub-encoding to TS1/4 on input line 408.
+Package textcomp Info: Setting ptmj sub-encoding to TS1/4 on input line 409.
+))
+("C:\Users\Michele\AppData\Local\Programs\MiKTeX 2.9\tex/latex/microtype\microt
+ype.sty"
+Package: microtype 2019/02/28 v2.7b Micro-typographical refinements (RS)
+
+("C:\Users\Michele\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\keyval.
+sty"
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks22
+)
+\MT@toks=\toks23
+\MT@count=\count100
+LaTeX Info: Redefining \textls on input line 790.
+\MT@outer@kern=\dimen112
+LaTeX Info: Redefining \textmicrotypecontext on input line 1336.
+\MT@listname@count=\count101
+
+("C:\Users\Michele\AppData\Local\Programs\MiKTeX 2.9\tex/latex/microtype\microt
+ype-pdftex.def"
+File: microtype-pdftex.def 2019/02/28 v2.7b Definitions specific to pdftex (RS)
+
+LaTeX Info: Redefining \lsstyle on input line 914.
+LaTeX Info: Redefining \lslig on input line 914.
+\MT@outer@space=\skip46
+)
+Package microtype Info: Loading configuration file microtype.cfg.
+
+("C:\Users\Michele\AppData\Local\Programs\MiKTeX 2.9\tex/latex/microtype\microt
+ype.cfg"
+File: microtype.cfg 2019/02/28 v2.7b microtype main configuration file (RS)
+))
+("C:\Users\Michele\AppData\Local\Programs\MiKTeX 2.9\tex/latex/geometry\geometr
+y.sty"
+Package: geometry 2018/04/16 v5.8 Page Geometry
+
+("C:\Users\Michele\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\ifpdf
+.sty"
+Package: ifpdf 2018/09/07 v3.3 Provides the ifpdf switch
+)
+("C:\Users\Michele\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\ifvte
+x.sty"
+Package: ifvtex 2016/05/16 v1.6 Detect VTeX and its facilities (HO)
+Package ifvtex Info: VTeX not detected.
+)
+\Gm@cnth=\count102
+\Gm@cntv=\count103
+\c@Gm@tempcnt=\count104
+\Gm@bindingoffset=\dimen113
+\Gm@wd@mp=\dimen114
+\Gm@odd@mp=\dimen115
+\Gm@even@mp=\dimen116
+\Gm@layoutwidth=\dimen117
+\Gm@layoutheight=\dimen118
+\Gm@layouthoffset=\dimen119
+\Gm@layoutvoffset=\dimen120
+\Gm@dimlist=\toks24
+
+("C:\Users\Michele\AppData\Local\Programs\MiKTeX 2.9\tex/latex/geometry\geometr
+y.cfg"))
+("C:\Users\Michele\AppData\Local\Programs\MiKTeX 2.9\tex/latex/hyperref\hyperre
+f.sty"
+Package: hyperref 2018/11/30 v6.88e Hypertext links for LaTeX
+
+("C:\Users\Michele\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\hobsu
+b-hyperref.sty"
+Package: hobsub-hyperref 2016/05/16 v1.14 Bundle oberdiek, subset hyperref (HO)
+
+
+("C:\Users\Michele\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\hobsu
+b-generic.sty"
+Package: hobsub-generic 2016/05/16 v1.14 Bundle oberdiek, subset generic (HO)
+Package: hobsub 2016/05/16 v1.14 Construct package bundles (HO)
+Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
+Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
+Package hobsub Info: Skipping package `ifluatex' (already loaded).
+Package hobsub Info: Skipping package `ifvtex' (already loaded).
+Package: intcalc 2016/05/16 v1.2 Expandable calculations with integers (HO)
+Package hobsub Info: Skipping package `ifpdf' (already loaded).
+Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
+Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
+Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
+Package: pdftexcmds 2018/09/10 v0.29 Utility functions of pdfTeX for LuaTeX (HO
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+Package: pdfescape 2016/05/16 v1.14 Implements pdfTeX's escape features (HO)
+Package: bigintcalc 2016/05/16 v1.4 Expandable calculations on big integers (HO
+)
+Package: bitset 2016/05/16 v1.2 Handle bit-vector datatype (HO)
+Package: uniquecounter 2016/05/16 v1.3 Provide unlimited unique counter (HO)
+)
+Package hobsub Info: Skipping package `hobsub' (already loaded).
+Package: letltxmacro 2016/05/16 v1.5 Let assignment for LaTeX macros (HO)
+Package: hopatch 2016/05/16 v1.3 Wrapper for package hooks (HO)
+Package: xcolor-patch 2016/05/16 xcolor patch
+Package: atveryend 2016/05/16 v1.9 Hooks at the very end of document (HO)
+Package atveryend Info: \enddocument detected (standard20110627).
+Package: atbegshi 2016/06/09 v1.18 At begin shipout hook (HO)
+Package: refcount 2016/05/16 v3.5 Data extraction from label references (HO)
+Package: hycolor 2016/05/16 v1.8 Color options for hyperref/bookmark (HO)
+)
+("C:\Users\Michele\AppData\Local\Programs\MiKTeX 2.9\tex/latex/oberdiek\auxhook
+.sty"
+Package: auxhook 2016/05/16 v1.4 Hooks for auxiliary files (HO)
+)
+("C:\Users\Michele\AppData\Local\Programs\MiKTeX 2.9\tex/latex/oberdiek\kvoptio
+ns.sty"
+Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
+)
+\@linkdim=\dimen121
+\Hy@linkcounter=\count105
+\Hy@pagecounter=\count106
+
+("C:\Users\Michele\AppData\Local\Programs\MiKTeX 2.9\tex/latex/hyperref\pd1enc.
+def"
+File: pd1enc.def 2018/11/30 v6.88e Hyperref: PDFDocEncoding definition (HO)
+Now handling font encoding PD1 ...
+... no UTF-8 mapping file for font encoding PD1
+)
+\Hy@SavedSpaceFactor=\count107
+
+("C:\Users\Michele\AppData\Local\Programs\MiKTeX 2.9\tex/latex/00miktex\hyperre
+f.cfg"
+File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
+)
+Package hyperref Info: Hyper figures OFF on input line 4519.
+Package hyperref Info: Link nesting OFF on input line 4524.
+Package hyperref Info: Hyper index ON on input line 4527.
+Package hyperref Info: Plain pages OFF on input line 4534.
+Package hyperref Info: Backreferencing OFF on input line 4539.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4772.
+\c@Hy@tempcnt=\count108
+("C:\Users\Michele\AppData\Local\Programs\MiKTeX 2.9\tex/latex/url\url.sty"
+\Urlmuskip=\muskip11
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+LaTeX Info: Redefining \url on input line 5125.
+\XeTeXLinkMargin=\dimen122
+\Fld@menulength=\count109
+\Field@Width=\dimen123
+\Fld@charsize=\dimen124
+Package hyperref Info: Hyper figures OFF on input line 6380.
+Package hyperref Info: Link nesting OFF on input line 6385.
+Package hyperref Info: Hyper index ON on input line 6388.
+Package hyperref Info: backreferencing OFF on input line 6395.
+Package hyperref Info: Link coloring OFF on input line 6400.
+Package hyperref Info: Link coloring with OCG OFF on input line 6405.
+Package hyperref Info: PDF/A mode OFF on input line 6410.
+LaTeX Info: Redefining \ref on input line 6450.
+LaTeX Info: Redefining \pageref on input line 6454.
+\Hy@abspage=\count110
+\c@Item=\count111
+\c@Hfootnote=\count112
+)
+Package hyperref Info: Driver (autodetected): hpdftex.
+
+("C:\Users\Michele\AppData\Local\Programs\MiKTeX 2.9\tex/latex/hyperref\hpdftex
+.def"
+File: hpdftex.def 2018/11/30 v6.88e Hyperref driver for pdfTeX
+\Fld@listcount=\count113
+\c@bookmark@seq@number=\count114
+
+("C:\Users\Michele\AppData\Local\Programs\MiKTeX 2.9\tex/latex/oberdiek\rerunfi
+lecheck.sty"
+Package: rerunfilecheck 2016/05/16 v1.8 Rerun checks for auxiliary files (HO)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+82.
+)
+\Hy@SectionHShift=\skip47
+)
+Package hyperref Info: Option `unicode' set `true' on input line 30.
+
+("C:\Users\Michele\AppData\Local\Programs\MiKTeX 2.9\tex/latex/hyperref\puenc.d
+ef"
+File: puenc.def 2018/11/30 v6.88e Hyperref: PDF Unicode definition (HO)
+Now handling font encoding PU ...
+... no UTF-8 mapping file for font encoding PU
+)
+Package hyperref Info: Option `breaklinks' set `true' on input line 30.
+
+("C:\Users\Michele\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\color.s
+ty"
+Package: color 2016/07/10 v1.1e Standard LaTeX Color (DPC)
+
+("C:\Users\Michele\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics-cfg\col
+or.cfg"
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package color Info: Driver file: pdftex.def on input line 147.
+
+("C:\Users\Michele\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics-def\pdf
+tex.def"
+File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
+))
+("C:\Users\Michele\AppData\Local\Programs\MiKTeX 2.9\tex/latex/fancyvrb\fancyvr
+b.sty"
+Package: fancyvrb 2019/01/15
+Style option: `fancyvrb' v3.2a <2019/01/15> (tvz)
+\FV@CodeLineNo=\count115
+\FV@InFile=\read1
+\FV@TabBox=\box29
+\c@FancyVerbLine=\count116
+\FV@StepNumber=\count117
+\FV@OutFile=\write3
+)
+("C:\Users\Michele\AppData\Local\Programs\MiKTeX 2.9\tex/latex/framed\framed.st
+y"
+Package: framed 2011/10/22 v 0.96: framed or shaded text with page breaks
+\OuterFrameSep=\skip48
+\fb@frw=\dimen125
+\fb@frh=\dimen126
+\FrameRule=\dimen127
+\FrameSep=\dimen128
+)
+("C:\Users\Michele\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\graphic
+x.sty"
+Package: graphicx 2017/06/01 v1.1a Enhanced LaTeX Graphics (DPC,SPQR)
+
+("C:\Users\Michele\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\graphic
+s.sty"
+Package: graphics 2017/06/25 v1.2c Standard LaTeX Graphics (DPC,SPQR)
+
+("C:\Users\Michele\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\trig.st
+y"
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+("C:\Users\Michele\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics-cfg\gra
+phics.cfg"
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 99.
+)
+\Gin@req@height=\dimen129
+\Gin@req@width=\dimen130
+)
+("C:\Users\Michele\AppData\Local\Programs\MiKTeX 2.9\tex/latex/oberdiek\grffile
+.sty"
+Package: grffile 2017/06/30 v1.18 Extended file name support for graphics (HO)
+Package grffile Info: Option `multidot' is set to `true'.
+Package grffile Info: Option `extendedchars' is set to `false'.
+Package grffile Info: Option `space' is set to `true'.
+Package grffile Info: \Gin@ii of package `graphicx' fixed on input line 494.
+)
+("C:\Users\Michele\AppData\Local\Programs\MiKTeX 2.9\tex/latex/parskip\parskip.
+sty"
+Package: parskip 2019-01-16 v2.0c non-zero parskip adjustments
+
+("C:\Users\Michele\AppData\Local\Programs\MiKTeX 2.9\tex/latex/etoolbox\etoolbo
+x.sty"
+Package: etoolbox 2018/08/19 v2.5f e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count118
+))
+("C:\Users\Michele\AppData\Local\Programs\MiKTeX 2.9\tex/latex/titling\titling.
+sty"
+Package: titling 2009/09/04 v2.1d maketitle typesetting
+\thanksmarkwidth=\skip49
+\thanksmargin=\skip50
+\droptitle=\skip51
+)
+No file biblio_final.aux.
+\openout1 = `biblio_final.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 129.
+LaTeX Font Info:    ... okay on input line 129.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 129.
+LaTeX Font Info:    ... okay on input line 129.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 129.
+LaTeX Font Info:    ... okay on input line 129.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 129.
+LaTeX Font Info:    ... okay on input line 129.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 129.
+LaTeX Font Info:    ... okay on input line 129.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 129.
+LaTeX Font Info:    ... okay on input line 129.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 129.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 129.
+
+("C:\Users\Michele\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\ts1cmr.fd"
+File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    ... okay on input line 129.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 129.
+LaTeX Font Info:    ... okay on input line 129.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 129.
+LaTeX Font Info:    ... okay on input line 129.
+LaTeX Font Info:    Try loading font information for T1+lmr on input line 129.
+("C:\Users\Michele\AppData\Local\Programs\MiKTeX 2.9\tex/latex/lm\t1lmr.fd"
+File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Info: Redefining \microtypecontext on input line 129.
+Package microtype Info: Generating PDF output.
+Package microtype Info: Character protrusion enabled (level 2).
+Package microtype Info: Using protrusion set `basicmath'.
+Package microtype Info: Automatic font expansion enabled (level 2),
+(microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
+Package microtype Info: Using default expansion set `basictext'.
+Package microtype Info: No adjustment of tracking.
+Package microtype Info: No adjustment of interword spacing.
+Package microtype Info: No adjustment of character kerning.
+
+("C:\Users\Michele\AppData\Local\Programs\MiKTeX 2.9\tex/latex/microtype\mt-cmr
+.cfg"
+File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman 
+(RS)
+)
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: <default>
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(85.35826pt, 443.57848pt, 85.35826pt)
+* v-part:(T,H,B)=(56.9055pt, 681.15898pt, 56.9055pt)
+* \paperwidth=614.295pt
+* \paperheight=794.96999pt
+* \textwidth=443.57848pt
+* \textheight=681.15898pt
+* \oddsidemargin=13.08827pt
+* \evensidemargin=13.08827pt
+* \topmargin=-52.36449pt
+* \headheight=12.0pt
+* \headsep=25.0pt
+* \topskip=10.0pt
+* \footskip=30.0pt
+* \marginparwidth=65.0pt
+* \marginparsep=11.0pt
+* \columnsep=10.0pt
+* \skip\footins=9.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+\AtBeginShipoutBox=\box30
+Package hyperref Info: Link coloring OFF on input line 129.
+
+("C:\Users\Michele\AppData\Local\Programs\MiKTeX 2.9\tex/latex/hyperref\nameref
+.sty"
+Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
+
+("C:\Users\Michele\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\getti
+tlestring.sty"
+Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
+)
+\c@section@level=\count119
+)
+LaTeX Info: Redefining \ref on input line 129.
+LaTeX Info: Redefining \pageref on input line 129.
+LaTeX Info: Redefining \nameref on input line 129.
+\@outlinefile=\write4
+\openout4 = `biblio_final.out'.
+
+
+("C:\Users\Michele\AppData\Local\Programs\MiKTeX 2.9\tex/context/base/mkii\supp
+-pdf.mkii"
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count120
+\scratchdimen=\dimen131
+\scratchbox=\box31
+\nofMPsegments=\count121
+\nofMParguments=\count122
+\everyMPshowfont=\toks25
+\MPscratchCnt=\count123
+\MPscratchDim=\dimen132
+\MPnumerator=\count124
+\makeMPintoPDFobject=\count125
+\everyMPtoPDFconversion=\toks26
+)
+("C:\Users\Michele\AppData\Local\Programs\MiKTeX 2.9\tex/latex/oberdiek\epstopd
+f-base.sty"
+Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
+
+("C:\Users\Michele\AppData\Local\Programs\MiKTeX 2.9\tex/latex/oberdiek\grfext.
+sty"
+Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
+)
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+38.
+Package grfext Info: Graphics extension search list:
+(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 456.
+)
+LaTeX Font Info:    Try loading font information for TS1+lmr on input line 135.
+
+("C:\Users\Michele\AppData\Local\Programs\MiKTeX 2.9\tex/latex/lm\ts1lmr.fd"
+File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    Try loading font information for T1+lmtt on input line 177.
+
+("C:\Users\Michele\AppData\Local\Programs\MiKTeX 2.9\tex/latex/lm\t1lmtt.fd"
+File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <10> not available
+(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 178.
+LaTeX Font Info:    Try loading font information for OT1+lmr on input line 186.
+
+("C:\Users\Michele\AppData\Local\Programs\MiKTeX 2.9\tex/latex/lm\ot1lmr.fd"
+File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    Try loading font information for OML+lmm on input line 186.
+
+("C:\Users\Michele\AppData\Local\Programs\MiKTeX 2.9\tex/latex/lm\omllmm.fd"
+File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 186
+.
+("C:\Users\Michele\AppData\Local\Programs\MiKTeX 2.9\tex/latex/lm\omslmsy.fd"
+File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    Try loading font information for OMX+lmex on input line 186
+.
+("C:\Users\Michele\AppData\Local\Programs\MiKTeX 2.9\tex/latex/lm\omxlmex.fd"
+File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10> on input line 186.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <7> on input line 186.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <5> on input line 186.
+LaTeX Font Info:    Try loading font information for U+msa on input line 186.
+("C:\Users\Michele\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\umsa.fd
+"
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+("C:\Users\Michele\AppData\Local\Programs\MiKTeX 2.9\tex/latex/microtype\mt-msa
+.cfg"
+File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 186.
+("C:\Users\Michele\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\umsb.fd
+"
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+("C:\Users\Michele\AppData\Local\Programs\MiKTeX 2.9\tex/latex/microtype\mt-msb
+.cfg"
+File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
+) [1
+
+{C:/Users/Michele/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
+Overfull \hbox (753.41805pt too wide) in paragraph at lines 440--440
+[]\T1/lmtt/m/n/10 ##                                                           
+                                                                               
+                                                                               
+       AU[] 
+ []
+
+
+Overfull \hbox (753.41805pt too wide) in paragraph at lines 440--440
+[]\T1/lmtt/m/n/10 ## DICKSON BG, 2019, CONSERV BIOL             DICKSON BG;ALBA
+NO CM;ANANTHARAMAN R;BEIER P;FARGIONE J;GRAVES TA;GRAY ME;HALL KR;LAWLER JJ;LEO
+NARD PB;LITTLEFIELD CE;MCCLURE ML;NOVEMBRE J;SCHLOSS CA;SCHUMAKER NH;SHAH VB;TH
+EOBALD DM[] 
+ []
+
+
+Overfull \hbox (753.41805pt too wide) in paragraph at lines 440--440
+[]\T1/lmtt/m/n/10 ## ZHAO X, 2019, BIOL CONSERV                                
+                                                                               
+                         ZHAO X;REN B;LI D;GARBER PA;ZHU P;XIANG Z;GRUETER CC;L
+IU Z;LI M[] 
+ []
+
+
+Overfull \hbox (753.41805pt too wide) in paragraph at lines 440--440
+[]\T1/lmtt/m/n/10 ## BRUCE SA, 2018, ECOL EVOL                                 
+                                                                               
+                                                                      BRUCE SA;
+WRIGHT JJ[] 
+ []
+
+
+Overfull \hbox (753.41805pt too wide) in paragraph at lines 440--440
+[]\T1/lmtt/m/n/10 ## ANTUNES B, 2018, CONSERV GENET                            
+                                                                        ANTUNES
+ B;LOURENCO A;CAEIRO DIAS G;DINIS M;GONCALVES H;MARTINEZ SOLANO I;TARROSO P;VEL
+O ANTON G[] 
+ []
+
+
+Overfull \hbox (753.41805pt too wide) in paragraph at lines 440--440
+[]\T1/lmtt/m/n/10 ## CUERVO-ALARCON L, 2018, TREE GENET GENOMES                
+                                                                               
+                  CUERVO ALARCON L;AREND M;MUELLER M;SPERISEN C;FINKELDEY R;KRU
+TOVSKY KV[] 
+ []
+
+
+Overfull \hbox (753.41805pt too wide) in paragraph at lines 440--440
+[]\T1/lmtt/m/n/10 ## SYLVESTER EVA, 2018, MOL ECOL                             
+                                                     SYLVESTER EVA;BEIKO RG;BEN
+TZEN P;PATERSON I;HORNE JB;WATSON B;LEHNERT S;DUFFY S;CLEMENT M;ROBERTSON MJ;BR
+ADBURY IR[] 
+ []
+
+
+Overfull \hbox (648.41835pt too wide) in paragraph at lines 440--440
+[]\T1/lmtt/m/n/10 ##                                                           
+                                                                               
+                                                                  TI[] 
+ []
+
+
+Overfull \hbox (648.41835pt too wide) in paragraph at lines 440--440
+[]\T1/lmtt/m/n/10 ## DICKSON BG, 2019, CONSERV BIOL                            
+                                                                               
+CIRCUIT-THEORY APPLICATIONS TO CONNECTIVITY SCIENCE AND CONSERVATION[] 
+ []
+
+
+Overfull \hbox (648.41835pt too wide) in paragraph at lines 440--440
+[]\T1/lmtt/m/n/10 ## ZHAO X, 2019, BIOL CONSERV                                
+                                                    CLIMATE CHANGE, GRAZING, AN
+D COLLECTING ACCELERATE HABITAT CONTRACTION IN AN ENDANGERED PRIMATE[] 
+ []
+
+
+Overfull \hbox (648.41835pt too wide) in paragraph at lines 440--440
+[]\T1/lmtt/m/n/10 ## BRUCE SA, 2018, ECOL EVOL                  ESTIMATES OF GE
+NE FLOW AND DISPERSAL IN WILD RIVERINE BROOK TROUT (SALVELINUS FONTINALIS) POPU
+LATIONS REVEAL ONGOING MIGRATION AND INTROGRESSION FROM STOCKED FISH[] 
+ []
+
+
+Overfull \hbox (648.41835pt too wide) in paragraph at lines 440--440
+[]\T1/lmtt/m/n/10 ## ANTUNES B, 2018, CONSERV GENET                    COMBININ
+G PHYLOGEOGRAPHY AND LANDSCAPE GENETICS TO INFER THE EVOLUTIONARY HISTORY OF A 
+SHORT-RANGE MEDITERRANEAN RELICT, SALAMANDRA SALAMANDRA LONGIROSTRIS[] 
+ []
+
+
+Overfull \hbox (648.41835pt too wide) in paragraph at lines 440--440
+[]\T1/lmtt/m/n/10 ## CUERVO-ALARCON L, 2018, TREE GENET GENOMES                
+          GENETIC VARIATION AND SIGNATURES OF NATURAL SELECTION IN POPULATIONS 
+OF EUROPEAN BEECH (FAGUS SYLVATICA L.) ALONG PRECIPITATION GRADIENTS[] 
+ []
+
+
+Overfull \hbox (648.41835pt too wide) in paragraph at lines 440--440
+[]\T1/lmtt/m/n/10 ## SYLVESTER EVA, 2018, MOL ECOL                             
+                                  ENVIRONMENTAL EXTREMES DRIVE POPULATION STRUC
+TURE AT THE NORTHERN RANGE LIMIT OF ATLANTIC SALMON IN NORTH AMERICA[] 
+ []
+
+
+Overfull \hbox (11379.38716pt too wide) in paragraph at lines 440--440
+[]\T1/lmtt/m/n/10 ##                                                           
+                                                                               
+                                                                               
+                                                                               
+                                                                               
+                                                                               
+                                                                               
+                                                                               
+                                                                               
+                                                                               
+                                                                               
+                                                                               
+                                                                               
+                                                                               
+                                                                               
+                                                                               
+                                                                               
+                                                                               
+                                                                               
+                                                                               
+                                                                               
+                                                                               
+                                                                               
+                                                                               
+                                                                               
+                                                                               
+                                                                               
+                                                                               
+                                                        AB[] 
+ []
+
+
+Overfull \hbox (11379.38716pt too wide) in paragraph at lines 440--440
+[]\T1/lmtt/m/n/10 ## DICKSON BG, 2019, CONSERV BIOL                            
+                                                                               
+                                                                               
+                                                                               
+                                                                               
+                                                               CONSERVATION PRA
+CTITIONERS HAVE LONG RECOGNIZED ECOLOGICAL CONNECTIVITY AS A GLOBAL PRIORITY FO
+R PRESERVING BIODIVERSITY AND ECOSYSTEM FUNCTION. IN THE EARLY YEARS OF CONSERV
+ATION SCIENCE, ECOLOGISTS EXTENDED PRINCIPLES OF ISLAND BIOGEOGRAPHY TO ASSESS 
+CONNECTIVITY BASED ON SOURCE PATCH PROXIMITY AND OTHER METRICS DERIVED FROM BIN
+ARY MAPS OF HABITAT. FROM 2006 TO 2008, THE LATE BRAD MCRAE INTRODUCED CIRCUIT 
+THEORY AS AN ALTERNATIVE APPROACH TO MODEL GENE FLOW AND THE DISPERSAL OR MOVEM
+ENT ROUTES OF ORGANISMS. HE POSITED CONCEPTS AND METRICS FROM ELECTRICAL CIRCUI
+T THEORY AS A ROBUST WAY TO QUANTIFY MOVEMENT ACROSS MULTIPLE POSSIBLE PATHS IN
+ A LANDSCAPE, NOT JUST A SINGLE LEAST-COST PATH OR CORRIDOR. CIRCUIT THEORY OFF
+ERS MANY THEORETICAL, CONCEPTUAL, AND PRACTICAL LINKAGES TO CONSERVATION SCIENC
+E. WE REVIEWED 459 RECENT STUDIES CITING CIRCUIT THEORY OR THE OPEN-SOURCE SOFT
+WARE CIRCUITSCAPE. WE FOCUSED ON APPLICATIONS OF CIRCUIT THEORY TO THE SCIENCE 
+AND PRACTICE OF CONNECTIVITY CONSERVATION, INCLUDING TOPICS IN LANDSCAPE AND PO
+PULATION GENETICS, MOVEMENT AND DISPERSAL PATHS OF ORGANISMS, ANTHROPOGENIC BAR
+RIERS TO CONNECTIVITY, FIRE BEHAVIOR, WATER FLOW, AND ECOSYSTEM SERVICES. CIRCU
+IT THEORY IS LIKELY TO HAVE AN EFFECT ON CONSERVATION SCIENCE AND PRACTITIONERS
+ THROUGH IMPROVED INSIGHTS INTO LANDSCAPE DYNAMICS, ANIMAL MOVEMENT, AND HABITA
+T-USE STUDIES AND THROUGH THE DEVELOPMENT OF NEW SOFTWARE TOOLS FOR DATA ANALYS
+IS AND VISUALIZATION. THE INFLUENCE OF CIRCUIT THEORY ON CONSERVATION COMES FRO
+M THE THEORETICAL BASIS AND ELEGANCE OF THE APPROACH AND THE POWERFUL COLLABORA
+TIONS AND ACTIVE USER COMMUNITY THAT HAVE EMERGED. CIRCUIT THEORY PROVIDES A SP
+RINGBOARD FOR ECOLOGICAL UNDERSTANDING AND WILL REMAIN AN IMPORTANT CONSERVATIO
+N TOOL FOR RESEARCHERS AND PRACTITIONERS AROUND THE GLOBE.[] 
+ []
+
+LaTeX Font Info:    Try loading font information for TS1+lmtt on input line 440
+.
+("C:\Users\Michele\AppData\Local\Programs\MiKTeX 2.9\tex/latex/lm\ts1lmtt.fd"
+File: ts1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+Overfull \hbox (11379.38716pt too wide) in paragraph at lines 440--440
+[]\T1/lmtt/m/n/10 ## ZHAO X, 2019, BIOL CONSERV                 CORRELATIONAL M
+ODELS ARE WIDELY USED TO PREDICT CHANGES IN SPECIES\TS1/lmtt/m/n/10 ' \T1/lmtt/
+m/n/10 DISTRIBUTION, BUT GENERALLY HAVE FAILED TO ADDRESS THE COMPREHENSIVE EFF
+ECTS OF ANTHROPOGENIC ACTIVITIES, CLIMATE CHANGE, HABITAT CONNECTIVITY AND GENE
+ FLOW ON WILDLIFE SUSTAINABILITY. HERE, WE USED INTEGRATED APPROACHES (MAXENT M
+ODEL, CIRCUIT MODEL AND GENETIC ANALYSIS) TO ASSESS AND PREDICT THE EFFECTS OF 
+CLIMATE CHANGE AND ANTHROPOGENIC ACTIVITIES ON THE DISTRIBUTION, HABITAT CONNEC
+TIVITY, AND GENETIC DIVERSITY OF AN ENDANGERED PRIMATE, RHINOPITHECUS BIETI, FR
+OM 2000 TO 2050. WE CREATED SIX SCENARIOS: CLIMATIC FACTORS ONLY (SCENARIO-A), 
+ANTHROPOGENIC ACTIVITIES ONLY (SCENARIO-B), CLIMATIC FACTORS AND ANTHROPOGENIC 
+ACTIVITIES (SCENARIO-C), PLUS THREE ADDITIONAL SCENARIOS THAT INCLUDED CLIMATIC
+ FACTORS AND ANTHROPOGENIC ACTIVITIES BUT CONTROLLED FOR INDIVIDUAL ANTHROPOGEN
+IC ACTIVITIES (SCENARIO-D: GRAZING, SCENARIO E: COLLECTING, AND SCENARIO-F: GRA
+ZING AND COLLECTING). THE RESULTS INDICATE THAT AREAS OF SUITABLE HABITAT FOR R
+. BIETI ARE EXPECTED TO DECLINE BY 8.0\\%-22.4\\% FROM 2000 TO 2050, WITH THE C
+OLLECTION OF LOCAL FOREST PRODUCTS AND THE GRAZING OF DOMESTICATED CATTLE AS TH
+E PRIMARY DRIVERS OF LANDSCAPE FRAGMENTATION AND RANGE CONTRACTION. IF THESE AN
+THROPOGENIC ACTIVITIES ARE STRICTLY CONTROLLED, HOWEVER, THE AREA OF SUITABLE H
+ABITAT IS PREDICTED TO INCREASE BY10.4\\%-14.3\\%. WE ALSO FOUND THAT HABITATS 
+VULNERABLE TO HUMAN DISTURBANCE WERE PRINCIPALLY LOCATED IN AREAS OF LOW HABITA
+T CONNECTIVITY RESULTING IN LIMITED MIGRATION OPPORTUNITIES AND INCREASED LOSS 
+OF GENETIC DIVERSITY AMONG R. BIETI LIVING IN THESE ISOLATED SUBPOPULATIONS. TH
+US, WE SUGGEST THAT EFFECTIVE MANAGEMENT POLICIES TO PROTECT THIS SPECIES INCLU
+DE PROHIBITING BOTH LIVESTOCK GRAZING AND THE COLLECTING OF FOREST PRODUCTS. AL
+THOUGH OUR STUDY FOCUSES ON A SINGLE PRIMATE SPECIES, THE CONSERVATION MODELING
+ APPROACHES WE PRESENTED HAVE WIDE APPLICABILITY TO A BROAD RANGE OF THREATENED
+ MAMMALIAN AND AVIAN TAXA THAT CURRENTLY INHABIT A LIMITED GEOGRAPHIC RANGE AND
+ ARE AFFECTED BY ANTHROPOGENIC ACTIVITIES (E.G. COLLECTING, GRAZING, HUNTING), 
+LOSS OF HABITAT CONNECTIVITY, REDUCED GENETIC DIVERSITY, AND THE EFFECTS OF CLI
+MATE CHANGE.[] 
+ []
+
+
+Overfull \hbox (11379.38716pt too wide) in paragraph at lines 440--440
+[]\T1/lmtt/m/n/10 ## BRUCE SA, 2018, ECOL EVOL                                 
+                                                                               
+                                                                               
+                                                                               
+                                                                               
+                                                                               
+           AS ANTHROPOGENIC IMPACTS ACCELERATE CHANGES TO LANDSCAPES ACROSS THE
+ GLOBE, UNDERSTANDING HOW GENETIC POPULATION STRUCTURE IS INFLUENCED BY HABITAT
+ FEATURES AND DISPERSAL IS KEY TO PRESERVING EVOLUTIONARY POTENTIAL AT THE SPEC
+IES LEVEL. FURTHERMORE, KNOWLEDGE OF THESE INTERACTIONS IS ESSENTIAL TO IDENTIF
+YING POTENTIAL CONSTRAINTS ON LOCAL ADAPTATION AND FOR THE DEVELOPMENT OF EFFEC
+TIVE MANAGEMENT STRATEGIES. WE EXAMINED THESE ISSUES IN BROOK TROUT (SALVELINUS
+ FONTINALIS) POPULATIONS RESIDING IN THE UPPER HUDSON RIVER WATERSHED OF NEW YO
+RK STATE BY INVESTIGATING THE SPATIAL GENETIC STRUCTURE OF OVER 350 FISH COLLEC
+TED FROM 14 DIFFERENT SAMPLING LOCATIONS ENCOMPASSING THREE RIVER SYSTEMS. POPU
+LATION GENETIC ANALYSES OF MICROSATELLITE DATA SUGGEST THAT FISH IN THE AREA EX
+HIBIT VARYING DEGREES OF INTROGRESSION FROM NEARBY STATE-DIRECTED SUPPLEMENTATI
+ON ACTIVITIES. LEVELS OF INTROGRESSION IN THESE POPULATIONS CORRELATE WITH WATE
+R-WAY DISTANCE TO STOCKING SITES, ALTHOUGH GENETIC POPULATION STRUCTURE AT THE 
+LEVEL OF INDIVIDUAL TRIBUTARIES AS WELL AS THEIR LARGER, PARENT RIVER SYSTEMS I
+S ALSO DETECTABLE AND IS DICTATED BY MIGRATION AND INFLUENCED BY HABITAT CONNEC
+TIVITY. THESE FINDINGS REPRESENT A SIGNIFICANT CONTRIBUTION TO THE CURRENT LITE
+RATURE SURROUNDING BROOK TROUT MIGRATION AND DISPERSAL, ESPECIALLY AS IT RELATE
+S TO LARGER INTERCONNECTED SYSTEMS. THIS WORK ALSO SUGGESTS THAT STOCKING ACTIV
+ITIES MAY HAVE FAR-REACHING CONSEQUENCES THAT ARE NOT DIRECTLY LIMITED TO THE I
+MMEDIATE AREA WHERE STOCKING OCCURS. THE FRAMEWORK AND DATA PRESENTED HERE MAY 
+AID IN THE DEVELOPMENT OF OTHER LOCAL AQUATIC SPECIES-FOCUSED CONSERVATION PLAN
+S THAT INCORPORATE MOLECULAR TOOLS TO ANSWER COMPLEX QUESTIONS REGARDING DIVERS
+ITY MAPPING, AND GENETICALLY IMPORTANT CONSERVATION UNITS.[] 
+ []
+
+
+Overfull \hbox (11379.38716pt too wide) in paragraph at lines 440--440
+[]\T1/lmtt/m/n/10 ## ANTUNES B, 2018, CONSERV GENET                            
+                                                                               
+                                                                               
+                                                                               
+                                                                               
+                                                                               
+                                               EXAMINING HISTORICAL AND CONTEMP
+ORARY PROCESSES UNDERLYING CURRENT PATTERNS OF GENETIC VARIATION IS KEY TO RECO
+NSTRUCT THE EVOLUTIONARY HISTORY OF SPECIES AND IMPLEMENT CONSERVATION MEASURES
+ PROMOTING THEIR LONG-TERM PERSISTENCE. COMBINING PHYLOGEOGRAPHIC AND LANDSCAPE
+ GENETIC APPROACHES CAN PROVIDE VALUABLE INSIGHTS, ESPECIALLY IN REGIONS HARBOR
+ING HIGH LEVELS OF BIODIVERSITY THAT ARE CURRENTLY THREATENED BY CLIMATE AND LA
+ND COVER CHANGES, LIKE SOUTHERN IBERIA. WE USED GENETIC (MTDNA AND MICROSATELLI
+TES) AND SPATIAL DATA (CLIMATE AND LAND COVER) TO INFER THE EVOLUTIONARY HISTOR
+Y AND CONTEMPORARY GENETIC CONNECTIVITY IN A SHORT-RANGE ENDEMIC SALAMANDER SUB
+SPECIES, SALAMANDRA SALAMANDRA LONGIROSTRIS, USING A COMBINATION OF ECOLOGICAL 
+NICHE MODELLING, PHYLOGEOGRAPHIC, AND LANDSCAPE GENETIC ANALYSES. ECOLOGICAL-BA
+SED ANALYSES SUPPORT A ROLE OF THE GUADALQUIVIR RIVER BASIN AS A MAJOR VICARIAN
+T AGENT IN THIS TAXON. THE LOWER GENETIC DIVERSITY AND GREATER DIFFERENTIATION 
+OF PERIPHERAL POPULATIONS, TOGETHER WITH ANALYSES OF CLIMATICALLY STABLE AREAS 
+THROUGHOUT TIME, SUGGEST THE PERSISTENCE OF A POPULATION IN THE CENTRAL PART OF
+ THE CURRENT RANGE SINCE THE LAST INTER GLACIAL [LIG, 120,000-140,000YEARS BP],
+ AND A MICRO REFUGIUM IN THE EASTERN END OF THE RANGE. HABITAT HETEROGENEITY PL
+AYS A MAJOR ROLE IN SHAPING PATTERNS OF GENETIC DIFFERENTIATION IN S. S. LONGIR
+OSTRIS, WITH FORESTS REPRESENTING KEY AREAS FOR ITS LONG-TERM PERSISTENCE UNDER
+ SCENARIOS OF ENVIRONMENTAL CHANGE. OUR STUDY STRESSES THE IMPORTANCE OF MAINTA
+INING POPULATION GENETIC CONNECTIVITY IN LOW-DISPERSAL ORGANISMS UNDER RAPIDLY 
+CHANGING ENVIRONMENTS, AND WILL INFORM MANAGEMENT PLANS FOR THE LONG-TERM SURVI
+VAL OF THIS EVOLUTIONARILY DISTINCT MEDITERRANEAN ENDEMIC.[] 
+ []
+
+
+Overfull \hbox (11379.38716pt too wide) in paragraph at lines 440--440
+[]\T1/lmtt/m/n/10 ## CUERVO-ALARCON L, 2018, TREE GENET GENOMES                
+                                                                               
+                                                                               
+                                                                               
+                                                                               
+                                                                               
+                            EUROPEAN BEECH (FAGUS SYLVATICA L.) IS ONE OF THE M
+OST IMPORTANT FOREST TREE SPECIES IN EUROPE, AND ITS GENETIC ADAPTATION POTENTI
+AL TO CLIMATE CHANGE IS OF GREAT INTEREST. SAPLINGS AND ADULTS FROM 12 EUROPEAN
+ BEECH POPULATIONS WERE SAMPLED ALONG TWO STEEP PRECIPITATION GRADIENTS IN SWIT
+ZERLAND. ALL INDIVIDUALS WERE GENOTYPED AT 13 MICROSATELLITE OR SIMPLE SEQUENCE
+ REPEAT (SSR) MARKERS AND 70 SINGLE NUCLEOTIDE POLYMORPHISMS (SNPS) IN 24 CANDI
+DATE GENES POTENTIALLY INVOLVED IN STRESS RESPONSE AND PHENOLOGY. BOTH SSR AND 
+SNP MARKERS REVEALED HIGH GENETIC DIVERSITY IN THE STUDIED POPULATIONS AND LOW 
+BUT STATISTICALLY SIGNIFICANT POPULATION DIFFERENTIATION. THE SNPS WERE SEARCHE
+D FOR F-ST OUTLIERS USING THREE DIFFERENT METHODS IMPLEMENTED IN LOSITAN, ARLEQ
+UIN, AND BAYESCAN, RESPECTIVELY. ADDITIONALLY, ASSOCIATIONS OF THE SNPS WITH EN
+VIRONMENTAL VARIABLES WERE TESTED BY TWO METHODS IMPLEMENTED IN BAYENV2 AND SAM
+ADA, RESPECTIVELY. THERE WERE 14 (20\\%) SNPS IN 12 (50\\%) CANDIDATE GENES IN 
+THE SAPLINGS AND 9 (12.8\\%) SNPS IN 7 (29.2\\%) CANDIDATE GENES IN THE ADULTS 
+CONSISTENTLY IDENTIFIED BY AT LEAST TWO OF THE FIVE METHODS USED, INDICATING TH
+AT THEY ARE VERY LIKELY UNDER SELECTION. GENES WITH SNPS SHOWING SIGNATURES OF 
+SELECTION ARE INVOLVED IN A WIDE RANGE OF MOLECULAR FUNCTIONS, SUCH AS OXIDORED
+UCTASES (IDH), HYDROLASES (CYSPRO), TRANSFERASES (XTH), TRANSPORTERS (KT2), CHA
+PERONES (CP10), AND TRANSCRIPTION FACTORS (DAG, NAC TRANSCRIPTION FACTOR). THE 
+OBTAINED DATA WILL HELP US BETTER UNDERSTAND THE GENETIC VARIATION UNDERLYING A
+DAPTATION TO ENVIRONMENTALLY CHANGING CONDITIONS IN EUROPEAN BEECH, WHICH IS OF
+ GREAT IMPORTANCE FOR THE DEVELOPMENT OF SCIENTIFIC GUIDELINES FOR THE SUSTAINA
+BLE MANAGEMENT AND CONSERVATION OF THIS IMPORTANT SPECIES.[] 
+ []
+
+
+Overfull \hbox (11379.38716pt too wide) in paragraph at lines 440--440
+[]\T1/lmtt/m/n/10 ## SYLVESTER EVA, 2018, MOL ECOL                             
+                                                                               
+                                                                               
+                                                                               
+                                                                               
+                                                                               
+                                                                   CONSERVATION
+ OF EXPLOITED SPECIES REQUIRES AN UNDERSTANDING OF BOTH GENETIC DIVERSITY AND T
+HE DOMINANT STRUCTURING FORCES, PARTICULARLY NEAR RANGE LIMITS, WHERE CLIMATIC 
+VARIATION CAN DRIVE RAPID EXPANSIONS OR CONTRACTIONS OF GEOGRAPHIC RANGE. HERE,
+ WE EXAMINE POPULATION STRUCTURE AND LANDSCAPE ASSOCIATIONS IN ATLANTIC SALMON 
+(SALMO SALAR) ACROSS A HETEROGENEOUS LANDSCAPE NEAR THE NORTHERN RANGE LIMIT IN
+ LABRADOR, CANADA. ANALYSIS OF TWO AMPLICON-BASED DATA SETS CONTAINING 101 MICR
+OSATELLITES AND 376 SINGLE NUCLEOTIDE POLYMORPHISMS (SNPS) FROM 35 LOCATIONS RE
+VEALED CLEAR DIFFERENTIATION BETWEEN POPULATIONS SPAWNING IN RIVERS FLOWING INT
+O A LARGE MARINE EMBAYMENT (LAKE MELVILLE) COMPARED TO COASTAL POPULATIONS. THE
+ MECHANISMS INFLUENCING THE DIFFERENTIATION OF EMBAYMENT POPULATIONS WERE INVES
+TIGATED USING BOTH MULTIVARIATE AND MACHINE-LEARNING LANDSCAPE GENETIC APPROACH
+ES. WE IDENTIFIED TEMPERATURE AS THE STRONGEST CORRELATE WITH GENETIC STRUCTURE
+, PARTICULARLY WARM TEMPERATURE EXTREMES AND WIDER ANNUAL TEMPERATURE RANGES. T
+HE GENOMIC BASIS OF THIS DIVERGENCE WAS FURTHER EXPLORED USING A SUBSET OF LOCA
+TIONS (N=17) AND A 220K SNP ARRAY. SNPS ASSOCIATED WITH SPATIAL STRUCTURING AND
+ TEMPERATURE MAPPED TO A DIVERSE SET OF GENES AND MOLECULAR PATHWAYS, INCLUDING
+ REGULATION OF GENE EXPRESSION, IMMUNE RESPONSE, AND CELL DEVELOPMENT AND DIFFE
+RENTIATION. THE RESULTS SPANNING MOLECULAR MARKER TYPES AND BOTH NOVEL AND ESTA
+BLISHED METHODS CLEARLY SHOW CLIMATE-ASSOCIATED, FINE-SCALE POPULATION STRUCTUR
+E ACROSS AN ENVIRONMENTAL GRADIENT IN ATLANTIC SALMON NEAR ITS RANGE LIMIT IN N
+ORTH AMERICA, HIGHLIGHTING VALUABLE APPROACHES FOR PREDICTING POPULATION RESPON
+SES TO CLIMATE CHANGE AND MANAGING SPECIES SUSTAINABILITY.[] 
+ []
+
+
+Overfull \hbox (1315.16641pt too wide) in paragraph at lines 440--440
+[]\T1/lmtt/m/n/10 ##                                                           
+                                                                               
+                                                                               
+                                                                               
+                                   DE[] 
+ []
+
+
+Overfull \hbox (1315.16641pt too wide) in paragraph at lines 440--440
+[]\T1/lmtt/m/n/10 ## DICKSON BG, 2019, CONSERV BIOL             BARRIERS; CORRI
+DORS; DISPERSAL; ECOLOGICAL FLOW; ELECTRICAL CURRENT; LANDSCAPE GENETICS; BARRE
+RAS; CORREDORES; CORRIENTE ELECTRICA; DISPERSION; FLUJO ECOLOGICO; GENETICA DEL
+ PAISAJE; \\&\\#X969C;(SIC); \\&\\#X5ECA;(SIC); \\&\\#X6269;<SIC>; (SIC)(SIC)(S
+IC); (SIC)(SIC)(SIC)(SIC); (SIC)(SIC)[] 
+ []
+
+
+Overfull \hbox (1315.16641pt too wide) in paragraph at lines 440--440
+[]\T1/lmtt/m/n/10 ## ZHAO X, 2019, BIOL CONSERV                                
+                                                                               
+                                                                               
+                   CLIMATE CHANGE; ANTHROPOGENIC ACTIVITIES; SPECIES\TS1/lmtt/m
+/n/10 ' \T1/lmtt/m/n/10 DISTRIBUTION; RANGE SHIFT; RHINOPITHECUS BIETI[] 
+ []
+
+
+Overfull \hbox (1315.16641pt too wide) in paragraph at lines 440--440
+[]\T1/lmtt/m/n/10 ## BRUCE SA, 2018, ECOL EVOL                                 
+                                                                               
+                                                                               
+                           DISPERSAL; GENE FLOW; INTROGRESSION; LANDSCAPE GENET
+ICS; MIGRATION; SALVELINUS FONTINALIS[] 
+ []
+
+
+Overfull \hbox (1315.16641pt too wide) in paragraph at lines 440--440
+[]\T1/lmtt/m/n/10 ## ANTUNES B, 2018, CONSERV GENET                            
+                                                                               
+                                                                               
+                                           AMPHIBIANS; CLIMATE CHANGE; CONNECTI
+VITY; INTEGRATIVE STUDIES; LAND COVER[] 
+ []
+
+
+Overfull \hbox (1315.16641pt too wide) in paragraph at lines 440--440
+[]\T1/lmtt/m/n/10 ## CUERVO-ALARCON L, 2018, TREE GENET GENOMES                
+                                                                               
+                                                                               
+               ADAPTATION; CLIMATE CHANGE; ENVIRONMENTAL ASSOCIATION ANALYSIS; 
+MICROSATELLITE; OUTLIER ANALYSIS; SNP[] 
+ []
+
+
+Overfull \hbox (1315.16641pt too wide) in paragraph at lines 440--440
+[]\T1/lmtt/m/n/10 ## SYLVESTER EVA, 2018, MOL ECOL                             
+                                                                               
+                                                                               
+                    ATLANTIC SALMON; CLIMATE CHANGE; LANDSCAPE GENETICS; PERIPH
+ERAL POPULATIONS; POPULATION GENETICS[] 
+ []
+
+
+Overfull \hbox (716.66815pt too wide) in paragraph at lines 440--440
+[]\T1/lmtt/m/n/10 ##                                                           
+                                                                               
+                                                                               
+ID[] 
+ []
+
+
+Overfull \hbox (716.66815pt too wide) in paragraph at lines 440--440
+[]\T1/lmtt/m/n/10 ## DICKSON BG, 2019, CONSERV BIOL                PREDICTS GEN
+E FLOW; LANDSCAPE CONNECTIVITY; HABITAT CONNECTIVITY; FUNCTIONAL CONNECTIVITY; 
+REGIONAL CONNECTIVITY; CLIMATE-CHANGE; NEW-MODEL; DISPERSAL; MOVEMENT; RESISTAN
+CE[] 
+ []
+
+[2]
+Overfull \hbox (716.66815pt too wide) in paragraph at lines 440--440
+[]\T1/lmtt/m/n/10 ## ZHAO X, 2019, BIOL CONSERV                                
+         SNUB-NOSED MONKEYS; RHINOPITHECUS-BIETI; SPECIES DISTRIBUTION; LANDSCA
+PE GENETICS; CHANGE IMPACTS; DAY LENGTH; YUNNAN; POPULATION; TEMPERATURE; ECOLO
+GY[] 
+ []
+
+
+Overfull \hbox (716.66815pt too wide) in paragraph at lines 440--440
+[]\T1/lmtt/m/n/10 ## BRUCE SA, 2018, ECOL EVOL                                 
+               CLIMATE-CHANGE; RE-IMPLEMENTATION; ATLANTIC SALMON; BETA REGRESS
+ION; CONSERVATION; SOFTWARE; PROGRAMS; TRANSLOCATION; HYBRIDIZATION; BIODIVERSI
+TY[] 
+ []
+
+
+Overfull \hbox (716.66815pt too wide) in paragraph at lines 440--440
+[]\T1/lmtt/m/n/10 ## ANTUNES B, 2018, CONSERV GENET                            
+                              POPULATION EXPANSION; CLIMATE-CHANGE; DIFFERENTIA
+TION; CONSERVATION; DISPERSAL; SOFTWARE; CONNECTIVITY; AMPHIBIA; ECOLOGY; HABIT
+AT[] 
+ []
+
+
+Overfull \hbox (716.66815pt too wide) in paragraph at lines 440--440
+[]\T1/lmtt/m/n/10 ## CUERVO-ALARCON L, 2018, TREE GENET GENOMES PINE PINUS-TAED
+A; MICROSATELLITE MARKERS; LOCAL ADAPTATION; CLIMATE-CHANGE; CANDIDATE GENES; L
+ANDSCAPE GENETICS; GENOME-SCAN; SPATIAL-PATTERNS; PRACTICAL GUIDE; VAR. MENZIES
+II[] 
+ []
+
+
+Overfull \hbox (716.66815pt too wide) in paragraph at lines 440--440
+[]\T1/lmtt/m/n/10 ## SYLVESTER EVA, 2018, MOL ECOL                    LANDSCAPE
+ GENETICS; LOCAL ADAPTATION; SOCKEYE-SALMON; R-PACKAGE; PERIPHERAL-POPULATIONS;
+ MICROSATELLITE LOCI; ONCORHYNCHUS-NERKA; RANDOM FORESTS; F-STATISTICS; SELECTI
+ON[] 
+ []
+
+
+Overfull \hbox (7174.14938pt too wide) in paragraph at lines 440--440
+[]\T1/lmtt/m/n/10 ##                                                           
+                                                                               
+                                                                               
+                                                                               
+                                                                               
+                                                                               
+                                                                               
+                                                                               
+                                                                               
+                                                                               
+                                                                               
+                                                                               
+                                                                               
+                                                                               
+                                                                               
+                                                                               
+                                                                               
+                                                                               
+                                             C1[] 
+ []
+
+
+Overfull \hbox (7174.14938pt too wide) in paragraph at lines 440--440
+[]\T1/lmtt/m/n/10 ## DICKSON BG, 2019, CONSERV BIOL             DICKSON, BG (RE
+PRINT AUTHOR), CONSERVAT SCI PARTNERS INC, 11050 PIONEER TRAIL,SUITE 202, TRUCK
+EE, CA 96161 USA.;DICKSON, BG (REPRINT AUTHOR), NO ARIZONA UNIV, LANDSCAPE CONS
+ERVAT INITIAT, BOX 5694, FLAGSTAFF, AZ 86011 USA.;DICKSON, BRETT G., ALBANO, CH
+RISTINE M., GRAY, MIRANDA E., MCCLURE, MEREDITH L., THEOBALD, DAVID M., CONSERV
+AT SCI PARTNERS INC, 11050 PIONEER TRAIL,SUITE 202, TRUCKEE, CA 96161 USA.;DICK
+SON, BRETT G., NO ARIZONA UNIV, LANDSCAPE CONSERVAT INITIAT, BOX 5694, FLAGSTAF
+F, AZ 86011 USA.;ANANTHARAMAN, RANJAN, SHAH, VIRAL B., JULIA COMP, 45 PROSPECT 
+ST, CAMBRIDGE, MA 02139 USA.;BEIER, PAUL, NO ARIZONA UNIV, SCH FORESTRY, BOX 15
+018, FLAGSTAFF, AZ 86011 USA.;FARGIONE, JOE, HALL, KIMBERLY R., NAT CONSERVANCY
+ NORTH AMER REG, 1101 WEST RIVER PKWY,SUITE 200, MINNEAPOLIS, MN 55415 USA.;GRA
+VES, TABITHA A., US GEOL SURVEY, NORTHERN ROCKY MT SCI CTR, 38 MATHER DR, WEST 
+GLACIER, MT 59936 USA.;LAWLER, JOSH J., LITTLEFIELD, CAITLIN E., UNIV WASHINGTO
+N, SCH ENVIRONM \\& FOREST SCI, BOX 352100, SEATTLE, WA 98195 USA.;LEONARD, PAU
+L B., US FISH \\& WILDLIFE SERV, SCI APPLICAT, 101 12TH AVE,110, FAIRBANKS, AK 
+99701 USA.;NOVEMBRE, JOHN, UNIV CHICAGO, DEPT HUMAN GENET, DEPT ECOL \\& EVOLUT
+, 920 EAST 58TH ST, CHICAGO, IL 60637 USA.;SCHLOSS, CARRIE A., NATURE CONSERVAN
+CY, 201 MISSION ST, SAN FRANCISCO, CA 94105 USA.;SCHUMAKER, NATHAN H., US EPA, 
+200 SOUTHWEST 35TH ST, CORVALLIS, OR 97330 USA.[] 
+ []
+
+
+Overfull \hbox (7174.14938pt too wide) in paragraph at lines 440--440
+[]\T1/lmtt/m/n/10 ## ZHAO X, 2019, BIOL CONSERV                                
+                                                                               
+                                                                               
+                                                                               
+                                                                            LIU
+, ZJ (REPRINT AUTHOR), INST ZOOL, CAS KEY LAB ANIM ECOL \\& CONSERVAT BIOL, BEI
+JING 100101, PEOPLES R CHINA.;LI, M (REPRINT AUTHOR), CHINESE ACAD SCI, CTR EXC
+ELLENCE ANIM EVOLUT \\& GENET, KUNMING 650223, YUNNAN, PEOPLES R CHINA.;ZHAO, X
+UMAO, REN, BAOPING, ZHU, PINGFEN, LIU, ZHIJIN, LI, MING, INST ZOOL, CAS KEY LAB
+ ANIM ECOL \\& CONSERVAT BIOL, BEIJING 100101, PEOPLES R CHINA.;ZHAO, XUMAO, UN
+IV CHINESE ACAD SCI, BEIJING 100049, PEOPLES R CHINA.;LI, DAYONG, CHINA WEST NO
+RMAL UNIV, MINIST EDUC, KEY LAB SOUTHWEST CHINA WILDLIFE RESOURCES CONSER, NANC
+HONG 637009, PEOPLES R CHINA.;GARBER, PAUL A., UNIV ILLINOIS, DEPT ANTHROPOL, 1
+09 DAVENPORT HALL, URBANA, IL 61801 USA.;GARBER, PAUL A., UNIV ILLINOIS, PROGRA
+M ECOL \\& EVOLUTIONARY BIOL, URBANA, IL 61801 USA.;XIANG, ZUOFU, CENT SOUTH UN
+IV FORESTRY \\& TECHNOL, COLL LIFE SCI \\& TECHNOL, CHANGSHA 410004, HUNAN, PEO
+PLES R CHINA.;GRUETER, CYRIL C., UNIV WESTERN AUSTRALIA, SCH HUMAN SCI, PERTH, 
+WA 6009, AUSTRALIA.;LI, MING, CHINESE ACAD SCI, CTR EXCELLENCE ANIM EVOLUT \\& 
+GENET, KUNMING 650223, YUNNAN, PEOPLES R CHINA.[] 
+ []
+
+
+Overfull \hbox (7174.14938pt too wide) in paragraph at lines 440--440
+[]\T1/lmtt/m/n/10 ## BRUCE SA, 2018, ECOL EVOL                                 
+                                                                               
+                                                                               
+                                                                               
+                                                                               
+                                                                               
+                                                                               
+                                                                               
+                                                                               
+                                                                               
+                                                                               
+                                                                               
+                                                                               
+                                                                               
+                                                                               
+                                                BRUCE, SA (REPRINT AUTHOR), SUN
+Y ALBANY, DEPT BIOL SCI, ALBANY, NY 12222 USA.;BRUCE, SPENCER A., SUNY ALBANY, 
+DEPT BIOL SCI, ALBANY, NY 12222 USA.;BRUCE, SPENCER A., WRIGHT, JEREMY J., NEW 
+YORK STATE MUSEUM \\& SCI SERV, ALBANY, NY USA.[] 
+ []
+
+
+Overfull \hbox (7174.14938pt too wide) in paragraph at lines 440--440
+[]\T1/lmtt/m/n/10 ## ANTUNES B, 2018, CONSERV GENET                            
+                                                                               
+                                                                               
+                                                                               
+                                                                               
+                                                                               
+                                                                               
+        VELO-ANTON, G (REPRINT AUTHOR), UNIV PORTO, INST CIENCIAS AGR VAIRAO, C
+TR INVEST BIODIVERSIDADE \\& RECURSOS GENET, CIBIO INBIO, RUA PADRE ARMANDO QUI
+NTAS 7, P-4485661 VAIRAO, PORTUGAL.;ANTUNES, B., LOURENCO, A., CAEIRO-DIAS, G.,
+ DINIS, M., GONCALVES, H., TARROSO, P., VELO-ANTON, G., UNIV PORTO, INST CIENCI
+AS AGR VAIRAO, CTR INVEST BIODIVERSIDADE \\& RECURSOS GENET, CIBIO INBIO, RUA P
+ADRE ARMANDO QUINTAS 7, P-4485661 VAIRAO, PORTUGAL.;ANTUNES, B., LOURENCO, A., 
+CAEIRO-DIAS, G., DINIS, M., UNIV PORTO, DEPT BIOL, FAC CIENCIAS, RUA CAMPO ALEG
+RE, P-4169007 PORTO, PORTUGAL.;CAEIRO-DIAS, G., UNIV PAUL VALERY MONTPELLIER, U
+NIV MONTPELLIER, CNRS, CEFE,EPHE,UMR 5175, 1919 ROUTE MENDE, F-34293 MONTPELLIE
+R 5, FRANCE.;GONCALVES, H., MHNC UP, PRACA GOMES TEIXEIRA, P-4099002 PORTO, POR
+TUGAL.;MARTINEZ-SOLANO, I., CSIC, MNCN, DEPT BIODIVERSIDAD \\& BIOL EVOLUT, C J
+OSE GUTIERREZ ABASCAL 2, E-28006 MADRID, SPAIN.[] 
+ []
+
+
+Overfull \hbox (7174.14938pt too wide) in paragraph at lines 440--440
+[]\T1/lmtt/m/n/10 ## CUERVO-ALARCON L, 2018, TREE GENET GENOMES                
+                                              KRUTOVSKY, KV (REPRINT AUTHOR), G
+EORG AUGUST UNIV GOTTINGEN, DEPT FOREST GENET \\& FOREST TREE BREEDING, BUESGEN
+WEG 2, D-37077 GOTTINGEN, GERMANY.;KRUTOVSKY, KV (REPRINT AUTHOR), RUSSIAN ACAD
+ SCI, VAVILOV INST GEN GENET, 3 GUBKINA STR, MOSCOW 119333, RUSSIA.;KRUTOVSKY, 
+KV (REPRINT AUTHOR), SIBERIAN FED UNIV, LAB FOREST GENOM, GENOME RES \\& EDUC C
+TR, 50A-2 AKADEMGORODOK, KRASNOYARSK 660036, RUSSIA.;KRUTOVSKY, KV (REPRINT AUT
+HOR), TEXAS A\\&M UNIV, DEPT ECOSYST SCI \\& MANAGEMENT, COLLEGE STN, TX 77843 
+USA.;CUERVO-ALARCON, LAURA, MUELLER, MARKUS, KRUTOVSKY, KONSTANTIN V., GEORG AU
+GUST UNIV GOTTINGEN, DEPT FOREST GENET \\& FOREST TREE BREEDING, BUESGENWEG 2, 
+D-37077 GOTTINGEN, GERMANY.;AREND, MATTHIAS, SPERISEN, CHRISTOPH, SWISS FED INS
+T FOREST SNOW \\& LANDSCAPE RES WSL, ZURCHERSTR 111, CH-8903 BIRMENSDORF, SWITZ
+ERLAND.;AREND, MATTHIAS, UNIV BASEL, DEPT ENVIRONM SCI, SCHONBEINSTR 6, CH-4056
+ BASEL, SWITZERLAND.;FINKELDEY, REINER, UNIV KASSEL, MONCHEBERGSTR 19, D-34109 
+KASSEL, GERMANY.;KRUTOVSKY, KONSTANTIN V., RUSSIAN ACAD SCI, VAVILOV INST GEN G
+ENET, 3 GUBKINA STR, MOSCOW 119333, RUSSIA.;KRUTOVSKY, KONSTANTIN V., SIBERIAN 
+FED UNIV, LAB FOREST GENOM, GENOME RES \\& EDUC CTR, 50A-2 AKADEMGORODOK, KRASN
+OYARSK 660036, RUSSIA.;KRUTOVSKY, KONSTANTIN V., TEXAS A\\&M UNIV, DEPT ECOSYST
+ SCI \\& MANAGEMENT, COLLEGE STN, TX 77843 USA.[] 
+ []
+
+
+Overfull \hbox (7174.14938pt too wide) in paragraph at lines 440--440
+[]\T1/lmtt/m/n/10 ## SYLVESTER EVA, 2018, MOL ECOL                             
+                                                                               
+                                                                               
+                                                                               
+                                                                               
+                                                                               
+                                                                               
+                                                                               
+                                                                   SYLVESTER, E
+VA (REPRINT AUTHOR), DEPT FISHERIES \\& OCEANS CANADA, SCI BRANCH, ST JOHN, NF,
+ CANADA.;SYLVESTER, EMMA V. A., LEHNERT, SARAH, DUFFY, STEVEN, ROBERTSON, MARTH
+A J., BRADBURY, IAN R., DEPT FISHERIES \\& OCEANS CANADA, SCI BRANCH, ST JOHN, 
+NF, CANADA.;BEIKO, ROBERT G., PATERSON, IAN, BRADBURY, IAN R., DALHOUSIE UNIV, 
+FAC COMP SCI, HALIFAX, NS, CANADA.;BENTZEN, PAUL, WATSON, BETH, BRADBURY, IAN R
+., DALHOUSIE UNIV, DEPT BIOL, MARINE GENE PROBE LAB, HALIFAX, NS, CANADA.;HORNE
+, JOHN B., UNIV SOUTHERN MISSISSIPPI, GULF COAST RES LAB, OCEAN SPRINGS, MS USA
+.;CLEMENT, MARIE, MEM UNIV NEWFOUNDLAND, FISHERIES \\& MARINE INST, CTR FISHERI
+ES ECOSYST RES, ST JOHN, NF, CANADA.;CLEMENT, MARIE, MEM UNIV NEWFOUNDLAND, LAB
+RADOR INST, HAPPY VALLEY GOOSE BAY, NF, CANADA.[] 
+ []
+
+
+Overfull \hbox (170.66974pt too wide) in paragraph at lines 440--440
+[]\T1/lmtt/m/n/10 ##                                                           
+                                                      PA[] 
+ []
+
+
+Overfull \hbox (170.66974pt too wide) in paragraph at lines 440--440
+[]\T1/lmtt/m/n/10 ## DICKSON BG, 2019, CONSERV BIOL                            
+                111 RIVER ST, HOBOKEN 07030-5774, NJ USA[] 
+ []
+
+
+Overfull \hbox (170.66974pt too wide) in paragraph at lines 440--440
+[]\T1/lmtt/m/n/10 ## ZHAO X, 2019, BIOL CONSERV                 THE BOULEVARD, 
+LANGFORD LANE, KIDLINGTON, OXFORD OX5 1GB, OXON, ENGLAND[] 
+ []
+
+
+Overfull \hbox (170.66974pt too wide) in paragraph at lines 440--440
+[]\T1/lmtt/m/n/10 ## BRUCE SA, 2018, ECOL EVOL                                 
+                111 RIVER ST, HOBOKEN 07030-5774, NJ USA[] 
+ []
+
+
+Overfull \hbox (170.66974pt too wide) in paragraph at lines 440--440
+[]\T1/lmtt/m/n/10 ## ANTUNES B, 2018, CONSERV GENET                            
+  VAN GODEWIJCKSTRAAT 30, 3311 GZ DORDRECHT, NETHERLANDS[] 
+ []
+
+
+Overfull \hbox (170.66974pt too wide) in paragraph at lines 440--440
+[]\T1/lmtt/m/n/10 ## CUERVO-ALARCON L, 2018, TREE GENET GENOMES                
+       TIERGARTENSTRASSE 17, D-69121 HEIDELBERG, GERMANY[] 
+ []
+
+
+Overfull \hbox (170.66974pt too wide) in paragraph at lines 440--440
+[]\T1/lmtt/m/n/10 ## SYLVESTER EVA, 2018, MOL ECOL                             
+                111 RIVER ST, HOBOKEN 07030-5774, NJ USA[] 
+ []
+
+
+Overfull \hbox (2002.91441pt too wide) in paragraph at lines 440--440
+[]\T1/lmtt/m/n/10 ##                                                           
+                                                                               
+                                                                               
+                                                                               
+                                                                               
+                                                                               
+        FU[] 
+ []
+
+
+Overfull \hbox (2002.91441pt too wide) in paragraph at lines 440--440
+[]\T1/lmtt/m/n/10 ## DICKSON BG, 2019, CONSERV BIOL                            
+                                                                               
+                 WILBURFORCE FOUNDATION, COUGAR FUND, NATIONAL AERONAUTICS AND 
+SPACE ADMINISTRATION (NASA), NATIONAL CENTER FOR ECOLOGICAL ANALYSIS AND SYNTHE
+SIS, THE NATURE CONSERVANCY (TNC), UNIVERSITY OF WASHINGTON, U.S. ENVIRONMENTAL
+ PROTECTION AGENCY, NASA APPLIED SCIENCES-ECOLOGICAL FORECASTING GRANT [16-ECO4
+CAST-0018][] 
+ []
+
+
+Overfull \hbox (2002.91441pt too wide) in paragraph at lines 440--440
+[]\T1/lmtt/m/n/10 ## ZHAO X, 2019, BIOL CONSERV                                
+                                                                               
+                                                   STRATEGIC PRIORITY RESEARCH 
+PROGRAM OF THE CHINESE ACADEMY OF SCIENCES [XDB31020000, XDA19050202], NATIONAL
+ KEY R AND D PROGRAM OF CHINA [2016YFC0503200], NATIONAL NATURAL SCIENCE FOUNDA
+TION OF CHINA [31821001], STATE FORESTRY ADMINISTRATION OF THE PEOPLE\TS1/lmtt/
+m/n/10 '\T1/lmtt/m/n/10 S REPUBLIC OF CHINA[] 
+ []
+
+
+Overfull \hbox (2002.91441pt too wide) in paragraph at lines 440--440
+[]\T1/lmtt/m/n/10 ## BRUCE SA, 2018, ECOL EVOL                                 
+                                                                               
+                                                                               
+                                                                               
+                                                                               
+                                           NEW YORK STATE MUSEUM, HUDSON RIVER 
+FOUNDATION[] 
+ []
+
+
+Overfull \hbox (2002.91441pt too wide) in paragraph at lines 440--440
+[]\T1/lmtt/m/n/10 ## ANTUNES B, 2018, CONSERV GENET                            
+                                                                        FEDER F
+UNDS THROUGH THE OPERATIONAL PROGRAMME FOR COMPETITIVENESS FACTORS-COMPETE, FCT
+-FOUNDATION FOR SCIENCE AND TECHNOLOGY [PTDC/BIA-EVF/3036/2012, PTDC/BIA-BEC/09
+9915/2008, POCI-01-0145-FEDER-006821, FCOMP-01-0124-FEDER-028325], FCT [IF/0142
+5/2014, SFRH/BPD/102966/2014, SFRH/BD/89750/2012, PD/BD/106060/2015, SFRH/BPD/9
+3473/2013][] 
+ []
+
+
+Overfull \hbox (2002.91441pt too wide) in paragraph at lines 440--440
+[]\T1/lmtt/m/n/10 ## CUERVO-ALARCON L, 2018, TREE GENET GENOMES                
+                                                                               
+                                                                               
+                                                                               
+                                                      SWISS FEDERAL OFFICE FOR 
+THE ENVIRONMENT FOEN, SWISS FEDERAL INSTITUTE FOR FOREST, SNOW AND LANDSCAPE RE
+SEARCH WSL[] 
+ []
+
+
+Overfull \hbox (2002.91441pt too wide) in paragraph at lines 440--440
+[]\T1/lmtt/m/n/10 ## SYLVESTER EVA, 2018, MOL ECOL              NATURAL SCIENCE
+S AND ENGINEERING RESEARCH COUNCIL OF CANADA (NSERC), GENOMICS RESEARCH AND DEV
+ELOPMENT INITIATIVE (GRDI), NATIONAL SCIENCES NSERC, ATLANTIC SALMON FEDERATION
+ OLIN FELLOWSHIP, ATLANTIC SALMON CONSERVATION FOUNDATION, LABRADOR INSTITUTE (
+ATLANTIC CANADA OPPORTUNITIES AGENCY), LABRADOR INSTITUTE (DEPARTMENT OF TOURIS
+M, CULTURE, INDUSTRY AND INNOVATION), TORNGAT WILDLIFE, PLANTS, AND FISHERIES S
+ECRETARIAT[] 
+ []
+
+
+Overfull \hbox (5378.6546pt too wide) in paragraph at lines 440--440
+[]\T1/lmtt/m/n/10 ##                                                           
+                                                                               
+                                                                               
+                                                                               
+                                                                               
+                                                                               
+                                                                               
+                                                                               
+                                                                               
+                                                                               
+                                                                               
+                                                                               
+                                                                               
+                                                                               
+                   FX[] 
+ []
+
+
+Overfull \hbox (5378.6546pt too wide) in paragraph at lines 440--440
+[]\T1/lmtt/m/n/10 ## DICKSON BG, 2019, CONSERV BIOL             WE THANK THE MA
+NY SUPPORTERS OF BRAD MCRAE AND HIS VISION FOR THE DEVELOPMENT OF CIRCUIT THEOR
+Y AND CIRCUITSCAPE SOFTWARE FOR CONSERVATION, INCLUDING THE WILBURFORCE FOUNDAT
+ION, COUGAR FUND, NATIONAL AERONAUTICS AND SPACE ADMINISTRATION (NASA), NATIONA
+L CENTER FOR ECOLOGICAL ANALYSIS AND SYNTHESIS, THE NATURE CONSERVANCY (TNC), U
+NIVERSITY OF WASHINGTON, AND U.S. ENVIRONMENTAL PROTECTION AGENCY. WE ALSO THAN
+K T. MOHAPATRA AND OTHERS AT JULIA COMPUTING FOR THEIR CONTRIBUTIONS TO THE ONG
+OING DEVELOPMENT OF CIRCUITSCAPE AND RELATED SOFTWARE, FUNDED THROUGH A NASA AP
+PLIED SCIENCES-ECOLOGICAL FORECASTING GRANT (16-ECO4CAST-0018) TO TNC, WITH MAT
+CHING FUNDS FROM THE WILBURFORCE FOUNDATION. WE ARE GRATEFUL TO THE CIRCUITSCAP
+E USER COMMUNITY FOR THEIR CREATIVITY AND DEDICATION TO INNOVATION IN CONSERVAT
+ION. THE COMMENTS OF M. BURGMAN, C. EPPS, C. MURCIA, T. NOGEIRE MCRAE, AND 3 AN
+ONYMOUS REVIEWERS GREATLY IMPROVED OUR MANUSCRIPT. ANY USE OF TRADE, FIRM, OR P
+RODUCT NAMES IS FOR DESCRIPTIVE PURPOSES ONLY AND DOES NOT IMPLY ENDORSEMENT BY
+ THE U.S. GOVERNMENT.[] 
+ []
+
+[3]
+Overfull \hbox (5378.6546pt too wide) in paragraph at lines 440--440
+[]\T1/lmtt/m/n/10 ## ZHAO X, 2019, BIOL CONSERV                                
+                                                                               
+                                                                               
+                                                                               
+                                                                               
+                                                                               
+                                                                               
+                                                                               
+                                                                               
+                                    THIS PROJECT WAS SUPPORTED BY STRATEGIC PRI
+ORITY RESEARCH PROGRAM OF THE CHINESE ACADEMY OF SCIENCES (XDB31020000 AND XDA1
+9050202), NATIONAL KEY R AND D PROGRAM OF CHINA (2016YFC0503200), THE NATIONAL 
+NATURAL SCIENCE FOUNDATION OF CHINA (31821001) AND STATE FORESTRY ADMINISTRATIO
+N OF THE PEOPLE\TS1/lmtt/m/n/10 '\T1/lmtt/m/n/10 S REPUBLIC OF CHINA. WE THANK 
+CHRISSIE, SARA, JENNI, AND YU ZHANG FOR THEIR SUPPORT.[] 
+ []
+
+
+Overfull \hbox (5378.6546pt too wide) in paragraph at lines 440--440
+[]\T1/lmtt/m/n/10 ## BRUCE SA, 2018, ECOL EVOL                                 
+                                                                               
+                                                                               
+                                                                               
+                                                                               
+                                                                               
+                                                                               
+                                                                               
+                                                                               
+                                                                               
+                                                                               
+                                                                               
+                           THE NEW YORK STATE MUSEUM, GRANT/AWARD NUMBER: GRADU
+ATE RESEARCH FELLOWSHIP, THE HUDSON RIVER FOUNDATION, GRANT/AWARD NUMBER: TIBOR
+ T. POLGAR FELLOWSHIP[] 
+ []
+
+
+Overfull \hbox (5378.6546pt too wide) in paragraph at lines 440--440
+[]\T1/lmtt/m/n/10 ## ANTUNES B, 2018, CONSERV GENET                            
+                                                                               
+                                                                               
+                                                                               
+                                      WE THANK DAVID BUCKLEY, DAVID DONAIRE, FR
+ANCISCO JIMENEZ CAZALLA, JESUS DIAZ-RODRIGUEZ, LUIS GARCIA-CARDENETE AND SAUL Y
+UBERO FOR PROVIDING SAMPLES AND HELP WITH FIELD WORK. S. LOPES HELPED WITH GENO
+TYPING. FIELDWORK FOR OBTAINING TISSUE SAMPLES WAS DONE WITH THE CORRESPONDING 
+PERMITS FROM THE REGIONAL ADMINISTRATIONS THIS WORK WAS FUNDED BY FEDER FUNDS T
+HROUGH THE OPERATIONAL PROGRAMME FOR COMPETITIVENESS FACTORS-COMPETE-AND BY NAT
+IONAL FUNDS THROUGH FCT-FOUNDATION FOR SCIENCE AND TECHNOLOGY-UNDER THE PTDC/BI
+A-EVF/3036/2012, PTDC/BIA-BEC/099915/2008, POCI-01-0145-FEDER-006821 AND FCOMP-
+01-0124-FEDER-028325. GVA, HG, GCD, AL AND PT ARE SUPPORTED BY FCT (IF/01425/20
+14, SFRH/BPD/102966/2014, SFRH/BD/89750/2012, PD/BD/106060/2015, SFRH/BPD/93473
+/2013), RESPECTIVELY.[] 
+ []
+
+
+Overfull \hbox (5378.6546pt too wide) in paragraph at lines 440--440
+[]\T1/lmtt/m/n/10 ## CUERVO-ALARCON L, 2018, TREE GENET GENOMES                
+                                                                               
+                                                                               
+                                                                               
+                                                                               
+                                                                               
+                                                                               
+                                                                               
+                                                                               
+                                                                               
+                                                                               
+                                                                               
+             THIS STUDY WAS FINANCIALLY SUPPORTED BY THE SWISS FEDERAL OFFICE F
+OR THE ENVIRONMENT FOEN AND THE SWISS FEDERAL INSTITUTE FOR FOREST, SNOW AND LA
+NDSCAPE RESEARCH WSL.[] 
+ []
+
+
+Overfull \hbox (5378.6546pt too wide) in paragraph at lines 440--440
+[]\T1/lmtt/m/n/10 ## SYLVESTER EVA, 2018, MOL ECOL                             
+                                                                               
+                                                                               
+                                                                               
+                                                                               
+                                                                               
+                                                                               
+                                                                               
+                           NATURAL SCIENCES AND ENGINEERING RESEARCH COUNCIL OF
+ CANADA (NSERC) STRATEGIC GRANT, GENOMICS RESEARCH AND DEVELOPMENT INITIATIVE (
+GRDI) GRANT, NATIONAL SCIENCES NSERC DISCOVERY GRANT AND STRATEGIC PROJECT GRAN
+T, ATLANTIC SALMON FEDERATION OLIN FELLOWSHIP, TORNGAT WILDLIFE, PLANTS, AND FI
+SHERIES SECRETARIAT, ATLANTIC SALMON CONSERVATION FOUNDATION, LABRADOR INSTITUT
+E (ATLANTIC CANADA OPPORTUNITIES AGENCY AND DEPARTMENT OF TOURISM, CULTURE, IND
+USTRY AND INNOVATION)[] 
+ []
+
+
+Overfull \hbox (280.91942pt too wide) in paragraph at lines 440--440
+[]\T1/lmtt/m/n/10 ##                                                           
+                                                                           SC[]
+ 
+ []
+
+
+Overfull \hbox (280.91942pt too wide) in paragraph at lines 440--440
+[]\T1/lmtt/m/n/10 ## DICKSON BG, 2019, CONSERV BIOL                            
+            BIODIVERSITY \\& CONSERVATION, ENVIRONMENTAL SCIENCES \\& ECOLOGY[]
+ 
+ []
+
+
+Overfull \hbox (280.91942pt too wide) in paragraph at lines 440--440
+[]\T1/lmtt/m/n/10 ## ZHAO X, 2019, BIOL CONSERV                                
+            BIODIVERSITY \\& CONSERVATION, ENVIRONMENTAL SCIENCES \\& ECOLOGY[]
+ 
+ []
+
+
+Overfull \hbox (280.91942pt too wide) in paragraph at lines 440--440
+[]\T1/lmtt/m/n/10 ## BRUCE SA, 2018, ECOL EVOL                                 
+                     ENVIRONMENTAL SCIENCES \\& ECOLOGY, EVOLUTIONARY BIOLOGY[]
+ 
+ []
+
+
+Overfull \hbox (280.91942pt too wide) in paragraph at lines 440--440
+[]\T1/lmtt/m/n/10 ## ANTUNES B, 2018, CONSERV GENET                            
+                         BIODIVERSITY \\& CONSERVATION, GENETICS \\& HEREDITY[]
+ 
+ []
+
+
+Overfull \hbox (280.91942pt too wide) in paragraph at lines 440--440
+[]\T1/lmtt/m/n/10 ## CUERVO-ALARCON L, 2018, TREE GENET GENOMES                
+                                 FORESTRY, GENETICS \\& HEREDITY, AGRICULTURE[]
+ 
+ []
+
+
+Overfull \hbox (280.91942pt too wide) in paragraph at lines 440--440
+[]\T1/lmtt/m/n/10 ## SYLVESTER EVA, 2018, MOL ECOL              BIOCHEMISTRY \\
+& MOLECULAR BIOLOGY, ENVIRONMENTAL SCIENCES \\& ECOLOGY, EVOLUTIONARY BIOLOGY[]
+ 
+ []
+
+
+Overfull \hbox (139.16983pt too wide) in paragraph at lines 440--440
+[]\T1/lmtt/m/n/10 ##                                                           
+                                                WC[] 
+ []
+
+
+Overfull \hbox (139.16983pt too wide) in paragraph at lines 440--440
+[]\T1/lmtt/m/n/10 ## DICKSON BG, 2019, CONSERV BIOL                    BIODIVER
+SITY CONSERVATION, ECOLOGY, ENVIRONMENTAL SCIENCES[] 
+ []
+
+
+Overfull \hbox (139.16983pt too wide) in paragraph at lines 440--440
+[]\T1/lmtt/m/n/10 ## ZHAO X, 2019, BIOL CONSERV                        BIODIVER
+SITY CONSERVATION, ECOLOGY, ENVIRONMENTAL SCIENCES[] 
+ []
+
+
+Overfull \hbox (139.16983pt too wide) in paragraph at lines 440--440
+[]\T1/lmtt/m/n/10 ## BRUCE SA, 2018, ECOL EVOL                                 
+                     ECOLOGY, EVOLUTIONARY BIOLOGY[] 
+ []
+
+
+Overfull \hbox (139.16983pt too wide) in paragraph at lines 440--440
+[]\T1/lmtt/m/n/10 ## ANTUNES B, 2018, CONSERV GENET                            
+  BIODIVERSITY CONSERVATION, GENETICS \\& HEREDITY[] 
+ []
+
+
+Overfull \hbox (139.16983pt too wide) in paragraph at lines 440--440
+[]\T1/lmtt/m/n/10 ## CUERVO-ALARCON L, 2018, TREE GENET GENOMES                
+     FORESTRY, GENETICS \\& HEREDITY, HORTICULTURE[] 
+ []
+
+
+Overfull \hbox (139.16983pt too wide) in paragraph at lines 440--440
+[]\T1/lmtt/m/n/10 ## SYLVESTER EVA, 2018, MOL ECOL              BIOCHEMISTRY \\
+& MOLECULAR BIOLOGY, ECOLOGY, EVOLUTIONARY BIOLOGY[] 
+ []
+
+
+Overfull \hbox (459.4189pt too wide) in paragraph at lines 440--440
+[]\T1/lmtt/m/n/10 ##                                                           
+                                                                               
+                              EM[] 
+ []
+
+
+Overfull \hbox (459.4189pt too wide) in paragraph at lines 440--440
+[]\T1/lmtt/m/n/10 ## DICKSON BG, 2019, CONSERV BIOL                            
+                                                                               
+                BRETTCSP-INC.ORG[] 
+ []
+
+
+Overfull \hbox (459.4189pt too wide) in paragraph at lines 440--440
+[]\T1/lmtt/m/n/10 ## ZHAO X, 2019, BIOL CONSERV                 ZHAOXUMAOIOZ.AC
+.CN RENBPIOZ.AC.CN P-GARBERILLINOIS.EDU ZHUPINGFENIOZ.AC.CN CYRIL.GRUETERUWA.ED
+U.AU LIUZJIOZ.AC.CN LIMIOZ.AC.CN[] 
+ []
+
+
+Overfull \hbox (459.4189pt too wide) in paragraph at lines 440--440
+[]\T1/lmtt/m/n/10 ## BRUCE SA, 2018, ECOL EVOL                                 
+                                                                               
+                SBRUCEALBANY.EDU[] 
+ []
+
+
+Overfull \hbox (459.4189pt too wide) in paragraph at lines 440--440
+[]\T1/lmtt/m/n/10 ## ANTUNES B, 2018, CONSERV GENET                            
+                                                                               
+       GUILLERMO.VELOCIBIO.UP.PT[] 
+ []
+
+
+Overfull \hbox (459.4189pt too wide) in paragraph at lines 440--440
+[]\T1/lmtt/m/n/10 ## CUERVO-ALARCON L, 2018, TREE GENET GENOMES                
+                                                                    KONSTANTIN.
+KRUTOVSKYFORST.UNI-GOETTINGEN.DE[] 
+ []
+
+
+Overfull \hbox (459.4189pt too wide) in paragraph at lines 440--440
+[]\T1/lmtt/m/n/10 ## SYLVESTER EVA, 2018, MOL ECOL                             
+                                                                               
+         EMMASYLVESTER7GMAIL.COM[] 
+ []
+
+[4]
+Overfull \hbox (763.91801pt too wide) in paragraph at lines 440--440
+[]\T1/lmtt/m/n/10 ##                                                           
+                                                                               
+                                                                               
+         RP[] 
+ []
+
+
+Overfull \hbox (763.91801pt too wide) in paragraph at lines 440--440
+[]\T1/lmtt/m/n/10 ## DICKSON BG, 2019, CONSERV BIOL                            
+                                                           DICKSON, BG (REPRINT
+ AUTHOR), CONSERVAT SCI PARTNERS INC, 11050 PIONEER TRAIL,SUITE 202, TRUCKEE, C
+A 96161 USA[] 
+ []
+
+
+Overfull \hbox (763.91801pt too wide) in paragraph at lines 440--440
+[]\T1/lmtt/m/n/10 ## ZHAO X, 2019, BIOL CONSERV                                
+                                                           LIU, ZJ (REPRINT AUT
+HOR), INST ZOOL, CAS KEY LAB ANIM ECOL \\& CONSERVAT BIOL, BEIJING 100101, PEOP
+LES R CHINA[] 
+ []
+
+
+Overfull \hbox (763.91801pt too wide) in paragraph at lines 440--440
+[]\T1/lmtt/m/n/10 ## BRUCE SA, 2018, ECOL EVOL                                 
+                                                                               
+              BRUCE, SA (REPRINT AUTHOR), SUNY ALBANY, DEPT BIOL SCI, ALBANY, N
+Y 12222 USA[] 
+ []
+
+
+Overfull \hbox (763.91801pt too wide) in paragraph at lines 440--440
+[]\T1/lmtt/m/n/10 ## ANTUNES B, 2018, CONSERV GENET             VELO-ANTON, G (
+REPRINT AUTHOR), UNIV PORTO, INST CIENCIAS AGR VAIRAO, CTR INVEST BIODIVERSIDAD
+E \\& RECURSOS GENET, CIBIO INBIO, RUA PADRE ARMANDO QUINTAS 7, P-4485661 VAIRA
+O, PORTUGAL[] 
+ []
+
+
+Overfull \hbox (763.91801pt too wide) in paragraph at lines 440--440
+[]\T1/lmtt/m/n/10 ## CUERVO-ALARCON L, 2018, TREE GENET GENOMES                
+                        KRUTOVSKY, KV (REPRINT AUTHOR), GEORG AUGUST UNIV GOTTI
+NGEN, DEPT FOREST GENET \\& FOREST TREE BREEDING, BUESGENWEG 2, D-37077 GOTTING
+EN, GERMANY[] 
+ []
+
+
+Overfull \hbox (763.91801pt too wide) in paragraph at lines 440--440
+[]\T1/lmtt/m/n/10 ## SYLVESTER EVA, 2018, MOL ECOL                             
+                                                                       SYLVESTE
+R, EVA (REPRINT AUTHOR), DEPT FISHERIES \\& OCEANS CANADA, SCI BRANCH, ST JOHN,
+ NF, CANADA[] 
+ []
+
+
+Overfull \hbox (632.6684pt too wide) in paragraph at lines 440--440
+[]\T1/lmtt/m/n/10 ##                                                           
+                                                                               
+                                                            AU_UN[] 
+ []
+
+
+Overfull \hbox (632.6684pt too wide) in paragraph at lines 440--440
+[]\T1/lmtt/m/n/10 ## DICKSON BG, 2019, CONSERV BIOL                            
+CONSERVAT SCI PARTNERS INC;NO ARIZONA UNIV;NO ARIZONA UNIV;NORTHERN ROCKY MT SC
+I CTR;UNIV WASHINGTON;SCI APPLICAT;UNIV CHICAGO;SCHLOSS;SCHUMAKER[] 
+ []
+
+
+Overfull \hbox (632.6684pt too wide) in paragraph at lines 440--440
+[]\T1/lmtt/m/n/10 ## ZHAO X, 2019, BIOL CONSERV                 INST ZOOL;UNIV 
+CHINESE ACAD SCI;CHINA WEST NORMAL UNIV;UNIV ILLINOIS;UNIV ILLINOIS;CENT SOUTH 
+UNIV FORESTRY AND TECHNOL;UNIV WESTERN AUSTRALIA;CHINESE ACAD SCI[] 
+ []
+
+
+Overfull \hbox (632.6684pt too wide) in paragraph at lines 440--440
+[]\T1/lmtt/m/n/10 ## BRUCE SA, 2018, ECOL EVOL                                 
+                                                                               
+                 DEPT BIOL SCI;NEW YORK STATE MUSEUM AND SCI SERV[] 
+ []
+
+
+Overfull \hbox (632.6684pt too wide) in paragraph at lines 440--440
+[]\T1/lmtt/m/n/10 ## ANTUNES B, 2018, CONSERV GENET                            
+                                                                               
+               UNIV PORTO;UNIV PORTO;UNIV PAUL VALERY MONTPELLIER[] 
+ []
+
+
+Overfull \hbox (632.6684pt too wide) in paragraph at lines 440--440
+[]\T1/lmtt/m/n/10 ## CUERVO-ALARCON L, 2018, TREE GENET GENOMES   GEORG AUGUST 
+UNIV GOTTINGEN;SWISS FED INST FOREST SNOW AND LANDSCAPE RES WSL;UNIV BASEL;UNIV
+ KASSEL;VAVILOV INST GEN GENET;SIBERIAN FED UNIV;TEXAS AANDM UNIV[] 
+ []
+
+
+Overfull \hbox (632.6684pt too wide) in paragraph at lines 440--440
+[]\T1/lmtt/m/n/10 ## SYLVESTER EVA, 2018, MOL ECOL                             
+                                  SCI BRANCH;DALHOUSIE UNIV;DALHOUSIE UNIV;UNIV
+ SOUTHERN MISSISSIPPI;MEM UNIV NEWFOUNDLAND;MEM UNIV NEWFOUNDLAND[] 
+ []
+
+
+Overfull \hbox (18.42018pt too wide) in paragraph at lines 440--440
+[]\T1/lmtt/m/n/10 ##                                                           
+                    SR_FULL[] 
+ []
+
+
+Overfull \hbox (18.42018pt too wide) in paragraph at lines 440--440
+[]\T1/lmtt/m/n/10 ## DICKSON BG, 2019, CONSERV BIOL                         DIC
+KSON BG, 2019, CONSERV BIOL[] 
+ []
+
+
+Overfull \hbox (18.42018pt too wide) in paragraph at lines 440--440
+[]\T1/lmtt/m/n/10 ## ZHAO X, 2019, BIOL CONSERV                                
+ ZHAO X, 2019, BIOL CONSERV[] 
+ []
+
+
+Overfull \hbox (18.42018pt too wide) in paragraph at lines 440--440
+[]\T1/lmtt/m/n/10 ## BRUCE SA, 2018, ECOL EVOL                                 
+  BRUCE SA, 2018, ECOL EVOL[] 
+ []
+
+
+Overfull \hbox (18.42018pt too wide) in paragraph at lines 440--440
+[]\T1/lmtt/m/n/10 ## ANTUNES B, 2018, CONSERV GENET                         ANT
+UNES B, 2018, CONSERV GENET[] 
+ []
+
+
+Overfull \hbox (18.42018pt too wide) in paragraph at lines 440--440
+[]\T1/lmtt/m/n/10 ## CUERVO-ALARCON L, 2018, TREE GENET GENOMES CUERVO-ALARCON 
+L, 2018, TREE GENET GENOMES[] 
+ []
+
+
+Overfull \hbox (18.42018pt too wide) in paragraph at lines 440--440
+[]\T1/lmtt/m/n/10 ## SYLVESTER EVA, 2018, MOL ECOL                           SY
+LVESTER EVA, 2018, MOL ECOL[] 
+ []
+
+
+Overfull \hbox (18.42018pt too wide) in paragraph at lines 440--440
+[]\T1/lmtt/m/n/10 ##                                                           
+                         SR[] 
+ []
+
+
+Overfull \hbox (18.42018pt too wide) in paragraph at lines 440--440
+[]\T1/lmtt/m/n/10 ## DICKSON BG, 2019, CONSERV BIOL                         DIC
+KSON BG, 2019, CONSERV BIOL[] 
+ []
+
+
+Overfull \hbox (18.42018pt too wide) in paragraph at lines 440--440
+[]\T1/lmtt/m/n/10 ## ZHAO X, 2019, BIOL CONSERV                                
+ ZHAO X, 2019, BIOL CONSERV[] 
+ []
+
+
+Overfull \hbox (18.42018pt too wide) in paragraph at lines 440--440
+[]\T1/lmtt/m/n/10 ## BRUCE SA, 2018, ECOL EVOL                                 
+  BRUCE SA, 2018, ECOL EVOL[] 
+ []
+
+
+Overfull \hbox (18.42018pt too wide) in paragraph at lines 440--440
+[]\T1/lmtt/m/n/10 ## ANTUNES B, 2018, CONSERV GENET                         ANT
+UNES B, 2018, CONSERV GENET[] 
+ []
+
+
+Overfull \hbox (18.42018pt too wide) in paragraph at lines 440--440
+[]\T1/lmtt/m/n/10 ## CUERVO-ALARCON L, 2018, TREE GENET GENOMES CUERVO-ALARCON 
+L, 2018, TREE GENET GENOMES[] 
+ []
+
+
+Overfull \hbox (18.42018pt too wide) in paragraph at lines 440--440
+[]\T1/lmtt/m/n/10 ## SYLVESTER EVA, 2018, MOL ECOL                           SY
+LVESTER EVA, 2018, MOL ECOL[] 
+ []
+
+[5] [6] [7]
+<biblio_final_files/figure-latex/unnamed-chunk-10-1.pdf, id=56, 469.755pt x 325
+.215pt>
+File: biblio_final_files/figure-latex/unnamed-chunk-10-1.pdf Graphic file (type
+ pdf)
+<use biblio_final_files/figure-latex/unnamed-chunk-10-1.pdf>
+Package pdftex.def Info: biblio_final_files/figure-latex/unnamed-chunk-10-1.pdf
+  used on input line 620.
+(pdftex.def)             Requested size: 443.57677pt x 307.0916pt.
+<biblio_final_files/figure-latex/unnamed-chunk-10-2.pdf, id=57, 469.755pt x 325
+.215pt>
+File: biblio_final_files/figure-latex/unnamed-chunk-10-2.pdf Graphic file (type
+ pdf)
+<use biblio_final_files/figure-latex/unnamed-chunk-10-2.pdf>
+Package pdftex.def Info: biblio_final_files/figure-latex/unnamed-chunk-10-2.pdf
+  used on input line 621.
+(pdftex.def)             Requested size: 443.57677pt x 307.0916pt.
+<biblio_final_files/figure-latex/unnamed-chunk-10-3.pdf, id=58, 469.755pt x 325
+.215pt>
+File: biblio_final_files/figure-latex/unnamed-chunk-10-3.pdf Graphic file (type
+ pdf)
+<use biblio_final_files/figure-latex/unnamed-chunk-10-3.pdf>
+Package pdftex.def Info: biblio_final_files/figure-latex/unnamed-chunk-10-3.pdf
+  used on input line 622.
+(pdftex.def)             Requested size: 443.57677pt x 307.0916pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 620--623
+[][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 620--623
+[]
+ []
+
+[8] [9 <./biblio_final_files/figure-latex/unnamed-chunk-10-1.pdf> <./biblio_fin
+al_files/figure-latex/unnamed-chunk-10-2.pdf>]
+<biblio_final_files/figure-latex/unnamed-chunk-10-4.pdf, id=78, 469.755pt x 325
+.215pt>
+File: biblio_final_files/figure-latex/unnamed-chunk-10-4.pdf Graphic file (type
+ pdf)
+<use biblio_final_files/figure-latex/unnamed-chunk-10-4.pdf>
+Package pdftex.def Info: biblio_final_files/figure-latex/unnamed-chunk-10-4.pdf
+  used on input line 632.
+(pdftex.def)             Requested size: 443.57677pt x 307.0916pt.
+<biblio_final_files/figure-latex/unnamed-chunk-10-5.pdf, id=79, 469.755pt x 325
+.215pt>
+File: biblio_final_files/figure-latex/unnamed-chunk-10-5.pdf Graphic file (type
+ pdf)
+<use biblio_final_files/figure-latex/unnamed-chunk-10-5.pdf>
+Package pdftex.def Info: biblio_final_files/figure-latex/unnamed-chunk-10-5.pdf
+  used on input line 633.
+(pdftex.def)             Requested size: 443.57677pt x 307.0916pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 632--634
+[][]
+ []
+
+[10 <./biblio_final_files/figure-latex/unnamed-chunk-10-3.pdf> <./biblio_final_
+files/figure-latex/unnamed-chunk-10-4.pdf>]
+Overfull \hbox (23.67017pt too wide) in paragraph at lines 676--676
+[]\T1/lmtt/m/n/10 ##                                                           
+                        [,1][] 
+ []
+
+
+Overfull \hbox (23.67017pt too wide) in paragraph at lines 676--676
+[]\T1/lmtt/m/n/10 ## MANEL S, 2003, TRENDS ECOL EVOL, V18, P189, DOI 10.1016/S0
+169-5347(03)00008-9.      43[] 
+ []
+
+
+Overfull \hbox (23.67017pt too wide) in paragraph at lines 676--676
+[]\T1/lmtt/m/n/10 ## PRITCHARD JK, 2000, GENETICS, V155, P945.                 
+                          39[] 
+ []
+
+
+Overfull \hbox (23.67017pt too wide) in paragraph at lines 676--676
+[]\T1/lmtt/m/n/10 ## EVANNO G, 2005, MOL ECOL, V14, P2611, DOI 10.1111/J.1365-2
+94X.2005.02553.X.         32[] 
+ []
+
+
+Overfull \hbox (23.67017pt too wide) in paragraph at lines 676--676
+[]\T1/lmtt/m/n/10 ## MANEL S, 2013, TRENDS ECOL EVOL, V28, P614, DOI 10.1016/J.
+TREE.2013.05.012.         24[] 
+ []
+
+
+Overfull \hbox (23.67017pt too wide) in paragraph at lines 676--676
+[]\T1/lmtt/m/n/10 ## MCRAE BH, 2006, EVOLUTION, V60, P1551, DOI 10.1111/J.0014-
+3820.2006.TB00500.X.      24[] 
+ []
+
+
+Overfull \hbox (23.67017pt too wide) in paragraph at lines 676--676
+[]\T1/lmtt/m/n/10 ## STORFER A, 2007, HEREDITY, V98, P128, DOI 10.1038/SJ.HDY.6
+800917.                   23[] 
+ []
+
+
+Overfull \hbox (23.67017pt too wide) in paragraph at lines 676--676
+[]\T1/lmtt/m/n/10 ## MANTEL N, 1967, CANCER RES, V27, P209.                    
+                          22[] 
+ []
+
+
+Overfull \hbox (23.67017pt too wide) in paragraph at lines 676--676
+[]\T1/lmtt/m/n/10 ## CUSHMAN SA, 2006, AM NAT, V168, P486, DOI 10.1086/506976. 
+                          21[] 
+ []
+
+
+Overfull \hbox (23.67017pt too wide) in paragraph at lines 676--676
+[]\T1/lmtt/m/n/10 ## WEIR BS, 1984, EVOLUTION, V38, P1358, DOI 10.1111/J.1558-5
+646.1984.TB05657.X.       21[] 
+ []
+
+
+Overfull \hbox (23.67017pt too wide) in paragraph at lines 676--676
+[]\T1/lmtt/m/n/10 ## ROUSSET F, 2008, MOL ECOL RESOUR, V8, P103, DOI 10.1111/J.
+1471-8286.2007.01931.X.   19[] 
+ []
+
+[11 <./biblio_final_files/figure-latex/unnamed-chunk-10-5.pdf>]
+Overfull \hbox (2.67023pt too wide) in paragraph at lines 755--755
+[]\T1/lmtt/m/n/10 ##                                Paper                      
+        DOI Year LCS GCS[] 
+ []
+
+
+Overfull \hbox (2.67023pt too wide) in paragraph at lines 755--755
+[]\T1/lmtt/m/n/10 ## 23   MANEL S, 2013, TRENDS ECOL EVOL       10.1016/J.TREE.
+2013.05.012 2013  24 245[] 
+ []
+
+
+Overfull \hbox (2.67023pt too wide) in paragraph at lines 755--755
+[]\T1/lmtt/m/n/10 ## 44       CASTILLO JA, 2014, MOL ECOL                10.111
+1/MEC.12650 2014  11  71[] 
+ []
+
+
+Overfull \hbox (2.67023pt too wide) in paragraph at lines 755--755
+[]\T1/lmtt/m/n/10 ## 1    HOLDEREGGER R, 2008, BIOSCIENCE                  10.1
+641/B580306 2008  10 228[] 
+ []
+
+
+Overfull \hbox (2.67023pt too wide) in paragraph at lines 755--755
+[]\T1/lmtt/m/n/10 ## 8     SCOBLE J, 2010, DIVERS DISTRIB 10.1111/J.1472-4642.2
+010.00658.X 2010   5  67[] 
+ []
+
+
+Overfull \hbox (2.67023pt too wide) in paragraph at lines 755--755
+[]\T1/lmtt/m/n/10 ## 29 WASSERMAN TN, 2013, CONSERV GENET        10.1007/S10592
+-012-0336-Z 2013   4  20[] 
+ []
+
+
+Overfull \hbox (2.67023pt too wide) in paragraph at lines 755--755
+[]\T1/lmtt/m/n/10 ## 37   RAZGOUR O, 2014, DIVERS DISTRIB                10.111
+1/DDI.12200 2014   4  17[] 
+ []
+
+
+Overfull \hbox (2.67023pt too wide) in paragraph at lines 755--755
+[]\T1/lmtt/m/n/10 ## 19      CUSHMAN SA, 2012, ECOL MODEL  10.1016/J.ECOLMODEL.
+2012.02.011 2012   3  41[] 
+ []
+
+
+Overfull \hbox (2.67023pt too wide) in paragraph at lines 755--755
+[]\T1/lmtt/m/n/10 ## 30           BLAIR C, 2013, PLOS ONE     10.1371/JOURNAL.P
+ONE.0057433 2013   3  12[] 
+ []
+
+
+Overfull \hbox (2.67023pt too wide) in paragraph at lines 755--755
+[]\T1/lmtt/m/n/10 ## 12     THOMASSEN HA, 2011, EVOL APPL 10.1111/J.1752-4571.2
+010.00172.X 2011   2  50[] 
+ []
+
+
+Overfull \hbox (2.67023pt too wide) in paragraph at lines 755--755
+[]\T1/lmtt/m/n/10 ## 13     OLSEN JB, 2011, CONSERV GENET        10.1007/S10592
+-010-0135-3 2011   2  25[] 
+ []
+
+
+Overfull \hbox (144.41982pt too wide) in paragraph at lines 793--793
+[]\T1/lmtt/m/n/10 ##           Author Dominance Factor Tot Articles Single-Auth
+ored Multi-Authored First-Authored Rank by Articles[] 
+ []
+
+
+Overfull \hbox (144.41982pt too wide) in paragraph at lines 793--793
+[]\T1/lmtt/m/n/10 ## 1      RAZGOUR O        1.0000000            3            
+   1              2              2                4[] 
+ []
+
+
+Overfull \hbox (144.41982pt too wide) in paragraph at lines 793--793
+[]\T1/lmtt/m/n/10 ## 2   THOMASSEN HA        1.0000000            3            
+   0              3              3                4[] 
+ []
+
+
+Overfull \hbox (144.41982pt too wide) in paragraph at lines 793--793
+[]\T1/lmtt/m/n/10 ## 3       BRUCE SA        1.0000000            2            
+   0              2              2                1[] 
+ []
+
+
+Overfull \hbox (144.41982pt too wide) in paragraph at lines 793--793
+[]\T1/lmtt/m/n/10 ## 4    CASTILLO JA        1.0000000            2            
+   0              2              2                1[] 
+ []
+
+[12]
+Overfull \hbox (144.41982pt too wide) in paragraph at lines 793--793
+[]\T1/lmtt/m/n/10 ## 5        MIMS MC        1.0000000            2            
+   0              2              2                1[] 
+ []
+
+
+Overfull \hbox (144.41982pt too wide) in paragraph at lines 793--793
+[]\T1/lmtt/m/n/10 ## 6    LANDGUTH EL        0.4285714            7            
+   0              7              3                9[] 
+ []
+
+
+Overfull \hbox (144.41982pt too wide) in paragraph at lines 793--793
+[]\T1/lmtt/m/n/10 ## 7  HOLDEREGGER R        0.3333333            3            
+   0              3              1                4[] 
+ []
+
+
+Overfull \hbox (144.41982pt too wide) in paragraph at lines 793--793
+[]\T1/lmtt/m/n/10 ## 8         ZHAO X        0.3333333            3            
+   0              3              1                4[] 
+ []
+
+
+Overfull \hbox (144.41982pt too wide) in paragraph at lines 793--793
+[]\T1/lmtt/m/n/10 ## 9        MANEL S        0.1666667            6            
+   0              6              1                8[] 
+ []
+
+
+Overfull \hbox (144.41982pt too wide) in paragraph at lines 793--793
+[]\T1/lmtt/m/n/10 ## 10    CUSHMAN SA        0.1111111            9            
+   0              9              1               10[] 
+ []
+
+[13]
+<biblio_final_files/figure-latex/unnamed-chunk-19-1.pdf, id=131, 469.755pt x 32
+5.215pt>
+File: biblio_final_files/figure-latex/unnamed-chunk-19-1.pdf Graphic file (type
+ pdf)
+<use biblio_final_files/figure-latex/unnamed-chunk-19-1.pdf>
+Package pdftex.def Info: biblio_final_files/figure-latex/unnamed-chunk-19-1.pdf
+  used on input line 864.
+(pdftex.def)             Requested size: 443.57677pt x 307.0916pt.
+
+Overfull \hbox (632.6684pt too wide) in paragraph at lines 916--916
+[]\T1/lmtt/m/n/10 ##                                                           
+                                                                               
+                                                               TI[] 
+ []
+
+
+Overfull \hbox (632.6684pt too wide) in paragraph at lines 916--916
+[]\T1/lmtt/m/n/10 ## 2                                                     SIMU
+LATING IMPACTS OF RAPID FOREST LOSS ON POPULATION SIZE, CONNECTIVITY AND GENETI
+C DIVERSITY OF SUNDA CLOUDED LEOPARDS (NEOFELIS DIARDI) IN BORNEO[] 
+ []
+
+
+Overfull \hbox (632.6684pt too wide) in paragraph at lines 916--916
+[]\T1/lmtt/m/n/10 ## 3                                                         
+                                                                A COMPARISON OF
+ INDIVIDUAL-BASED GENETIC DISTANCE METRICS FOR LANDSCAPE GENETICS[] 
+ []
+
+
+Overfull \hbox (632.6684pt too wide) in paragraph at lines 916--916
+[]\T1/lmtt/m/n/10 ## 4 CONSERVING THREATENED RIPARIAN ECOSYSTEMS IN THE AMERICA
+N WEST: PRECIPITATION GRADIENTS AND RIVER NETWORKS DRIVE GENETIC CONNECTIVITY A
+ND DIVERSITY IN A FOUNDATION RIPARIAN TREE (POPULUS ANGUSTIFOLIA)[] 
+ []
+
+
+Overfull \hbox (632.6684pt too wide) in paragraph at lines 916--916
+[]\T1/lmtt/m/n/10 ## 5                                                         
+                      USING LANDSCAPE GENETICS SIMULATIONS FOR PLANTING BLISTER
+ RUST RESISTANT WHITEBARK PINE IN THE US NORTHERN ROCKY MOUNTAINS[] 
+ []
+
+
+Overfull \hbox (632.6684pt too wide) in paragraph at lines 916--916
+[]\T1/lmtt/m/n/10 ## 6                                                         
+                                   PREDICTING GLOBAL POPULATION CONNECTIVITY AN
+D TARGETING CONSERVATION ACTION FOR SNOW LEOPARD ACROSS ITS RANGE[] 
+ []
+
+
+Overfull \hbox (632.6684pt too wide) in paragraph at lines 916--916
+[]\T1/lmtt/m/n/10 ## 7                                    LANDSCAPE GENETICS FO
+R THE EMPIRICAL ASSESSMENT OF RESISTANCE SURFACES: THE EUROPEAN PINE MARTEN (MA
+RTES MARTES) AS A TARGET-SPECIES OF A REGIONAL ECOLOGICAL NETWORK[] 
+ []
+
+[14 <./biblio_final_files/figure-latex/unnamed-chunk-19-1.pdf>]
+
+! Package inputenc Error: Unicode character  (U+0080)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.919 Law}
+          \label{estimativa-do-coeficiente-de-lotkaas-law} 
+Here is how much of TeX's memory you used:
+ 12943 strings out of 492945
+ 193716 string characters out of 3125365
+ 791849 words of memory out of 3000000
+ 16587 multiletter control sequences out of 15000+200000
+ 49339 words of font info for 70 fonts, out of 3000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 32i,5n,38p,9489b,457s stack positions out of 5000i,500n,10000p,200000b,50000s
+
+!  ==> Fatal error occurred, no output PDF file produced!

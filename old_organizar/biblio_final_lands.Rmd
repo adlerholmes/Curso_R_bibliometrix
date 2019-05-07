@@ -1,0 +1,474 @@
+---
+title: "Bibliometrix - Landscape genetics for studies in Conservation and Climate changes"
+author: "Michele Fernandes da Silva"
+date: "6 de maio de 2019"
+output: pdf_document
+---
+
+```{r include=FALSE}
+options(Encoding="UTF-8")
+```
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(tidy = TRUE)
+``` 
+
+## **Landscape genetics**
+
+A genética da paisagem surgiu como uma disciplina relativamente que visa compreender, através de dados genéticos, ambientais e espaciais, a influência de restrições ecológicas e ambientais na variação genética, quantificando a relação entre características da paisagem, diversidade genética e estrutura genética espacial. O campo está se desenvolvendo rapidamente devido aos recentes avanços em tecnologias de biologia molecular, aquisições de dados ambientais e métodos analíticos espaciais que podem relacionar dados genéticos e de paisagem de maneira significativa (Storfer et al. 2010). 
+A abordagem integrativa permite uma avaliação do impacto da composição da paisagem na distribuição espacial da variação genética neutra e adaptativa e nos processos microevolutivos associados em populações naturais (Holderegger e Wagner 2008; Balkenhol et al. 2009; Manel e cols. 2010; Segelbacher et al., 2010; Epperson et al., 2010). Esse entendimento é crucial para promover pesquisas em ecologia evolutiva e genética, mas também tem um imenso potencial para manejo aplicado, conservação de espécies de plantas e animais ameaçadas ou em perigo de extinção (Sork e Waits, 2010) e principalmente, na previsão do futuro das espécies frente às mudanças ambientais provocadas pelas mudanças climáticas globais.
+Embora o interesse pela Genética da paisagem tenha aumentado, os estudos sobre esse tema, principalmente relacionados à conservação e mudanças climáticas ainda são escassos. Nesse sentido, buscamos analisar os dados de publicações e citações referentes à essa área através do pacote bibliometrix; um pacote que fornece um conjunto de ferramentas para pesquisa quantitativa em bibliometria e cienciometria. Essencialmente, a bibliometria é a aplicação de análises quantitativas e estatísticas a publicações como artigos de periódicos e suas respectivas contagens de citações. A avaliação quantitativa de dados de publicações e citações é agora usada em quase todas as áreas científicas para avaliar o crescimento, maturidade, autores líderes, mapas conceituais e intelectuais, tendências de uma comunidade científica.
+
+### Pacote utilizado: *Bibliometrix*
+
+Instalando o pacote *Bibliometrix* e suas dependências
+
+```{r eval=FALSE, include=FALSE}
+install.packages("bibliometrix", dependencies=TRUE, 
+                 repos = "http://cran.us.r-project.org")
+```
+
+### Carregando o pacote 
+
+```{r include=FALSE}
+library(bibliometrix)
+```
+
+### Configurando o diretório de trabalho
+
+```{r}
+setwd("C:/Users/Michele/Documents/Curso_R_bibliometrix/")
+```
+
+### Dados utilizados
+
+Os dados utilizados foram obtidos através do serviço de indexação de citações científicas ```Web of Science``` (http://www.webofknowledge.com). Foram pesquisadas as palavras "Landscape genetics", "Conservation" e "Climate change" entre os anos de 1900 à 2019.
+
+### Carregamento e importação
+
+O arquivo foi inicialmente carregado como um vetor de caracteres grandes no formato ```BibTeX```, através da função *readFiles*.
+
+```{r}
+D <- readFiles("data/file1.bib")
+```
+
+E convertido em um quadro de dados (dataframe) usando a função *convert2df*.
+
+```{r}
+M <- convert2df(D, dbsource = "isi", format = "bibtex")
+```
+
+## **Análises Bibliométricas**
+
+### Análise descritiva
+
+A função *biblioAnalysis* calcula as principais medidas bibliométricas.
+
+```{r echo=TRUE}
+results <- biblioAnalysis(M, sep = ";")
+```
+
+#### Resumo das informaÃ§Ãµes
+
+A funÃ§Ã£o *Summary* sumariza as principais informaÃ§Ãµes encontradas no dataset.
+
+```{r}
+options(width=100)
+S <- summary(object = results, k = 10, pause = FALSE)
+```
+
+Alguns grÃ¡ficos bÃ¡sicos podem ser desenhados usando a funÃ§Ã£o genÃ©rica *plot*.
+
+```{r}
+plot(x = results, k = 10, pause = FALSE)
+```
+
+### AnÃ¡lise das referÃªncias citadas
+
+Para uma extraÃ§Ã£o correta, primeiro identificamos o campo separador entre diferentes referÃªncias:
+
+```{r}
+M$CR[1]
+```
+
+A funÃ§Ã£o *citation* gera a tabela de frequÃªncias das referÃªncias mais citadas ou os primeiros autores mais citados (de referÃªncias).
+
+#### Manuscritos mais citados
+
+```{r}
+CR <- citations(M, field = "article", sep = ";")
+cbind(CR$Cited[1:10])
+```
+
+#### Primeiro autor mais citado
+
+```{r}
+CR <- citations(M, field = "author", sep = ";")
+cbind(CR$Cited[1:10])
+```
+
+A funÃ§Ã£o *localCitations* gera a tabela de frequÃªncia dos autores mais citados localmente.
+
+##### Autores citados localmente mais frequentes
+
+```{r}
+CR <- localCitations(M, sep = ";")
+CR$Authors[1:10,]
+CR$Papers[1:10,]
+```
+
+
+### Ranking de domÃ�nio dos autores
+
+A funÃ§Ã£o *dominace* calcula o ranking de dominÃ¢ncia dos autores, conforme proposto por Kumar & Kumar, 2008.
+
+```{r}
+DF <- dominance(results, k = 10)
+DF
+```
+
+### H-Index dos autores
+
+O Ã�ndice h Ã© uma mÃ©trica no nÃ�vel do autor que tenta medir o impacto da produtividade e da citaÃ§Ã£o das publicaÃ§Ãµes de um cientista ou estudioso.
+A funÃ§Ã£o *Hindex* calcula o Ã�ndice H dos autores ou o Ã�ndice H das fontes e suas variantes (Ã�ndice-g e Ã�ndice-m) em uma coleÃ§Ã£o bibliogrÃ¡fica.
+
+```{r}
+indices <- Hindex(M, field = "author", elements="RENAUT J", sep = ";", years = 10)
+#Bornmann's impact indices:
+indices$H
+```
+
+```{r}
+indices$CitationList
+```
+
+
+#### H-Index dos primeiros 10 autores mais produtivos
+
+```{r}
+authors=gsub(","," ",names(results$Authors)[1:10])
+indices <- Hindex(M, field = "author", elements=authors, sep = ";", years = 50)
+indices$H
+```
+
+
+### Produtividade dos principais autores ao longo do tempo
+
+A funÃ§Ã£o *AuthorProdOverTime* calcula e plota a produÃ§Ã£o dos autores (em termos de nÃºmero de publicaÃ§Ãµes e total de citaÃ§Ãµes por ano) ao longo do tempo.
+
+```{r}
+topAU <- authorProdOverTime(M, k = 10, graph = TRUE)
+```
+
+
+#### Produtividade dos autores por ano
+
+```{r}
+head(topAU$dfAU)
+```
+
+
+#### Lista de documentos dos autores
+
+```{r}
+head(topAU$dfPapersAU)
+```
+
+
+### Estimativa do coeficiente de Lotkaâs Law
+
+A funÃ§Ã£o *lotka* a estima os coeficientes da Lei de Lotka para a produtividade cientÃ�fica (Lotka AJ, 1926). AtravÃ©s dessa funÃ§Ã£o Ã© possÃ�vel estimar a similaridade desta distribuiÃ§Ã£o empÃ�rica com a teÃ³rica.
+
+```{r}
+L <- lotka(results)
+# Produtividade dos autores DistribuiÃ§Ã£o empÃ�rica
+L$AuthorProd
+```
+
+```{r}
+# Estimativa do coefficiente Beta
+L$Beta
+```
+
+```{r}
+# Constante
+L$C
+```
+
+```{r}
+# Qualidade do ajuste
+L$R2
+```
+
+```{r}
+# P-value de K-S para o teste de duas amostras
+L$p.value
+```
+
+
+#### DistribuiÃ§Ã£o observada
+
+```{r}
+Observed=L$AuthorProd[,3]
+```
+
+
+#### DistribuiÃ§Ã£o teÃ³rica com Beta = 2
+
+```{r}
+Theoretical=10^(log10(L$C)-2*log10(L$AuthorProd[,1]))
+plot(L$AuthorProd[,1],Theoretical,type="l",col="red", ylim=c(0, 1), 
+     xlab="Articles",ylab="Freq. of Authors", main="Scientific Productivity")
+lines(L$AuthorProd[,1],Observed,col="blue")
+legend(x="topright",c("Theoretical (B=2)","Observed"), col=c("red","blue"),
+       lty = c(1,1,1),cex=0.6,bty="n")
+```
+
+
+### Matrizes de redes bibliogrÃ¡ficas
+
+#### Redes bipartidas
+
+*cocMatrix* Ã© uma funÃ§Ã£o geral para calcular uma rede bipartida selecionando um dos atributos de metadados.
+
+```{r}
+A <- cocMatrix(M, Field = "SO", sep = ";")
+```
+
+Classificando, em ordem decrescente, as somas da coluna de ```A```, vocÃª pode ver as fontes de publicaÃ§Ã£o mais relevantes:
+
+#### Ordem decrescente
+
+```{r}
+sort(Matrix::colSums(A), decreasing = TRUE)[1:5]
+```
+
+Seguindo essa abordagem, vocÃª pode calcular vÃ¡rias redes bipartidas:
+
+#### Rede de citaÃ§Ã£o
+
+```{r}
+A <- cocMatrix(M, Field = "CR", sep = ".  ")
+```
+
+
+#### Rede de autor
+
+```{r}
+A <- cocMatrix(M, Field = "AU", sep = ";")
+```
+
+
+#### Redes do paÃ�s
+
+PaÃ�ses dos autores nÃ£o Ã© um atributo padrÃ£o do quadro de dados bibliogrÃ¡ficos. VocÃª precisa extrair essas informaÃ§Ãµes do atributo de afiliaÃ§Ã£o usando a funÃ§Ã£o metaTagExtraction .
+
+```{r}
+M <- metaTagExtraction(M, Field = "AU_CO", sep = ";")
+A <- cocMatrix(M, Field = "AU_CO", sep = ";")
+```
+
+
+#### Rede de palavra-chave de autores
+
+```{r}
+A <- cocMatrix(M, Field = "DE", sep = ";")
+```
+
+
+#### Rede de palavras-chave adicional
+
+```{r}
+A <- cocMatrix(M, Field = "ID", sep = ";")
+```
+
+#### Acoplamento bibliogrÃ¡fico
+
+A funÃ§Ã£o *biblioNetwork* calcula, a partir de um quadro de dados bibliogrÃ¡ficos, as redes de acoplamento mais utilizadas: Autores, Fontes e PaÃ�ses.
+
+#### Redes de acoplamento de artigos clÃ¡ssicos
+
+```{r}
+NetMatrix <- biblioNetwork(M, analysis = "coupling", 
+                           network = "references", sep = ".  ")
+```
+
+#### NormalizaÃ§Ã£o
+
+A funÃ§Ã£o *normalizeSimilarity* calcula a forÃ§a de associaÃ§Ã£o, inclusÃ£o, similaridade de Jaccard ou Salton entre os vÃ©rtices de uma rede. *normalizeSimilarity* pode ser recuperada diretamente da funÃ§Ã£o networkPlot () usando o argumento *normalize* .
+
+```{r}
+NetMatrix <- biblioNetwork(M, analysis = "coupling", 
+                           network = "authors", sep = ";")
+net=networkPlot(NetMatrix,  normalize = "salton", weighted=NULL, 
+                n = 100, Title = "Authors' Coupling", type = "fruchterman",
+                size=5,size.cex=T,remove.multiple=TRUE,labelsize=0.8, 
+                label.n=10,label.cex=F)
+```
+
+
+#### Co-citaÃ§Ãµes bibliogrÃ¡ficas
+
+#### Redes de co-citaÃ§Ã£o de referÃªncias clÃ¡ssicas
+
+Usando a funÃ§Ã£o *biblioNetwork* , vocÃª pode calcular uma rede clÃ¡ssica de co-citaÃ§Ã£o de referÃªncia:
+
+```{r}
+NetMatrix <- biblioNetwork(M, analysis = "co-citation", 
+                           network = "references", sep = ".  ")
+```
+
+
+#### ColaboraÃ§Ã£o bibliogrÃ¡fica
+
+Usando a funÃ§Ã£o *biblioNetwork* , vocÃª pode calcular a rede de colaboraÃ§Ã£o de um autor:
+
+```{r}
+NetMatrix <- biblioNetwork(M, analysis = "collaboration", network = "authors", sep = ";")
+```
+
+ou uma rede de colaboraÃ§Ã£o do paÃ�s:
+
+#### Redes de colaboraÃ§Ã£o entre paÃ�ses
+
+```{r}
+NetMatrix <- biblioNetwork(M, analysis = "collaboration", network = "countries", sep = ";")
+```
+
+
+### AnÃ¡lise descritiva das caracterÃ�sticas de grÃ¡ficos de rede
+
+A funÃ§Ã£o *networkStat* calcula vÃ¡rias estatÃ�sticas de resumo.
+
+#### Um exemplo de redes de co-ocorrÃªncia clÃ¡ssica 
+
+```{r}
+NetMatrix <- biblioNetwork(M, analysis = "co-occurrences", network = "keywords", sep = ";")
+netstat <- networkStat(NetMatrix)
+```
+
+#### As estatÃ�sticas resumidas da rede
+
+```{r}
+names(netstat$network)
+```
+
+#### Os principais Ã�ndices de centralidade e prestÃ�gio dos vÃ©rtices
+
+```{r}
+names(netstat$vertex)
+```
+
+#### Resumo dos principais resultados da funÃ§Ã£o *networkStat* 
+
+```{r}
+summary(netstat, k=10)
+```
+
+
+### VisualizaÃ§Ã£o de redes bibliogrÃ¡ficas
+
+#### ColaboraÃ§Ã£o cientÃ�fica nos paÃ�ses
+
+```{r}
+# CriaÃ§Ã£o de uma rede de colaboraÃ§Ã£o entre paÃ�ses
+M <- metaTagExtraction(M, Field = "AU_CO", sep = ";")
+NetMatrix <- biblioNetwork(M, analysis = "collaboration", 
+                           network = "countries", sep = ";")
+```
+
+#### GrÃ¡fico da rede
+
+```{r}
+net=networkPlot(NetMatrix, n = dim(NetMatrix)[1], Title = "Country Collaboration", 
+                type = "circle", size=T, remove.multiple=FALSE, 
+                labelsize=0.7,cluster="none")
+```
+
+#### Redes de co-citaÃ§Ã£o
+
+```{r}
+# CriaÃ§Ã£o de uma rede de co-citaÃ§Ã£o
+NetMatrix <- biblioNetwork(M, analysis = "co-citation", 
+                           network = "references", sep = ";")
+```
+
+#### GrÃ¡fico da rede 
+
+```{r}
+net=networkPlot(NetMatrix, n = 30, Title = "Co-Citation Network", 
+                type = "fruchterman", size=T, remove.multiple=FALSE,
+                labelsize=0.7,edgesize = 5)
+```
+
+
+#### Co-ocorrÃªncia de palavras-chave
+
+```{r}
+# CriaÃ§Ã£o de rede de co-ocorrÃªncia de palavras-chave
+NetMatrix <- biblioNetwork(M, analysis = "co-occurrences", network = "keywords", sep = ";")
+``` 
+
+
+#### GrÃ¡fico da rede
+
+```{r}
+net=networkPlot(NetMatrix, normalize="association", weighted=T, n = 30, Title = "Keyword Co-occurrences", type = "fruchterman", size=T,edgesize = 5,labelsize=0.7)
+```
+
+
+### AnÃ¡lise de _Co-Word_: A estrutura conceitual de um campo
+
+
+```{r}
+# Estrutura conceitual usando palavras-chave (mÃ©todo="CA")
+CS <- conceptualStructure(M,field="ID", method="CA", minDegree=4, k.max=8, stemming=FALSE, labelsize=10, documents=10)
+```
+
+
+#### Rede histÃ³rica de citaÃ§Ã£o direta
+
+```{r}
+# CriaÃ§Ã£o de uma rede de citaÃ§Ã£o histÃ³rica
+histResults <- histNetwork(M, min.citations = 10, sep = ";")
+```
+
+
+```{r}
+# GrÃ¡fico de uma rede de co-citaÃ§Ã£o histÃ³rica
+net <- histPlot(histResults, n=15, size = 20, labelsize=10, size.cex=TRUE, arrowsize = 0.5, color = TRUE)
+```
+
+## **Respostas encontradas**
+
+
+## **Dificuldades encontradas**
+
+Primeiramente, encontrei dificuldades com a obtenÃ§Ã£o dos dados pelo site __Web of science__, pois como nÃ£o o conhecia, nÃ£o percebi que eu poderia "adicionar linhas" com outras palavras especÃ�ficas de interesse. Essa dificuldade logo foi sanada e acabei achando a plataforma muito interessante. 
+
+Posteriormente, tive problemas em entender com o Rmarkdown funcionava. Achei que entre as chaves "{}" era necessÃ¡rio colocar uma funÃ§Ã£o especÃ�fica para rodar o cÃ³digo. Conhecia apenas o sÃ�mbolo "#" para a formataÃ§Ã£o das palavras, com o tempo e pesquisas, conheci outros meios de formataÃ§Ã£o. Pude me integrar melhor com o RMArkdown atravÃ©s do Cheat Sheet:  <https://www.rstudio.com/wp-content/uploads/2015/02/rmarkdown-cheatsheet.pdf> e tambÃ©m do vÃ�deo de um colega de laboratÃ³rio, Alexandre Aono: <https://www.youtube.com/watch?v=AuXTUalb0HU&t=310s>.
+
+Quando tentei baixar o arquivo no formato PDF, o Rmarkdow apresentou um erro relativo ao sistema LATEX, no qual tive bastante dificuldade em sanar. Mesmo baixando o LATEX, o arquivo nÃ£o era gerado. Encontrei a soluÃ§Ã£o em um forum de discussÃ£o sugerido por um amigo atravÃ©s deste link: <https://tex.stackexchange.com/questions/408798/sorry-but-pdflatex-did-not-succeed?rq=1>.
+
+## **Bibliografia**
+
+Balkenhol, N.; McDevitt, A. D.; Sommer, S. Landscape genetic approaches in conservation biology and management. Conservation Genetics, v. 14, n. 2, p. 249-251, april. 2013.
+
+Storfer A, Murphy MA, Evans JS, Goldberg CS, Robinson S, Spear SF, Dezzani R, Delmelle E, Vierling L, Waits LP (2007) Putting the âlandscapeâ in landscape genetics. Heredity 98:128â142
+
+Storfer A, Murphy MA, Spear SF, Holderegger R, Waits LP (2010) Landscape genetics: where are we now? Mol Ecol 19:3496â3514
+
+Holderegger R, Wagner HH (2008) Landscape genetics. Bioscience 58:199â207
+
+Balkenhol N, Gugerli F, Cushman SA, Waits L, Coulon A, Arntzen J, Holderegger R, Wagner HH (2009) Identifying future research needs in landscape genetics: where to from here? Landsc Ecol 24:455â463
+
+Manel S, Joost S, Epperson BK, Holderegger R, Storfer A, Rosenberg MS, Scribner KT, Bonin A, Fortin MJ (2010) Perspectives on the use of landscape genetics to detect genetic adaptive variation in the field. Mol Ecol 19:3760â3772
+
+Segelbacher G, Cushman SA, Epperson BK, Fortin M-J, Francois O, Hardy OJ, Holderegger R, Manel S (2010) Applications of landscape genetics in conservation biology: concepts and challenges. Conserv Genet 11:375â385
+
+Epperson BK, McRae B, Scribner K, Cushman SA, Rosenberg MS, Fortin M-J, James PMA, Murphy M, Manel S, Legendre P, Dale MRT (2010) Utility of computer simulations in landscape genetics. Mol Ecol 19:3540â3564
+
+Sork VL, Waits L (2010) Contributions of landscape geneticsâapproaches, insights and future potential. Mol Ecol 19:3489â3495
+
+Aria, M. & Cuccurullo, C. (2017) bibliometrix: An R-tool for comprehensive science mapping analysis, Journal of Informetrics, 11(4), pp 959-975, Elsevier.
